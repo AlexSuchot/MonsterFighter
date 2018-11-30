@@ -17,19 +17,29 @@ class Pokemon
     private $id;
 
     /**
+     * @ORM\Column(type="integer")
+     */
+    private $numberPokedex;
+
+    /**
      * @ORM\Column(type="string", length=255)
      */
     private $name;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="string", length=255)
      */
-    private $attack;
+    private $type;
 
     /**
      * @ORM\Column(type="integer")
      */
     private $life;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $attack;
 
     /**
      * @ORM\Column(type="integer")
@@ -46,14 +56,21 @@ class Pokemon
      */
     private $image;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $type;
-
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    public function getNumberPokedex(): ?int
+    {
+        return $this->numberPokedex;
+    }
+
+    public function setNumberPokedex(int $numberPokedex): self
+    {
+        $this->numberPokedex = $numberPokedex;
+
+        return $this;
     }
 
     public function getName(): ?string
@@ -68,14 +85,14 @@ class Pokemon
         return $this;
     }
 
-    public function getAttack(): ?int
+    public function getType(): ?string
     {
-        return $this->attack;
+        return $this->type;
     }
 
-    public function setAttack(int $attack): self
+    public function setType(string $type): self
     {
-        $this->attack = $attack;
+        $this->type = $type;
 
         return $this;
     }
@@ -88,6 +105,18 @@ class Pokemon
     public function setLife(int $life): self
     {
         $this->life = $life;
+
+        return $this;
+    }
+
+    public function getAttack(): ?int
+    {
+        return $this->attack;
+    }
+
+    public function setAttack(int $attack): self
+    {
+        $this->attack = $attack;
 
         return $this;
     }
@@ -127,16 +156,4 @@ class Pokemon
 
         return $this;
     }
-
-    public function getType(): ?string
-    {
-        return $this->type;
-    }
-    public function setType(string $type): self
-    {
-        $this->type = $type;
-
-        return $this;
-    }
-
 }

@@ -6,41 +6,47 @@ use App\Entity\Pokemon;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\Persistence\ObjectManager;
 
-class AppFixtures extends Fixture
+
+class PokemonFixtures extends Fixture
 {
     public function load(ObjectManager $manager)
     {
+
         $charizard = new Pokemon();
         $charizard
             ->setName("Charizard")
-            ->setAttack(80)
-            ->setLife(120)
-            ->setDefense(60)
-            ->setSpeed(50)
+            ->setAttack(109)
+            ->setLife(78)
+            ->setDefense(81)
+            ->setSpeed(100)
             ->setImage("https://archives.bulbagarden.net/media/upload/7/7e/006Charizard.png")
-            ->setType("Fire");
+            ->setType("Fire")
+            ->setNumberPokedex(6);
         $manager->persist($charizard);
 
         $blastoise = new Pokemon();
         $blastoise
             ->setName("Blastoise")
-            ->setAttack(60)
-            ->setLife(120)
-            ->setDefense(80)
-            ->setSpeed(35)
+            ->setAttack(85)
+            ->setLife(79)
+            ->setDefense(105)
+            ->setSpeed(78)
             ->setImage("https://archives.bulbagarden.net/media/upload/0/02/009Blastoise.png")
-            ->setType("Water");
+            ->setType("Water")
+            ->setNumberPokedex(9);
         $manager->persist($blastoise);
+
 
         $venusaur = new Pokemon();
         $venusaur
             ->setName("Venusaur")
-            ->setAttack(55)
-            ->setLife(130)
-            ->setDefense(70)
-            ->setSpeed(40)
+            ->setAttack(100)
+            ->setLife(80)
+            ->setDefense(91)
+            ->setSpeed(80)
             ->setImage("https://archives.bulbagarden.net/media/upload/a/ae/003Venusaur.png")
-            ->setType("Grass");
+            ->setType("Grass")
+            ->setNumberPokedex(3);
         $manager->persist($venusaur);
 
         $manager->flush();
