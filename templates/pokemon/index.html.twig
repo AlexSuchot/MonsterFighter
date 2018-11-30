@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello {{ controller_name }}!{% endblock %}
+
+{% block body %}
+
+    <div>
+        {% for pokemon in pokemons %}
+            <p>{{ pokemon.name }}</p>
+            <img width="120px" src="{{ pokemon.image }}">
+        {% endfor %}
+    </div>
+{% endblock %}
