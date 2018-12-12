@@ -5,11 +5,15 @@
 {% block body %}
 
     <div>
-        {% for pokemon in pokemons %}
+        {#{% for pokemon in pokemons %}
             <p>{{ pokemon.name }}</p>
             <img width="120px" src="{{ pokemon.image }}">
+            <img src="{{ pokemon.icon }}">
+        {% endfor %}#}
+
+        {% for pokemon in pokemon %}
+            <p>{{ pokemon.name }}</p>
+            <img width="120px" src="{{ pokemon.icon }}">
         {% endfor %}
-        <p> {{ trainer.getName() }}</p>
-        <p> {{ trainer.getTeam() }}</p>
     </div>
 {% endblock %}

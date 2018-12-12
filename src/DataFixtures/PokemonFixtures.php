@@ -20,7 +20,7 @@ class PokemonFixtures extends Fixture
             ->setDefense(81)
             ->setSpeed(100)
             ->setImage("assets/images/Charizard.png")
-            ->setIcone("assets/icones/Charizard_icon.png")
+            ->setIcon("assets/icones/Charizard_icon.png")
             ->setType("Fire")
             ->setNumberPokedex(6);
         $manager->persist($charizard);
@@ -33,7 +33,7 @@ class PokemonFixtures extends Fixture
             ->setDefense(105)
             ->setSpeed(78)
             ->setImage("assets/images/Blastoise.png")
-            ->setIcone("assets/icones/Blastoise_icon.png")
+            ->setIcon("assets/icones/Blastoise_icon.png")
             ->setType("Water")
             ->setNumberPokedex(9);
         $manager->persist($blastoise);
@@ -47,7 +47,7 @@ class PokemonFixtures extends Fixture
             ->setDefense(91)
             ->setSpeed(80)
             ->setImage("assets/images/Venusaur.png")
-            ->setIcone("assets/icones/Venusaur_icon.png")
+            ->setIcon("assets/icones/Venusaur_icon.png")
             ->setType("Grass")
             ->setNumberPokedex(3);
         $manager->persist($venusaur);

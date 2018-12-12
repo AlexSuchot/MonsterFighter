@@ -6,6 +6,7 @@ use App\Classes\Trainer;
 use App\Entity\Pokemon;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
+use App\Repository\PokemonRepository;
 
 class PokemonController extends AbstractController
 {
@@ -15,14 +16,14 @@ class PokemonController extends AbstractController
     public function index()
     {
         $repo = $this->getDoctrine()->getRepository(Pokemon::class);
-        $pokemon = $repo->findAll();
-        $pokemons = $repo->find(rand(1,3));
-        $trainer = new Trainer("coucou",$pokemons);
+        //$pokemons = $repo->findAll();
+        $pokemon = $repo->findByNumberPokedex(rand(1,3));
+        $trainer = new Trainer($pokemon,$pokemon);
 
 
         return $this->render('pokemon/index.html.twig', [
-            'controller_name' => 'PokemonController', 'pokemons' => $pokemon,
-            'trainer' => $trainer, 'pokemon' => $pokemons
+            'controller_name' => 'PokemonController',
+            'trainer' => $trainer, 'pokemon' => $pokemon
         ]);
     }
 

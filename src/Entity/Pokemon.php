@@ -59,7 +59,34 @@ class Pokemon
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $icone;
+    private $icon;
+
+    /**
+     * Pokemon constructor.
+     * @param $id
+     * @param $numberPokedex
+     * @param $name
+     * @param $type
+     * @param $life
+     * @param $attack
+     * @param $defense
+     * @param $speed
+     * @param $image
+     * @param $icon
+     */
+    public function __construct($id, $numberPokedex, $name, $type, $life, $attack, $defense, $speed, $image, $icon)
+    {
+        $this->id = $id;
+        $this->numberPokedex = $numberPokedex;
+        $this->name = $name;
+        $this->type = $type;
+        $this->life = $life;
+        $this->attack = $attack;
+        $this->defense = $defense;
+        $this->speed = $speed;
+        $this->image = $image;
+        $this->icon = $icon;
+    }
 
     public function getId(): ?int
     {
@@ -162,14 +189,14 @@ class Pokemon
         return $this;
     }
 
-    public function getIcone() : ?string
+    public function getIcon() : ?string
     {
-        return $this->icone;
+        return $this->icon;
     }
 
-    public function setIcone(string $icone) : self
+    public function setIcon(string $icon) : self
     {
-        $this->icone = $icone;
+        $this->icon = $icon;
 
         return $this;
     }
