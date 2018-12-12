@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello {{ controller_name }}!{% endblock %}
+
+{% block body %}
+<div class="container">
+    <input class="searchbar" type="search" name="search" placeholder="Search something ...">
+    <table class="table">
+        <thead class="tb-head">
+            <tr>
+                <th class="tb-header">Numéro</th>
+                <th class="tb-header">Image</th>
+                <th class="tb-header">Nom</th>
+                <th class="tb-header">Type</th>
+            </tr>
+        </thead>
+        <tbody class="tb-body">
+            <tr>
+                <td class="tb-data">1</td>
+                <td class="tb-data"><img class="thumbnail" src="https://www.pokemontrash.com/pokedex/images/minixy/001.png"
+                        alt=""></td>
+                <td class="tb-data">Bulbizarre</td>
+                <td class="tb-data">Plante</td>
+            </tr>
+            <tr>
+                <td class="tb-data">2</td>
+                <td class="tb-data"><img class="thumbnail" src="https://www.pokemontrash.com/pokedex/images/minixy/002.png"
+                        alt=""></td>
+                <td class="tb-data">Herbizarre</td>
+                <td class="tb-data">Plante</td>
+            </tr>
+            <tr>
+                <td class="tb-data">3</td>
+                <td class="tb-data"><img class="thumbnail" src="https://www.pokemontrash.com/pokedex/images/minixy/003.png"
+                        alt=""></td>
+                <td class="tb-data">Florizarre</td>
+                <td class="tb-data">Plante</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}

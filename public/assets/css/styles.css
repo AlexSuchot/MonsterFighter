@@ -1,0 +1,212 @@
+        @import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #eeeeee;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1280px;
+            height: 100%;
+            margin: 100px auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            align-content: center;
+        }
+
+        /* Page Pokedex */
+
+        .searchbar {
+            width: 480px;
+            height: 50px;
+            margin-bottom: 200px;
+            padding: 10px 10px 10px 30px;
+            border: 10px solid #ffffff;
+            border-radius: 10px;
+            background-image: url(../icons/magnify.svg);
+            background-repeat: no-repeat;
+            background-position: left;
+            background-origin: padding-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .searchbar::placeholder {
+            text-align: left;
+        }
+
+        .searchbar:focus {
+            outline: none;
+        }
+
+        .table {
+            width: 100%;
+            line-height: 32px;
+            text-align: center;
+            vertical-align: middle;
+            border-collapse: separate;
+            border-spacing: 0px 10px;
+        }
+
+        .tb-head tr:first-child th:first-child {
+            border-bottom-left-radius: 10px;
+            border-top-left-radius: 10px;
+        }
+
+        .tb-head tr:first-child th:last-child {
+            border-bottom-right-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .tb-header {
+            padding: 10px;
+            border: 1px solid #bbbbbb;
+            color: white;
+            background-color: #bbbbbb;
+            opacity: 1;
+            transition: opacity .5s;
+        }
+
+        .tb-header:hover {
+            cursor: pointer;
+            opacity: .6;
+        }
+
+        .tb-body tr td:first-child {
+            border-bottom-left-radius: 10px;
+            border-top-left-radius: 10px;
+        }
+
+        .tb-body tr td:last-child {
+            border-bottom-right-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .tb-data {
+            padding: 10px;
+            border: 1px solid #ffffff;
+            background-color: #ffffff;
+            opacity: 1;
+            transition: opacity .5s, color .5s;
+        }
+
+        .tb-data:hover {
+            opacity: .5;
+            color: #1B95E0;
+        }
+
+        .thumbnail {
+            height: 100%;
+            vertical-align: middle;
+        }
+
+        /* Page Item*/
+
+        .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            border-radius: 10px;
+            background-color: #ffffff;
+            color: #aaaaaa;
+            font-size: 1em;
+            transition: background-color .5s, color .5s;
+        }
+
+        .btn svg {
+            padding-right: 5px;
+        }
+
+        .btn svg path {
+            fill: #aaaaaa;
+            transition: fill .5s;
+        }
+
+        .btn:hover {
+            cursor: pointer;
+            background-color: #dddddd;
+            color: #ffffff;
+        }
+
+        .btn:hover svg path {
+            fill: #ffffff;
+        }
+
+        .btn-back {
+            width: 110px;
+            align-self: flex-start;
+            padding: 10px;
+            text-align: end;
+            text-decoration: none;
+        }
+
+        .item-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .item-info {
+            width: 80%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .name {
+            margin-bottom: 50px;
+        }
+
+        .item-stats {
+            border-collapse: separate;
+            border-spacing: 15px;
+        }
+
+        .item-stats tr th {
+            text-align: start;
+            padding: 0px 10px;
+        }
+
+        .item-stats tr td {
+            text-align: end;
+            padding: 0px 10px;
+        }
+
+        .item-stage {
+            margin-top: 50px;
+            width: 100%;
+        }
+
+        .item-stage tr td a {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        @media screen and (max-width: 480px) {
+            .searchbar {
+                width: 100%;
+            }
+
+            .container {
+                width: 100%;
+            }
+
+            .item-info {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
