@@ -5,12 +5,11 @@
 {% block body %}
 
     <div>
-        {% for i in 0..5 %}
         {% for pokemons in pokemons %}
             <p>{{ pokemons.name }}</p>
             <img width="120px" src="{{ pokemons.image }}">
             <img src="{{ pokemons.icon }}">
         {% endfor %}
-        {% endfor %}
+
     </div>
 {% endblock %}

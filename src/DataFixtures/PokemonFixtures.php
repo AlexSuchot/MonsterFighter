@@ -327,7 +327,7 @@ class PokemonFixtures extends Fixture
             ->setDefense(71)
             ->setSpeed(60)
             ->setImage("assets/images/Ivysaur.png")
-            ->setIcon("assets/icones/Ivysaur.png")
+            ->setIcon("assets/icones/Ivysaur_icon.png")
             ->setType("Grass")
             ->setNumberPokedex(2);
         $manager->persist($ivysaur);

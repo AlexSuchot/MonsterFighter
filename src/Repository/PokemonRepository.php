@@ -38,7 +38,7 @@ class PokemonRepository extends ServiceEntityRepository
         return $this->createQueryBuilder('p')
             ->andWhere('p.numberPokedex = :val')
             ->setParameter('val', $numberPokedex)
-            ->setMaxResults(6)
+            ->setMaxResults(1)
             ->getQuery()
             ->getResult()
             ;
