@@ -61,7 +61,7 @@ class PokemonFixtures extends Fixture
             ->setDefense(35)
             ->setSpeed(90)
             ->setImage("assets/images/Abra.png")
-            ->setIcone("assets/icones/Abra_icon.png")
+            ->setIcon("assets/icones/Abra_icon.png")
             ->setType("Psychic")
             ->setNumberPokedex(63);
         $manager->persist($abra);
@@ -75,7 +75,7 @@ class PokemonFixtures extends Fixture
             ->setDefense(50)
             ->setSpeed(105)
             ->setImage("assets/images/Kadabra.png")
-            ->setIcone("assets/icones/Kadabra_icon.png")
+            ->setIcon("assets/icones/Kadabra_icon.png")
             ->setType("Psychic")
             ->setNumberPokedex(64);
         $manager->persist($kadabra);
@@ -89,7 +89,7 @@ class PokemonFixtures extends Fixture
             ->setDefense(70)
             ->setSpeed(120)
             ->setImage("assets/images/Alakazam.png")
-            ->setIcone("assets/icones/Alakazam_icon.png")
+            ->setIcon("assets/icones/Alakazam_icon.png")
             ->setType("Psychic")
             ->setNumberPokedex(65);
         $manager->persist($alakazam);
@@ -103,7 +103,7 @@ class PokemonFixtures extends Fixture
             ->setDefense(70)
             ->setSpeed(130)
             ->setImage("assets/images/Aerodactyl.png")
-            ->setIcone("assets/icones/Aerodactyl_icon.png")
+            ->setIcon("assets/icones/Aerodactyl_icon.png")
             ->setType("Rock")
             ->setNumberPokedex(142);
         $manager->persist($aerodactyl);
@@ -117,7 +117,7 @@ class PokemonFixtures extends Fixture
             ->setDefense(49)
             ->setSpeed(55)
             ->setImage("assets/images/Ekans.png")
-            ->setIcone("assets/icones/Ekans_icon.png")
+            ->setIcon("assets/icones/Ekans_icon.png")
             ->setType("Poison")
             ->setNumberPokedex(23);
         $manager->persist($ekans);
@@ -131,7 +131,7 @@ class PokemonFixtures extends Fixture
             ->setDefense(74)
             ->setSpeed(80)
             ->setImage("assets/images/Arbok.png")
-            ->setIcone("assets/icones/Arbok_icon.png")
+            ->setIcon("assets/icones/Arbok_icon.png")
             ->setType("Poison")
             ->setNumberPokedex(24);
         $manager->persist($arbok);
@@ -145,7 +145,7 @@ class PokemonFixtures extends Fixture
             ->setDefense(47)
             ->setSpeed(60)
             ->setImage("assets/images/Growlithe.png")
-            ->setIcone("assets/icones/Growlithe_icon.png")
+            ->setIcon("assets/icones/Growlithe_icon.png")
             ->setType("Fire")
             ->setNumberPokedex(58);
         $manager->persist($growlithe);
@@ -159,7 +159,7 @@ class PokemonFixtures extends Fixture
             ->setDefense(80)
             ->setSpeed(95)
             ->setImage("assets/images/Arcanine.png")
-            ->setIcone("assets/icones/Arcanine_icon.png")
+            ->setIcon("assets/icones/Arcanine_icon.png")
             ->setType("Fire")
             ->setNumberPokedex(59);
         $manager->persist($arcanine);
@@ -173,7 +173,7 @@ class PokemonFixtures extends Fixture
             ->setDefense(87)
             ->setSpeed(90)
             ->setImage("assets/images/Moltres.png")
-            ->setIcone("assets/icones/Moltres_icon.png")
+            ->setIcon("assets/icones/Moltres_icon.png")
             ->setType("Fire")
             ->setNumberPokedex(146);
         $manager->persist($moltres);
@@ -187,7 +187,7 @@ class PokemonFixtures extends Fixture
             ->setDefense(112)
             ->setSpeed(85)
             ->setImage("assets/images/Articuno.png")
-            ->setIcone("assets/icones/Articuno_icon.png")
+            ->setIcon("assets/icones/Articuno_icon.png")
             ->setType("Ice")
             ->setNumberPokedex(144);
         $manager->persist($articuno);
@@ -201,7 +201,7 @@ class PokemonFixtures extends Fixture
             ->setDefense(25)
             ->setSpeed(50)
             ->setImage("assets/images/Weedle.png")
-            ->setIcone("assets/icones/Weedle_icon.png")
+            ->setIcon("assets/icones/Weedle_icon.png")
             ->setType("Bug")
             ->setNumberPokedex(13);
         $manager->persist($weedle);
@@ -215,7 +215,7 @@ class PokemonFixtures extends Fixture
             ->setDefense(37)
             ->setSpeed(35)
             ->setImage("assets/images/Kakuna.png")
-            ->setIcone("assets/icones/Kakuna_icon.png")
+            ->setIcon("assets/icones/Kakuna_icon.png")
             ->setType("Bug")
             ->setNumberPokedex(14);
         $manager->persist($kakuna);
@@ -229,7 +229,7 @@ class PokemonFixtures extends Fixture
             ->setDefense(60)
             ->setSpeed(75)
             ->setImage("assets/images/Weedle.png")
-            ->setIcone("assets/icones/Weedle_icon.png")
+            ->setIcon("assets/icones/Weedle_icon.png")
             ->setType("Bug")
             ->setNumberPokedex(15);
         $manager->persist($beedrill);
@@ -243,7 +243,7 @@ class PokemonFixtures extends Fixture
             ->setDefense(32)
             ->setSpeed(40)
             ->setImage("assets/images/Bellsprout.png")
-            ->setIcone("assets/icones/Bellsprout_icon.png")
+            ->setIcon("assets/icones/Bellsprout_icon.png")
             ->setType("Grass")
             ->setNumberPokedex(69);
         $manager->persist($bellsprout);
@@ -257,7 +257,7 @@ class PokemonFixtures extends Fixture
             ->setDefense(47)
             ->setSpeed(55)
             ->setImage("assets/images/Weepinbell.png")
-            ->setIcone("assets/icones/Weepinbell_icon.png")
+            ->setIcon("assets/icones/Weepinbell_icon.png")
             ->setType("Grass")
             ->setNumberPokedex(70);
         $manager->persist($weepinbell);
@@ -271,7 +271,7 @@ class PokemonFixtures extends Fixture
             ->setDefense(67)
             ->setSpeed(70)
             ->setImage("assets/images/Victreebel.png")
-            ->setIcone("assets/icones/Victreebel_icon.png")
+            ->setIcon("assets/icones/Victreebel_icon.png")
             ->setType("Grass")
             ->setNumberPokedex(71);
         $manager->persist($victreebel);
@@ -285,7 +285,7 @@ class PokemonFixtures extends Fixture
             ->setDefense(64)
             ->setSpeed(43)
             ->setImage("assets/images/Squirtle.png")
-            ->setIcone("assets/icones/Squirtle_icon.png")
+            ->setIcon("assets/icones/Squirtle_icon.png")
             ->setType("Eau")
             ->setNumberPokedex(7);
         $manager->persist($squirtle);
@@ -299,7 +299,7 @@ class PokemonFixtures extends Fixture
             ->setDefense(80)
             ->setSpeed(58)
             ->setImage("assets/images/Wartortle.png")
-            ->setIcone("assets/icones/Wartortle_icon.png")
+            ->setIcon("assets/icones/Wartortle_icon.png")
             ->setType("Water")
             ->setNumberPokedex(8);
         $manager->persist($wartortle);
@@ -313,7 +313,7 @@ class PokemonFixtures extends Fixture
             ->setDefense(57)
             ->setSpeed(45)
             ->setImage("assets/images/Bulbasaur.png")
-            ->setIcone("assets/icones/Bulbasaur_icon.png")
+            ->setIcon("assets/icones/Bulbasaur_icon.png")
             ->setType("Grass")
             ->setNumberPokedex(1);
         $manager->persist($bulbasaur);
@@ -327,7 +327,7 @@ class PokemonFixtures extends Fixture
             ->setDefense(71)
             ->setSpeed(60)
             ->setImage("assets/images/Ivysaur.png")
-            ->setIcone("assets/icones/Ivysaur.png")
+            ->setIcon("assets/icones/Ivysaur.png")
             ->setType("Grass")
             ->setNumberPokedex(2);
         $manager->persist($ivysaur);
@@ -341,7 +341,7 @@ class PokemonFixtures extends Fixture
             ->setDefense(27)
             ->setSpeed(45)
             ->setImage("assets/images/Caterpie.png")
-            ->setIcone("assets/icones/Caterpie_icon.png")
+            ->setIcon("assets/icones/Caterpie_icon.png")
             ->setType("Bug")
             ->setNumberPokedex(10);
         $manager->persist($caterpie);
@@ -355,7 +355,7 @@ class PokemonFixtures extends Fixture
             ->setDefense(40)
             ->setSpeed(30)
             ->setImage("assets/images/Metapod.png")
-            ->setIcone("assets/icones/Metapod_icon.png")
+            ->setIcon("assets/icones/Metapod_icon.png")
             ->setType("Bug")
             ->setNumberPokedex(11);
         $manager->persist($metapod);
@@ -369,7 +369,7 @@ class PokemonFixtures extends Fixture
             ->setDefense(65)
             ->setSpeed(70)
             ->setImage("assets/images/Butterfree.png")
-            ->setIcone("assets/icones/Butterfree_icon.png")
+            ->setIcon("assets/icones/Butterfree_icon.png")
             ->setType("Bug")
             ->setNumberPokedex(12);
         $manager->persist($butterfree);
@@ -377,13 +377,13 @@ class PokemonFixtures extends Fixture
 
         $charmender = new Pokemon();
         $charmender
-            ->setName("Charmender")
+            ->setName("Charmander")
             ->setAttack(60)
             ->setLife(39)
             ->setDefense(46)
             ->setSpeed(65)
-            ->setImage("assets/images/Charmender.png")
-            ->setIcone("assets/icones/Charmender_icon.png")
+            ->setImage("assets/images/Charmander.png")
+            ->setIcon("assets/icones/Charmander_icon.png")
             ->setType("Fire")
             ->setNumberPokedex(4);
         $manager->persist($charmender);
@@ -397,7 +397,7 @@ class PokemonFixtures extends Fixture
             ->setDefense(61)
             ->setSpeed(80)
             ->setImage("assets/images/Charmeleon.png")
-            ->setIcone("assets/icones/Charmeleon_icon.png")
+            ->setIcon("assets/icones/Charmeleon_icon.png")
             ->setType("Fire")
             ->setNumberPokedex(5);
         $manager->persist($charmeleon);
@@ -411,7 +411,7 @@ class PokemonFixtures extends Fixture
             ->setDefense(90)
             ->setSpeed(130)
             ->setImage("assets/images/Mewtwo.png")
-            ->setIcone("assets/icones/Mewtwo_icon.png")
+            ->setIcon("assets/icones/Mewtwo_icon.png")
             ->setType("Psychic")
             ->setNumberPokedex(150);
         $manager->persist($mewtwo);

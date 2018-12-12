@@ -62,33 +62,6 @@ class Pokemon
      */
     private $icon;
 
-    /**
-     * Pokemon constructor.
-     * @param $id
-     * @param $numberPokedex
-     * @param $name
-     * @param $type
-     * @param $life
-     * @param $attack
-     * @param $defense
-     * @param $speed
-     * @param $image
-     * @param $icon
-     */
-    public function __construct($id, $numberPokedex, $name, $type, $life, $attack, $defense, $speed, $image, $icon)
-    {
-        $this->id = $id;
-        $this->numberPokedex = $numberPokedex;
-        $this->name = $name;
-        $this->type = $type;
-        $this->life = $life;
-        $this->attack = $attack;
-        $this->defense = $defense;
-        $this->speed = $speed;
-        $this->image = $image;
-        $this->icon = $icon;
-    }
-
     public function getId(): ?int
     {
         return $this->id;
