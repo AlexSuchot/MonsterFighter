@@ -9,5 +9,7 @@
             <p>{{ pokemon.name }}</p>
             <img width="120px" src="{{ pokemon.image }}">
         {% endfor %}
+        <p> {{ trainer.getName() }}</p>
+        <p> {{ trainer.getTeam() }}</p>
     </div>
 {% endblock %}
