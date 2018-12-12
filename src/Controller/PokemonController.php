@@ -19,15 +19,13 @@ class PokemonController extends AbstractController
 
     public function index()
     {
-
-        $repo = $this->getDoctrine()->getRepository(Pokemon::class);
-        $getRepository = $this->get(PokemonRepository::class);
-        //$pokemons = $repo->findAll();
-        $pokemon = $getRepository->findByNumberPokedex(rand(1, 3));
+        $repository = $this->getDoctrine()->getRepository(Pokemon::class);
+        $pokemon = $repository->findByNumberPokedex(rand(3,9));
+        $pokemons = $repository->findTeamByNumberPokedex(rand(3, 9));
 
         return $this->render('pokemon/index.html.twig', [
             'controller_name' => 'PokemonController',
-            'pokemon' => $pokemon
+            'pokemon' => $pokemon[0], 'pokemons' => $pokemons
         ]);
     }
 

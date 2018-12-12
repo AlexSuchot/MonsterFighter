@@ -33,4 +33,14 @@ class PokemonRepository extends ServiceEntityRepository
             ->getResult()
         ;
     }
+    public function findTeamByNumberPokedex($numberPokedex)
+    {
+        return $this->createQueryBuilder('p')
+            ->andWhere('p.numberPokedex = :val')
+            ->setParameter('val', $numberPokedex)
+            ->setMaxResults(6)
+            ->getQuery()
+            ->getResult()
+            ;
+    }
 }
