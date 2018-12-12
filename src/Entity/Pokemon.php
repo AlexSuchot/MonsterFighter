@@ -56,6 +56,11 @@ class Pokemon
      */
     private $image;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $icone;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -153,6 +158,18 @@ class Pokemon
     public function setImage(string $image): self
     {
         $this->image = $image;
+
+        return $this;
+    }
+
+    public function getIcone() : ?string
+    {
+        return $this->icone;
+    }
+
+    public function setIcone(string $icone) : self
+    {
+        $this->icone = $icone;
 
         return $this;
     }
