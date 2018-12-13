@@ -417,6 +417,146 @@ class PokemonFixtures extends Fixture
         $manager->persist($mewtwo);
 
 
+        $cloyster = new Pokemon();
+        $cloyster
+            ->setName("Cloyster")
+            ->setAttack(95)
+            ->setLife(50)
+            ->setDefense(92)
+            ->setSpeed(70)
+            ->setImage("assets/images/Cloyster.png")
+            ->setIcon("assets/icones/Cloyster_icon.png")
+            ->setType("Water")
+            ->setNumberPokedex(91);
+        $manager->persist($cloyster);
+
+
+        $dewgong = new Pokemon();
+        $dewgong
+            ->setName("Dewgong")
+            ->setAttack(70)
+            ->setLife(90)
+            ->setDefense(87)
+            ->setSpeed(70)
+            ->setImage("assets/images/Dewgong.png")
+            ->setIcon("assets/icones/Dewgong_icon.png")
+            ->setType("Water")
+            ->setNumberPokedex(87);
+        $manager->persist($dewgong);
+
+
+        $dragonair = new Pokemon();
+        $dragonair
+            ->setName("Dragonair")
+            ->setAttack(84)
+            ->setLife(61)
+            ->setDefense(67)
+            ->setSpeed(70)
+            ->setImage("assets/images/Dragonair.png")
+            ->setIcon("assets/icones/Dragonair_icon.png")
+            ->setType("Dragon")
+            ->setNumberPokedex(148);
+        $manager->persist($dragonair);
+
+
+        $dragonite = new Pokemon();
+        $dragonite
+            ->setName("Dragonite")
+            ->setAttack(134)
+            ->setLife(91)
+            ->setDefense(97)
+            ->setSpeed(80)
+            ->setImage("assets/images/Dragonite.png")
+            ->setIcon("assets/icones/Dragonite_icon.png")
+            ->setType("Dragon")
+            ->setNumberPokedex(149);
+        $manager->persist($dragonite);
+
+
+        $dratini = new Pokemon();
+        $dratini
+            ->setName("Dratini")
+            ->setAttack(64)
+            ->setLife(41)
+            ->setDefense(47)
+            ->setSpeed(50)
+            ->setImage("assets/images/Dratini.png")
+            ->setIcon("assets/icones/Dratini_icon.png")
+            ->setType("Dragon")
+            ->setNumberPokedex(147);
+        $manager->persist($dratini);
+
+
+        $drowzee = new Pokemon();
+        $drowzee
+            ->setName("Drowzee")
+            ->setAttack(48)
+            ->setLife(60)
+            ->setDefense(67)
+            ->setSpeed(42)
+            ->setImage("assets/images/Drowzee.png")
+            ->setIcon("assets/icones/Drowzee_icon.png")
+            ->setType("Psychic")
+            ->setNumberPokedex(96);
+        $manager->persist($drowzee);
+
+
+        $exeggcute = new Pokemon();
+        $exeggcute
+            ->setName("Exeggcute")
+            ->setAttack(60)
+            ->setLife(60)
+            ->setDefense(62)
+            ->setSpeed(40)
+            ->setImage("assets/images/Exeggcute.png")
+            ->setIcon("assets/icones/Exeggcute_icon.png")
+            ->setType("Grass")
+            ->setNumberPokedex(102);
+        $manager->persist($exeggcute);
+
+
+        $exeggutor = new Pokemon();
+        $exeggutor
+            ->setName("Exeggutor")
+            ->setAttack(125)
+            ->setLife(95)
+            ->setDefense(80)
+            ->setSpeed(55)
+            ->setImage("assets/images/Exeggutor.png")
+            ->setIcon("assets/icones/Exeggutor_icon.png")
+            ->setType("Grass")
+            ->setNumberPokedex(103);
+        $manager->persist($exeggutor);
+
+
+        $flareon = new Pokemon();
+        $flareon
+            ->setName("Flareon")
+            ->setAttack(130)
+            ->setLife(65)
+            ->setDefense(85)
+            ->setSpeed(65)
+            ->setImage("assets/images/Flareon.png")
+            ->setIcon("assets/icones/Flareon_icon.png")
+            ->setType("Fire")
+            ->setNumberPokedex(136);
+        $manager->persist($flareon);
+
+
+        $geodude = new Pokemon();
+        $geodude
+            ->setName("Geodude")
+            ->setAttack(80)
+            ->setLife(40)
+            ->setDefense(65)
+            ->setSpeed(20)
+            ->setImage("assets/images/Geodude.png")
+            ->setIcon("assets/icones/Geodude_icon.png")
+            ->setType("Rock")
+            ->setNumberPokedex(74);
+        $manager->persist($geodude);
+
+
         $manager->flush();
     }
 }
