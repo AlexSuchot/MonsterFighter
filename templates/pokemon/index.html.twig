@@ -5,9 +5,11 @@
 {% block body %}
 
     <div>
-        {% for pokemon in pokemons %}
-            <p>{{ pokemon.name }}</p>
-            <img width="120px" src="{{ pokemon.image }}">
+        {% for pokemons in pokemons %}
+            <p>{{ pokemons.name }}</p>
+            <img width="120px" src="{{ pokemons.image }}">
+            <img src="{{ pokemons.icon }}">
         {% endfor %}
+
     </div>
 {% endblock %}
