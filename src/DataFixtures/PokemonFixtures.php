@@ -290,7 +290,6 @@ class PokemonFixtures extends Fixture
             ->setNumberPokedex(7);
         $manager->persist($squirtle);
 
-
         $wartortle = new Pokemon();
         $wartortle
             ->setName("Wartortle")

@@ -23,16 +23,6 @@ class PokemonRepository extends ServiceEntityRepository
      * @param $numberPokedex
      * @return mixed
      */
-    public function findByNumberPokedex($numberPokedex)
-    {
-        return $this->createQueryBuilder('p')
-            ->andWhere('p.numberPokedex = :val')
-            ->setParameter('val', $numberPokedex)
-            ->setMaxResults(1)
-            ->getQuery()
-            ->getResult()
-        ;
-    }
     public function findTeamByNumberPokedex($numberPokedex)
     {
         return $this->createQueryBuilder('p')
