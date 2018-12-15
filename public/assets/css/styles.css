@@ -89,17 +89,21 @@
             border-top-right-radius: 10px;
         }
 
-        .tb-data {
-            padding: 10px;
+        .tb-body tr {
             border: 1px solid #ffffff;
             background-color: #ffffff;
             opacity: 1;
             transition: opacity .5s, color .5s;
         }
 
-        .tb-data:hover {
+        .tb-body tr:hover {
+            cursor: pointer;
             opacity: .5;
             color: #1B95E0;
+        }
+
+        .tb-data {
+            padding: 10px;
         }
 
         .thumbnail {
