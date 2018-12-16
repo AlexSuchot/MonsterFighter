@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+{% block title %}Inscription{% endblock %}
+
+{% block body %}
+<link rel="stylesheet" href="../assets/connection.css"/>
+
+<div class="container-connection">
+    <a href="{{path('connexion')}}"><img src="../assets/images/pokeball.png"></a>
+    <h1>Inscription</h1>
+        {{ form_start(form) }}
+        {{ form_row(form.pseudo, {'attr':{'placeholder':'Pseudo', 'class':'flexCol'}}) }}
+        {{ form_row(form.email, {'attr':{'placeholder':'Email', 'class':'flexCol'}}) }}
+        {{ form_row(form.password, {'label': 'Mot de passe', 'attr':{'placeholder':'Mot de passe', 'class':'flexCol'}}) }}
+        {{ form_row(form.confirm_password, {'label': 'Confirmer mot de passe', 'attr':{'placeholder':'Répétez votre mot de passe', 'class':'flexCol'}}) }}       
+        <button type="submit">Enregistrer</button>
+        {{ form_end(form) }}
+    {# <a href="">Mot de passe oublié ?</a> #}
+    <a href="{{path('connexion')}}">Connexion</a>
+<div>
+{% endblock %}

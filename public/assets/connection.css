@@ -4,24 +4,23 @@
     align-items: center;
     flex-direction: column;
     width: 100%;
-    height: 90vh;
+    height: 100vh;
 }
 
-img {
-    margin: 0 0 10px 0;
+.flexCol {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0 15px 0;
 }
 
 h1 {
-    margin: 0;
+    margin: 10px 0 10px 0;
 }
 
 form {
     display: flex;
     flex-direction: column;
-}
-
-label {
-    margin: 15px 0 5px 0;
+    width: 300px;
 }
 
 input {
@@ -29,6 +28,7 @@ input {
     background-color: transparent;
     color: black;
     padding: 8px;
+    width: 280px;
 }
 
 input:focus {
@@ -39,7 +39,7 @@ button {
     background-color: transparent;
     border: 2px solid black;
     color: black;
-    margin: 20px 0 0 0;
+    margin: 5px 0 0 0;
     padding: 8px;
 }
 
