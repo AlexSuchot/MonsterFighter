@@ -20,7 +20,9 @@ class PokemonRepository extends ServiceEntityRepository
     }
 
     /**
-     * @param $numberPokedex
+     * @param $keyword
+     * @param $col
+     * @param $order
      * @return mixed
      */
     public function findTeamByNumberPokedex($numberPokedex)
@@ -33,4 +35,20 @@ class PokemonRepository extends ServiceEntityRepository
             ->getResult()
             ;
     }
+
+    public function research($keyword, $col, $order)
+    {
+        return $this->createQueryBuilder('a')
+            ->andWhere('a.numberPokedex LIKE :val')
+            ->orWhere('a.name LIKE :val')
+            ->orWhere('a.type LIKE :val')
+            ->orWhere('a.life LIKE :val')
+            ->orWhere('a.attack LIKE :val')
+            ->orWhere('a.defense LIKE :val')
+            ->orWhere('a.speed LIKE :val')
+            ->setParameter('val', $keyword.'%')
+            ->orderBy('a.'.$col, $order)
+            ->getQuery()
+            ->getResult();
+    } 
 }
