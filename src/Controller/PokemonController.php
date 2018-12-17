@@ -49,13 +49,7 @@ class PokemonController extends AbstractController
 
     public function generateTeam()
     {
-        $repository = $this->getDoctrine()->getRepository(Pokemon::class);
-        $arrayPokemon = array();
-        for ($i = 0; $i < 6; $i++) {
-            $pokemons = $repository->findTeamByNumberPokedex(rand(1,12));
-            array_push($arrayPokemon, $pokemons[0]);
-        }
-        return $arrayPokemon;
+
     }
 
     /**
@@ -64,16 +58,7 @@ class PokemonController extends AbstractController
 
     public function attack(Pokemon $attaquant, Pokemon $cible, Request $request)
     {
-        $repository = $this->getDoctrine()->getRepository(Pokemon::class);
-        $dégat = $attaquant->getAttack() - $cible->getDefense();
-        if ($dégat < 0) {
-            $dégat = 10;
-        }
-        if ($dégat < 10) {
-            $dégat = 20;
-        }
-        $result = $cible->getLife() - $dégat;
-        $life = $cible->setLife($result);
+
     }
 
     public function pokemonKo()
@@ -82,7 +67,12 @@ class PokemonController extends AbstractController
 
     }
 
-    public function playerVictory(Trainer $trainer)
+    public function playerVictory()
+    {
+
+    }
+
+    public function enemyVictory()
     {
 
     }

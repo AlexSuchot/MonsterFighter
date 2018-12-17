@@ -19,7 +19,7 @@ class PokemonFixtures extends Fixture
             ->setLife(78)
             ->setDefense(81)
             ->setSpeed(100)
-            ->setImage("assets/images/Charizard.png")
+            ->setImage("../assets/images/Charizard.png")
             ->setIcon("assets/icones/Charizard_icon.png")
             ->setType("Fire")
             ->setNumberPokedex(6);
@@ -32,7 +32,7 @@ class PokemonFixtures extends Fixture
             ->setLife(79)
             ->setDefense(105)
             ->setSpeed(78)
-            ->setImage("assets/images/Blastoise.png")
+            ->setImage("../assets/images/Blastoise.png")
             ->setIcon("assets/icones/Blastoise_icon.png")
             ->setType("Water")
             ->setNumberPokedex(9);
@@ -46,7 +46,7 @@ class PokemonFixtures extends Fixture
             ->setLife(80)
             ->setDefense(91)
             ->setSpeed(80)
-            ->setImage("assets/images/Venusaur.png")
+            ->setImage("../assets/images/Venusaur.png")
             ->setIcon("assets/icones/Venusaur_icon.png")
             ->setType("Grass")
             ->setNumberPokedex(3);
@@ -60,7 +60,7 @@ class PokemonFixtures extends Fixture
             ->setLife(25)
             ->setDefense(35)
             ->setSpeed(90)
-            ->setImage("assets/images/Abra.png")
+            ->setImage("../assets/images/Abra.png")
             ->setIcon("assets/icones/Abra_icon.png")
             ->setType("Psychic")
             ->setNumberPokedex(63);
@@ -74,7 +74,7 @@ class PokemonFixtures extends Fixture
             ->setLife(40)
             ->setDefense(50)
             ->setSpeed(105)
-            ->setImage("assets/images/Kadabra.png")
+            ->setImage("../assets/images/Kadabra.png")
             ->setIcon("assets/icones/Kadabra_icon.png")
             ->setType("Psychic")
             ->setNumberPokedex(64);
@@ -88,7 +88,7 @@ class PokemonFixtures extends Fixture
             ->setLife(55)
             ->setDefense(70)
             ->setSpeed(120)
-            ->setImage("assets/images/Alakazam.png")
+            ->setImage("../assets/images/Alakazam.png")
             ->setIcon("assets/icones/Alakazam_icon.png")
             ->setType("Psychic")
             ->setNumberPokedex(65);
@@ -102,7 +102,7 @@ class PokemonFixtures extends Fixture
             ->setLife(80)
             ->setDefense(70)
             ->setSpeed(130)
-            ->setImage("assets/images/Aerodactyl.png")
+            ->setImage("../assets/images/Aerodactyl.png")
             ->setIcon("assets/icones/Aerodactyl_icon.png")
             ->setType("Rock")
             ->setNumberPokedex(142);
@@ -116,7 +116,7 @@ class PokemonFixtures extends Fixture
             ->setLife(35)
             ->setDefense(49)
             ->setSpeed(55)
-            ->setImage("assets/images/Ekans.png")
+            ->setImage("../assets/images/Ekans.png")
             ->setIcon("assets/icones/Ekans_icon.png")
             ->setType("Poison")
             ->setNumberPokedex(23);
@@ -130,7 +130,7 @@ class PokemonFixtures extends Fixture
             ->setLife(60)
             ->setDefense(74)
             ->setSpeed(80)
-            ->setImage("assets/images/Arbok.png")
+            ->setImage("../assets/images/Arbok.png")
             ->setIcon("assets/icones/Arbok_icon.png")
             ->setType("Poison")
             ->setNumberPokedex(24);
@@ -144,7 +144,7 @@ class PokemonFixtures extends Fixture
             ->setLife(55)
             ->setDefense(47)
             ->setSpeed(60)
-            ->setImage("assets/images/Growlithe.png")
+            ->setImage("../assets/images/Growlithe.png")
             ->setIcon("assets/icones/Growlithe_icon.png")
             ->setType("Fire")
             ->setNumberPokedex(58);
@@ -158,7 +158,7 @@ class PokemonFixtures extends Fixture
             ->setLife(90)
             ->setDefense(80)
             ->setSpeed(95)
-            ->setImage("assets/images/Arcanine.png")
+            ->setImage("../assets/images/Arcanine.png")
             ->setIcon("assets/icones/Arcanine_icon.png")
             ->setType("Fire")
             ->setNumberPokedex(59);
@@ -172,7 +172,7 @@ class PokemonFixtures extends Fixture
             ->setLife(90)
             ->setDefense(87)
             ->setSpeed(90)
-            ->setImage("assets/images/Moltres.png")
+            ->setImage("../assets/images/Moltres.png")
             ->setIcon("assets/icones/Moltres_icon.png")
             ->setType("Fire")
             ->setNumberPokedex(146);
@@ -186,7 +186,7 @@ class PokemonFixtures extends Fixture
             ->setLife(90)
             ->setDefense(112)
             ->setSpeed(85)
-            ->setImage("assets/images/Articuno.png")
+            ->setImage("../assets/images/Articuno.png")
             ->setIcon("assets/icones/Articuno_icon.png")
             ->setType("Ice")
             ->setNumberPokedex(144);
@@ -200,7 +200,7 @@ class PokemonFixtures extends Fixture
             ->setLife(40)
             ->setDefense(25)
             ->setSpeed(50)
-            ->setImage("assets/images/Weedle.png")
+            ->setImage("../assets/images/Weedle.png")
             ->setIcon("assets/icones/Weedle_icon.png")
             ->setType("Bug")
             ->setNumberPokedex(13);
@@ -214,7 +214,7 @@ class PokemonFixtures extends Fixture
             ->setLife(45)
             ->setDefense(37)
             ->setSpeed(35)
-            ->setImage("assets/images/Kakuna.png")
+            ->setImage("../assets/images/Kakuna.png")
             ->setIcon("assets/icones/Kakuna_icon.png")
             ->setType("Bug")
             ->setNumberPokedex(14);
@@ -228,7 +228,7 @@ class PokemonFixtures extends Fixture
             ->setLife(65)
             ->setDefense(60)
             ->setSpeed(75)
-            ->setImage("assets/images/Weedle.png")
+            ->setImage("../assets/images/Weedle.png")
             ->setIcon("assets/icones/Weedle_icon.png")
             ->setType("Bug")
             ->setNumberPokedex(15);
@@ -242,7 +242,7 @@ class PokemonFixtures extends Fixture
             ->setLife(50)
             ->setDefense(32)
             ->setSpeed(40)
-            ->setImage("assets/images/Bellsprout.png")
+            ->setImage("../assets/images/Bellsprout.png")
             ->setIcon("assets/icones/Bellsprout_icon.png")
             ->setType("Grass")
             ->setNumberPokedex(69);
@@ -256,7 +256,7 @@ class PokemonFixtures extends Fixture
             ->setLife(65)
             ->setDefense(47)
             ->setSpeed(55)
-            ->setImage("assets/images/Weepinbell.png")
+            ->setImage("../assets/images/Weepinbell.png")
             ->setIcon("assets/icones/Weepinbell_icon.png")
             ->setType("Grass")
             ->setNumberPokedex(70);
@@ -270,7 +270,7 @@ class PokemonFixtures extends Fixture
             ->setLife(80)
             ->setDefense(67)
             ->setSpeed(70)
-            ->setImage("assets/images/Victreebel.png")
+            ->setImage("../assets/images/Victreebel.png")
             ->setIcon("assets/icones/Victreebel_icon.png")
             ->setType("Grass")
             ->setNumberPokedex(71);
@@ -284,7 +284,7 @@ class PokemonFixtures extends Fixture
             ->setLife(44)
             ->setDefense(64)
             ->setSpeed(43)
-            ->setImage("assets/images/Squirtle.png")
+            ->setImage("../assets/images/Squirtle.png")
             ->setIcon("assets/icones/Squirtle_icon.png")
             ->setType("Eau")
             ->setNumberPokedex(7);
@@ -297,7 +297,7 @@ class PokemonFixtures extends Fixture
             ->setLife(59)
             ->setDefense(80)
             ->setSpeed(58)
-            ->setImage("assets/images/Wartortle.png")
+            ->setImage("../assets/images/Wartortle.png")
             ->setIcon("assets/icones/Wartortle_icon.png")
             ->setType("Water")
             ->setNumberPokedex(8);
@@ -311,7 +311,7 @@ class PokemonFixtures extends Fixture
             ->setLife(45)
             ->setDefense(57)
             ->setSpeed(45)
-            ->setImage("assets/images/Bulbasaur.png")
+            ->setImage("../../assets/images/Bulbasaur.png")
             ->setIcon("assets/icones/Bulbasaur_icon.png")
             ->setType("Grass")
             ->setNumberPokedex(1);
@@ -325,7 +325,7 @@ class PokemonFixtures extends Fixture
             ->setLife(60)
             ->setDefense(71)
             ->setSpeed(60)
-            ->setImage("assets/images/Ivysaur.png")
+            ->setImage("../assets/images/Ivysaur.png")
             ->setIcon("assets/icones/Ivysaur_icon.png")
             ->setType("Grass")
             ->setNumberPokedex(2);
@@ -339,7 +339,7 @@ class PokemonFixtures extends Fixture
             ->setLife(45)
             ->setDefense(27)
             ->setSpeed(45)
-            ->setImage("assets/images/Caterpie.png")
+            ->setImage("../assets/images/Caterpie.png")
             ->setIcon("assets/icones/Caterpie_icon.png")
             ->setType("Bug")
             ->setNumberPokedex(10);
@@ -353,7 +353,7 @@ class PokemonFixtures extends Fixture
             ->setLife(50)
             ->setDefense(40)
             ->setSpeed(30)
-            ->setImage("assets/images/Metapod.png")
+            ->setImage("../assets/images/Metapod.png")
             ->setIcon("assets/icones/Metapod_icon.png")
             ->setType("Bug")
             ->setNumberPokedex(11);
@@ -367,7 +367,7 @@ class PokemonFixtures extends Fixture
             ->setLife(60)
             ->setDefense(65)
             ->setSpeed(70)
-            ->setImage("assets/images/Butterfree.png")
+            ->setImage("../assets/images/Butterfree.png")
             ->setIcon("assets/icones/Butterfree_icon.png")
             ->setType("Bug")
             ->setNumberPokedex(12);
@@ -381,7 +381,7 @@ class PokemonFixtures extends Fixture
             ->setLife(39)
             ->setDefense(46)
             ->setSpeed(65)
-            ->setImage("assets/images/Charmander.png")
+            ->setImage("../assets/images/Charmander.png")
             ->setIcon("assets/icones/Charmander_icon.png")
             ->setType("Fire")
             ->setNumberPokedex(4);
@@ -395,7 +395,7 @@ class PokemonFixtures extends Fixture
             ->setLife(58)
             ->setDefense(61)
             ->setSpeed(80)
-            ->setImage("assets/images/Charmeleon.png")
+            ->setImage("../assets/images/Charmeleon.png")
             ->setIcon("assets/icones/Charmeleon_icon.png")
             ->setType("Fire")
             ->setNumberPokedex(5);
@@ -409,7 +409,7 @@ class PokemonFixtures extends Fixture
             ->setLife(106)
             ->setDefense(90)
             ->setSpeed(130)
-            ->setImage("assets/images/Mewtwo.png")
+            ->setImage("../assets/images/Mewtwo.png")
             ->setIcon("assets/icones/Mewtwo_icon.png")
             ->setType("Psychic")
             ->setNumberPokedex(150);
