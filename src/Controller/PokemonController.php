@@ -7,18 +7,25 @@ use App\Entity\Pokemon;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Routing\Annotation\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use App\Repository\PokemonRepository;
 use App\Repository;
 use Doctrine\ORM\EntityRepository;
 
+/**
+* @IsGranted("ROLE_USER")
+*/
 class PokemonController extends AbstractController
 {
     /**
      * @Route("/pokemon", name="pokemon")
+     * @IsGranted("ROLE_USER")
      */
 
     public function index()
     {
+        $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
+        $user = $this->getUser();
 
         //$attack = $this->attack($generateTeam[0], $generateTeam[1]);
         $generateTeam1 = $this->generateTeam();

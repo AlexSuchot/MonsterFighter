@@ -2,16 +2,42 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}Welcome!{% endblock %}</title>
-    <link rel="stylesheet" href="../assets/style.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/style.css"/>    
     <script src="/public/assets/ajax.js"></script>
     {% block stylesheets %}{% endblock %}
 </head>
 <body>
+{% if is_granted('ROLE_USER') %}
+    <header>
+        <nav id="nav">
+            <a id="logo" href="{{ path('pokemon') }}">
+                <img class="logo" alt="logo" src="../assets/images/pokeball.png" alt="">
+            </a>
+            <div class="menu">
+                <ul id="items-menu">
+                    <li><a class="active" href="{{ path('pokemon') }}">Home</a></li>
+                    <li><a href="{{ path('pokemon') }}">Fight</a></li>
+                    <li><a href="{{ path('pokemon') }}"><img class="logo" alt="logo" src="../assets/images/pokeball.png" alt=""></a></li>
+                    <li><a href="{{ path('pokemon') }}">Pokedex</a></li>
+                    <li><a href="{{ path('deconnexion') }}">Logout</a></li>
+                </ul>
+            </div>
+            <a href="javascript:void(0);" id="icon" onclick="clickMenu()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+    </header>
+{% endif %}
 {% block body %}{% endblock %}
 {% block javascripts %}
-    <script></script>
+{% if is_granted('ROLE_USER') %}
+    <script src="../assets/js/scriptMenu.js"></script>
+{% endif %}
 {% endblock %}
 </body>
 </html>

@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Connexion{% endblock %}
+
+{% block body %}
+    <link rel="stylesheet" href="../assets/connection.css"/>
+    <div class="container-connection">
+        <a href="{{path('connexion')}}"><img src="../assets/images/pokeball.png"></a>
+        <h1>Connexion</h1>
+        <form action="{{ path('connexion') }}" method="post">
+            <div class="flexCol">
+                <label>Email</label>
+                <input placeholder="Email" type="text" name="_username" required="required">
+            </div>
+            <div class="flexCol">
+                <label>Mot de passe</label>
+                <input placeholder="Mot de passe" type="password" name="_password" required="required">
+            </div>
+            <button type="submit">Go</button>
+        </form>
+        {# <a href="">Mot de passe oublié ?</a> #}
+        <a href="{{path('register')}}">Inscription</a>
+    <div>
+{% endblock %}
