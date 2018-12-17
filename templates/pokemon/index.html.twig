@@ -1,25 +1,59 @@
-{% extends 'base.html.twig' %}
+    {% extends 'base.html.twig' %}
 
-{% block title %}Hello {{ controller_name }}!{% endblock %}
-
-
+    {% block title %}Hello {{ controller_name }}!{% endblock %}
 
 
 
-{% block body %}
+
+
+    {% block body %}
+    <!-- TEAM 1 AFFICHAGE !-->
+    <h2>Team 1 :</h2>
     <div class="row">
-        {% for pokemons in pokemons %}
-            <div class="col-sm-2">
+        {% for pokemon in team1 %}
+            <div class="col-sm-1.5">
                 <div class="card" style="width: 18rem;">
                     <div class="card-body">
-                        <h5 class="card-title">{{ pokemons.name }} <img src="{{ pokemons.icon }}"></h5>
-                        <img width="120px" src="{{ pokemons.image }}">
-                        <p> {{ pokemons.life }}</p>
-                        <p> {{ pokemons.life}}</p>
+                        <h5 class="card-title">{{ pokemon.name }} <img src="{{ pokemon.icon }}"></h5>
+                        <img width="120px" src="{{ pokemon.image }}">
+                        <p> Points de vie : {{ pokemon.life }}</p>
+                        <p> Points d'attaque : {{ pokemon.attack }}</p>
                     </div>
                 </div>
             </div>
         {% endfor %}
 
     </div>
-{% endblock %}
+
+    <!-- TEAM 2 AFFICHAGE !-->
+    <h2>Team 2 :</h2>
+    <div class="row">
+        {% for pokemon in team2 %}
+            <div class="col-sm-1.5">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ pokemon.name }} <img src="{{ pokemon.icon }}"></h5>
+                        <img width="120px" src="{{ pokemon.image }}">
+                        <p> Points de vie : {{ pokemon.life }}</p>
+                        <p> Points d'attaque : {{ pokemon.attack }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+    <div>
+        <h3>Pokemon 1 de l'équipe 1 :</h3>
+        {{ pokemon1team1.name }}
+        <img src="{{ pokemon1team1.icon }}">
+        <img width="120px" src="{{ pokemon1team1.image }}">
+    </div>
+
+    <div>
+        <h3>Pokemon 1 de l'équipe 2 :</h3>
+        <p>{{ pokemon1team2.name }}</p>
+        <img src="{{ pokemon1team2.icon }}">
+        <img width="120px" src="{{ pokemon1team2.image }}">
+    </div>
+
+    {% endblock %}

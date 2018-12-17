@@ -19,14 +19,17 @@ class PokemonController extends AbstractController
 
     public function index()
     {
-        $generateTeam = $this->generateTeam();
-        $attack = $this->attack($generateTeam[0], $generateTeam[1]);
+
+        //$attack = $this->attack($generateTeam[0], $generateTeam[1]);
+        $generateTeam1 = $this->generateTeam();
+        $generateTeam2 = $this->generateTeam();
 
 
 
         return $this->render('pokemon/index.html.twig', [
             'controller_name' => 'PokemonController',
-            'pokemons' => $generateTeam
+            'team1' => $generateTeam1, 'team2' => $generateTeam2,
+            'pokemon1team1' => $generateTeam1[0], 'pokemon1team2' => $generateTeam2[0]
         ]);
     }
 
@@ -39,7 +42,7 @@ class PokemonController extends AbstractController
     {
         $repository = $this->getDoctrine()->getRepository(Pokemon::class);
         $arrayPokemon = array();
-        for ($i = 0; $i < 2; $i++) {
+        for ($i = 0; $i < 6; $i++) {
             $pokemons = $repository->findTeamByNumberPokedex(rand(1,12));
             array_push($arrayPokemon, $pokemons[0]);
         }
