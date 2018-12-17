@@ -10,6 +10,8 @@ use Symfony\Component\Routing\Annotation\Route;
 use App\Repository\PokemonRepository;
 use App\Repository;
 use Doctrine\ORM\EntityRepository;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class PokemonController extends AbstractController
 {
@@ -19,23 +21,30 @@ class PokemonController extends AbstractController
 
     public function index()
     {
+       // $generateTeam1 = $this->generateTeam();
+       // $generateTeam2 = $this->generateTeam();
+        $player1 = new Trainer("Alex", $this->generateTeam());
+        $player2 = new Trainer("Marceau", $this->generateTeam());
 
         //$attack = $this->attack($generateTeam[0], $generateTeam[1]);
-        $generateTeam1 = $this->generateTeam();
-        $generateTeam2 = $this->generateTeam();
 
-
+        //$fight = $this-> fight();
 
         return $this->render('pokemon/index.html.twig', [
             'controller_name' => 'PokemonController',
-            'team1' => $generateTeam1, 'team2' => $generateTeam2,
-            'pokemon1team1' => $generateTeam1[0], 'pokemon1team2' => $generateTeam2[0]
+            'team1' => $player1->getTeam(), 'team2' => $player2->getTeam(),
+            'pokemon1team1' => $player1->getTeam()[0], 'pokemon1team2' => $player2->getTeam()[0],
+            'player1' => $player1->getName(),'player2' => $player2->getName()
         ]);
     }
 
-    public function fight()
-    {
 
+
+    public function fight(Trainer $player, Trainer $opponent, $fight)
+    {
+        while($player->getTeam() > 0 OR $opponent->getTeam() > 0){
+            $fight == true;
+        }
     }
 
     public function generateTeam()
@@ -49,12 +58,11 @@ class PokemonController extends AbstractController
         return $arrayPokemon;
     }
 
-    public function turn()
-    {
+    /**
+     * @Route("/fight", name="fight")
+     */
 
-    }
-
-    public function attack(Pokemon $attaquant, Pokemon $cible)
+    public function attack(Pokemon $attaquant, Pokemon $cible, Request $request)
     {
         $repository = $this->getDoctrine()->getRepository(Pokemon::class);
         $dégat = $attaquant->getAttack() - $cible->getDefense();
@@ -68,13 +76,9 @@ class PokemonController extends AbstractController
         $life = $cible->setLife($result);
     }
 
-    public function calculDamage()
-    {
-
-    }
-
     public function pokemonKo()
     {
+
 
     }
 

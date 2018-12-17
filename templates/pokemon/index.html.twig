@@ -8,7 +8,7 @@
 
     {% block body %}
     <!-- TEAM 1 AFFICHAGE !-->
-    <h2>Team 1 :</h2>
+    <h2>Team 1 : {{ player1 }}</h2>
     <div class="row">
         {% for pokemon in team1 %}
             <div class="col-sm-1.5">
@@ -26,7 +26,7 @@
     </div>
 
     <!-- TEAM 2 AFFICHAGE !-->
-    <h2>Team 2 :</h2>
+    <h2>Team 2 : {{ player2 }}</h2>
     <div class="row">
         {% for pokemon in team2 %}
             <div class="col-sm-1.5">
@@ -47,6 +47,8 @@
         {{ pokemon1team1.name }}
         <img src="{{ pokemon1team1.icon }}">
         <img width="120px" src="{{ pokemon1team1.image }}">
+        <p> Points de vie : {{ pokemon1team1.life }}</p>
+        <p> Points d'attaque : {{ pokemon1team1.attack }}</p>
     </div>
 
     <div>
@@ -54,6 +56,26 @@
         <p>{{ pokemon1team2.name }}</p>
         <img src="{{ pokemon1team2.icon }}">
         <img width="120px" src="{{ pokemon1team2.image }}">
+        <p> Points de vie : {{ pokemon1team2.life }}</p>
+        <p> Points d'attaque : {{ pokemon1team2.attack }}</p>
     </div>
+        <button type="button" id="fight" class="btn btn-primary">Primary</button>
 
+        <script>
+            $(document).ready(function () {
+                $(#fight).click(function () {
+                    $.ajax({
+                        method: "POST",
+                        url: " path('fight') ",
+                        dataType: "json",
+                        data: data,
+                        async: true,
+                        success: function (data) {
+
+                        }
+
+                    })
+                })
+            })
+        </script>
     {% endblock %}
