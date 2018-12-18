@@ -3,128 +3,135 @@
 {% block title %}Hello!{% endblock %}
 
 {% block body %}
-    <div class="container">
-        <input id="searchbar" class="searchbar" type="search" name="search" placeholder="Search something ...">
-        <table class="table">
-            <thead class="tb-head">
-                <tr>
-                    <th id="number" class="tb-header">Numéro</th>
-                    <th class="tb-header">Image</th>
-                    <th id="name" class="tb-header">Nom</th>
-                    <th id="type" class="tb-header">Type</th>
-                    <th id="life" class="tb-header">Vie</th>
-                    <th id="attack" class="tb-header">Attaque</th>
-                    <th id="defense" class="tb-header">Défense</th>
-                    <th id="speed" class="tb-header">Vitesse</th>
-                </tr>
-            </thead>
-            <tbody id="data" class="tb-body">
-                {% for item in items %}
-                    <tr data-href="{{ path('pokemon', {'number': item.number })}}">
-                        <td class="tb-data">{{ item.number }}</td>
-                        <td class="tb-data"><img class="thumbnail" src="{{ item.icon }}" alt=""></td>
-                        <td class="tb-data">{{ item.name }}</td>
-                        <td class="tb-data">{{ item.type }}</td>
-                        <td class="tb-data">{{ item.life }}</td>
-                        <td class="tb-data">{{ item.attack }}</td>
-                        <td class="tb-data">{{ item.defense }}</td>
-                        <td class="tb-data">{{ item.speed }}</td>
-                    </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
-    <script>
-        $(document).ready(function () {
-            var data = {
-                keyword: 0,
-                col: 0,
-                order: 0
+<div class="container">
+    <input id="searchbar" class="searchbar" type="search" name="search" placeholder="Search something ...">
+    <table class="table">
+        <thead class="tb-head">
+            <tr>
+                <th id="number" class="tb-header">Numéro</th>
+                <th class="tb-header">Image</th>
+                <th id="name" class="tb-header">Nom</th>
+                <th id="type" class="tb-header">Type</th>
+                <th id="life" class="tb-header">Vie</th>
+                <th id="attack" class="tb-header">Attaque</th>
+                <th id="defense" class="tb-header">Défense</th>
+                <th id="speed" class="tb-header">Vitesse</th>
+            </tr>
+        </thead>
+        <tbody id="data" class="tb-body">
+            {% for item in items %}
+            <tr data-href="{{ path('pokemon', {'number': item.number })}}">
+                <td class="tb-data">{{ item.number }}</td>
+                <td class="tb-data"><img class="thumbnail" src="{{ item.icon }}" alt=""></td>
+                <td class="tb-data">{{ item.name }}</td>
+                <td class="tb-data">{{ item.type }}</td>
+                <td class="tb-data">{{ item.life }}</td>
+                <td class="tb-data">{{ item.attack }}</td>
+                <td class="tb-data">{{ item.defense }}</td>
+                <td class="tb-data">{{ item.speed }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+<script>
+    $(document).ready(function () {
+        var data = {
+            keyword: 0,
+            col: 0,
+            order: 0
+        }
+
+        var name = true;
+        var number = true;
+        var type = true;
+        var life = true;
+        var name = true;
+        var attack = true;
+        var defense = true;
+        var speed = true;
+
+        function links() {
+            $('#data tr').on("click", function () {
+                window.location = $(this).data('href');
+            });
+        }
+
+        links();
+
+        function request(col, bool) {
+            $('#data').empty();
+            data.keyword = $('#searchbar').val();
+            data.col = col;
+            if (bool) {
+                data.order = 'ASC';
+            } else {
+                data.order = 'DESC';
             }
-
-            var name = true;
-            var number = true;
-            var type = true;
-            var life = true;
-            var name = true;
-            var attack = true;
-            var defense = true;
-            var speed = true;
-
-            function links() {
-                $('#data tr').on("click", function () {
-                    window.location = $(this).data('href');
-                });
-            }
-
-            links();
-
-            function request(col, bool) {
-                $('#data').empty();
-                data.keyword = $('#searchbar').val();
-                data.col = col;
-                if (bool) {
-                    data.order = 'ASC';
-                } else {
-                    data.order = 'DESC';
+            console.log(data);
+            $.ajax({
+                method: "POST",
+                url: "{{ path('search') }}",
+                dataType: "json",
+                data: data,
+                async: true,
+                success: function (data) {
+                    data.forEach((el) => {
+                        var url = '{{ path("pokemon", {"number": "el.number"})}}';
+                        url = url.replace("el.number", el.number);
+                        var row = '<tr data-href=' + url + '><td class="tb-data">' + el.number +
+                            '</td><td class="tb-data"><img class="thumbnail" src="' + el.icon +
+                            '" alt=""></td><td class="tb-data">' + el.name +
+                            '</td><td class="tb-data">' + el.type +
+                            '</td><td class="tb-data">' + el.life +
+                            '</td><td class="tb-data">' + el.attack +
+                            '</td><td class="tb-data">' + el.defense +
+                            '</td><td class="tb-data">' + el.speed + '</td></a></tr>';
+                        $('#data').append(row);
+                        links();
+                    });
                 }
-                console.log(data);
-                $.ajax({
-                    method: "POST",
-                    url: "{{ path('search') }}",
-                    dataType: "json",
-                    data: data,
-                    async: true,
-                    success: function (data) {
-                        data.forEach((el) => {
-                            var url = '{{ path("pokemon", {"number": "el.number"})}}';
-                            url = url.replace("el.number", el.number);
-                            var row = '<tr data-href=' + url + '><td class="tb-data">' + el.number + '</td><td class="tb-data"><img class="thumbnail" src="' + el.icon + '" alt=""></td><td class="tb-data">' + el.name + '</td><td class="tb-data">' + el.type + '</td><td class="tb-data">' + el.life + '</td><td class="tb-data">' + el.attack + '</td><td class="tb-data">' + el.defense + '</td><td class="tb-data">' + el.speed + '</td></a></tr>';
-                            $('#data').append(row);
-                            links();
-                        });
-                    }
-                });
-            }
-
-            $('#searchbar').on('search', function () {
-                request('numberPokedex', true);
             });
+        }
 
-            $('#name').click(function () {
-                request('name', name)
-                name = !name;
-            });
-
-            $('#number').click(function () {
-                request('numberPokedex', number);
-                number = !number;
-            });
-
-            $('#type').click(function () {
-                request('type', type);
-                type = !type;
-            });
-
-            $('#life').click(function () {
-                request('life', life);
-                life = !life;
-            });
-
-            $('#attack').click(function () {
-                request('attack', attack);
-                attack = !attack;
-            });
-
-            $('#defense').click(function () {
-                request('defense', defense);
-                defense = !defense;
-            });
-
-            $('#speed').click(function () {
-                request('speed', speed);
-                speed = !speed;
-            });
+        $('#searchbar').on('search', function () {
+            request('numberPokedex', true);
         });
-    </script>
+
+        $('#name').click(function () {
+            request('name', name)
+            name = !name;
+        });
+
+        $('#number').click(function () {
+            request('numberPokedex', number);
+            number = !number;
+        });
+
+        $('#type').click(function () {
+            request('type', type);
+            type = !type;
+        });
+
+        $('#life').click(function () {
+            request('life', life);
+            life = !life;
+        });
+
+        $('#attack').click(function () {
+            request('attack', attack);
+            attack = !attack;
+        });
+
+        $('#defense').click(function () {
+            request('defense', defense);
+            defense = !defense;
+        });
+
+        $('#speed').click(function () {
+            request('speed', speed);
+            speed = !speed;
+        });
+    });
+</script>
 {% endblock %}
