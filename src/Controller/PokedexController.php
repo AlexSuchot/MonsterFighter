@@ -30,9 +30,9 @@ class PokedexController extends AbstractController
     }
 
     /**
-     * @Route("/pokedex/{number}", name="pokemon")
+     * @Route("/pokedex/{number}", name="info")
      */
-    public function item($number)
+    public function info($number)
     {
         $repo = $this->getDoctrine()->getRepository(Pokemon::class);
         $pokemon = $repo->findOneByNumberPokedex($number);
