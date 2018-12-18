@@ -1,5 +1,7 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}Info {{pokemon.name}}{% endblock %}
+
 {% block body %}
 <div class="container">
     <a class="btn btn-back" href=" {{ path('pokedex') }}">
