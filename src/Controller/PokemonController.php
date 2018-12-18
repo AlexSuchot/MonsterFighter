@@ -2,6 +2,7 @@
 namespace App\Controller;
 use App\Classes\Trainer;
 use App\Entity\Pokemon;
+use App\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Routing\Annotation\Route;
@@ -18,18 +19,29 @@ class PokemonController extends AbstractController
      */
     public function index()
     {
-        $player1 = new Trainer("Alex", $this->generateTeam());
-        $player2 = new Trainer("Marceau", $this->generateTeam());
+        $player1 = new Trainer("bigeard", $this->generateTeam());
 
-        $fight = $this-> attack($player1->getTeam()[0],$player2->getTeam()[0]);
+        $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
+        $user = $this->getUser();
+        $user->setTeam($this->generateTeam());
+        $manager = $this->getDoctrine()->getManager();
+        $manager->persist($user);
+        $manager->flush();
+
+        $fight = $this-> attack($player1->getTeam()[0],$user->getTeam()[0]);
+
+        $hp_pokemon =  $user->getTeam()[0]->getLife();
+
+
         return $this->render('pokemon/index.html.twig', [
             'controller_name' => 'PokemonController',
-            'team1' => $player1->getTeam(), 'team2' => $player2->getTeam(),
-            'pokemon1team1' => $player1->getTeam()[0], 'pokemon1team2' => $player2->getTeam()[0],
-            'player1' => $player1->getName(),'player2' => $player2->getName()
+            'team1' => $player1->getTeam(), 'team2' => $user->getTeam(),
+            'pokemon1team1' => $player1->getTeam()[0], 'pokemon1team2' => $user->getTeam()[0],
+            'player1' => $player1->getName(),'player2' => $user->getPseudo(),
+            'hp_pokemon' => $hp_pokemon
         ]);
     }
-    public function fight(Trainer $player, Trainer $opponent, $fight)
+    public function fight(User $player, User $opponent, $fight)
     {
         while($player->getTeam() > 0 OR $opponent->getTeam() > 0){
             $fight == true;
@@ -37,46 +49,60 @@ class PokemonController extends AbstractController
     }
     public function generateTeam()
     {
+
         $repository = $this->getDoctrine()->getRepository(Pokemon::class);
         $arrayPokemon = array();
+
         for ($i = 0; $i < 6; $i++) {
-            $pokemons = $repository->findTeamByNumberPokedex(rand(1,12));
-            array_push($arrayPokemon, $pokemons[0]);
+            $pokemons = $repository->findOneByNumberPokedex(rand(1,12));
+            array_push($arrayPokemon, $pokemons);
         }
         return $arrayPokemon;
     }
+
     /**
      * @Route("/fight", name="fight")
      */
+
     public function fightContainer(Request $request){
-        $attaquant = $request->request->get('attaquant');
-        $cible = $request->request->get('cible');
+        $attaquant = $request->get('attaquant');
+        $user1 = $request->get('cible');
         $repository = $this->getDoctrine()->getRepository(Pokemon::class);
+
+        $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
+        $user = $this->getUser();
+
+        $cible = $user->getTeam()[0];
         $pokemon1 = $repository->findOneByNumberPokedex($attaquant);
         $pokemon2 = $repository->findOneByNumberPokedex($cible);
 
         if ($request->isXMLHttpRequest()) {
-            $data = $this->attack($pokemon1,$pokemon2);
+            $data = $this->attack($pokemon1,$cible);
             return new JsonResponse($data);
         }
         return new Response("Erreur : ceci n'est pas une requête Ajax");
-
-
     }
+
     public function attack(Pokemon $attaquant, Pokemon $cible)
     {
-        $repository = $this->getDoctrine()->getRepository(Pokemon::class);
-        $dégat = $attaquant->getAttack() - $cible->getDefense();
-        if ($dégat < 0) {
-            $dégat = 10;
-        }
-        if ($dégat < 10) {
-            $dégat = 20;
-        }
-        $result = $cible->getLife() - $dégat;
-        $cible->setLife($result);
-        return array("result" => $result);
+        $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
+        $user = $this->getUser();
+            $damage = $attaquant->getAttack() - $cible->getDefense();
+            if ($damage < 0) {
+                $damage = 10;
+            }
+            if ($damage < 10) {
+                $damage = 20;
+            }
 
+            $result = $cible->getLife() - $damage;
+
+            $cible->setLife($result);
+            $manager = $this->getDoctrine()->getManager();
+            $manager->persist($cible);
+            $manager->flush();
+
+            return array("result" => $result);
     }
     public function pokemonKo()
     {

@@ -3,80 +3,78 @@
 {% block title %}Fight{% endblock %}
 
 {% block body %}
+    <section class="fightContainer">
 
-    <!-- TEAM 1 AFFICHAGE !-->
-    <h2>Team 1 : {{ player1 }}</h2>
-    <div class="row">
-        {% for pokemon in team1 %}
-            <div class="col-sm-1.5">
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ pokemon.name }} <img src="{{ pokemon.icon }}"></h5>
-                        <img width="120px" src="{{ pokemon.image }}">
-                        <p> Points de vie : {{ pokemon.life }}</p>
-                        <p> Points d'attaque : {{ pokemon.attack }}</p>
+        <div class="displayAllTeam">
 
-                    </div>
+            <!-- TEAM 1 AFFICHAGE !-->
+
+            <div class="displayOneTeamContainer">
+                <h2>{{ player1 }}</h2>
+                <div class="displayOneTeam">
+                    {% for pokemon in team1 %}
+                        <div class="displayOnePokemon">
+                            <img src="{{ pokemon.icon }}">
+                        </div>
+                    {% endfor %}
                 </div>
             </div>
-        {% endfor %}
-    </div>
 
-    <!-- TEAM 2 AFFICHAGE !-->
-    <h2>Team 2 : {{ player2 }}</h2>
-    <div class="row">
-        {% for pokemon in team2 %}
-            <div class="col-sm-1.5">
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ pokemon.name }} <img src="{{ pokemon.icon }}"></h5>
-                        <img width="120px" src="{{ pokemon.image }}">
-                        <p> Points de vie : {{ pokemon.life }}</p>
-                        <p> Points d'attaque : {{ pokemon.attack }}</p>
-                    </div>
+            <!-- TEAM 2 AFFICHAGE !-->
+
+            <div class="displayOneTeamContainer">
+                <h2>{{ player2 }}</h2>
+                <div class="displayOneTeam">
+                    {% for pokemon in team2 %}
+                        <div class="displayOnePokemon">
+                            <img src="{{ pokemon.icon }}">
+                        </div>
+                    {% endfor %}
                 </div>
             </div>
-        {% endfor %}
+        </div>
 
-    </div>
-    <div>
-        <h3>Pokemon 1 de l'équipe 1 :</h3>
-        {{ pokemon1team1.name }}
-        <img src="{{ pokemon1team1.icon }}">
-        <img width="120px" src="{{ pokemon1team1.image }}">
-        <p> Points de vie : {{ pokemon1team1.life }}</p>
-        <p> Points d'attaque : {{ pokemon1team1.attack }}</p>
-    </div>
+        <div class="FightSection">
+            <div class="displayOneFighter">
+                <h3>Pokemon 1 de l'équipe 1 :</h3>
+                <p>{{ pokemon1team1.name }}</p>
+                <img width="120px" src="{{ pokemon1team1.image }}">
+                <p> Points de vie : {{ pokemon1team1.life }}</p>
+                <progress value="{{ pokemon1team1.life }}" max="{{ pokemon1team1.life }}"></progress>
+            </div>
 
-    <div>
-        <h3>Pokemon 1 de l'équipe 2 :</h3>
-        <p>{{ pokemon1team2.name }}</p>
-        <img src="{{ pokemon1team2.icon }}">
-        <img width="120px" src="{{ pokemon1team2.image }}">
-        Points de vie :<p id="hpOpponent">{{ pokemon1team2.life }}</p>
-        <p> Points d'attaque : {{ pokemon1team2.attack }}</p>
-    </div>
-        <button type="button" id="fight" class="btn btn-primary">Primary</button>
+            <div class="displayOneFighter">
+                <h3>Pokemon 1 de l'équipe 2 :</h3>
+                <p>{{ pokemon1team2.name }}</p>
+                <img width="120px" src="{{ pokemon1team2.image }}">
+                <p id="#hpOpponent">Points de vie : {{ pokemon1team2.life }}</p>
+                <progress value="{{ pokemon1team2.life }}" max="{{ hp_pokemon }}"></progress>
+            </div>
+        </div>
+        <button type="button" id="fight" class="btn btn-primary">Fight !</button>
+        <p class="descriptionFight">Description of the fight ! Squirtle attack water gun. It's super effective ! The opponent Charmander fainted. </p>
+    </section>
+    <script>
 
-        <script>
-            $(document).ready(function () {
-                $('#fight').click(function () {
-                    var data = {
-                        attaquant: "{{ pokemon1team1.numberPokedex }}",
-                        cible: "{{ pokemon1team2.numberPokedex }}"
-                    };
-                    $.ajax({
-                        method: "POST",
-                        url: "{{ path('fight') }}",
-                        dataType: "json",
-                        data: data,
-                        async: true,
-                        success: function (data) {
-                            console.log(data);
-                            $('#hpOpponent').html(data.result);
-                        }
-                    })
+
+        $(document).ready(function () {
+            $('#fight').click(function () {
+                var data = {
+                    attaquant: "{{ pokemon1team1.numberPokedex }}",
+                    cible: "{{ pokemon1team2.numberPokedex }}"
+                };
+                $.ajax({
+                    method: "POST",
+                    url: "{{ path('fight') }}",
+                    dataType: "json",
+                    data: data,
+                    async: true,
+                    success: function (data) {
+                        console.log(data);
+                        $('#hpOpponent').html(data.result);
+                    }
                 })
             })
-        </script>
-    {% endblock %}
+        })
+    </script>
+{% endblock %}
