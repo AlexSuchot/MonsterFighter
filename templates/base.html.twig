@@ -26,8 +26,8 @@
                     <li><a class="{{ app.request.get('_route') == 'pokemon' ? 'active' }}" href="{{ path('pokemon') }}">Fight</a></li>
                     <li><a class="{{ app.request.get('_route') == 'pokedex' ? 'active' }}" href="{{ path('pokedex') }}">Pokedex</a></li>
                     <li><a href="{{ path('pokemon') }}"><img class="logo" alt="logo" src="../assets/images/pokeball.png" alt=""></a></li>
-                    <li><a class="{{ app.request.get('_route') == 'pokemon' ? 'active' }}" href="{{ path('pokemon') }}">Profil</a></li>
-                    <li><a href="{{ path('deconnexion') }}">Logout</a></li>
+                    <li><a class="{{ app.request.get('_route') == 'profile' ? 'active' }}" href="{{ path('profile') }}">Profile</a></li>
+                    <li><a href="{{ path('logout') }}">Logout</a></li>
                 </ul>
             </div>
             <a href="javascript:void(0);" id="icon" onclick="clickMenu()">

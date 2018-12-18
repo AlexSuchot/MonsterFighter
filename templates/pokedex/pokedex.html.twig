@@ -3,44 +3,59 @@
 {% block title %}Hello!{% endblock %}
 
 {% block body %}
-<div class="container">
-    <input id="searchbar" class="searchbar" type="search" name="search" placeholder="Search something ...">
-    <table class="table">
-        <thead class="tb-head">
-            <tr>
-                <th id="number" class="tb-header">Numéro</th>
-                <th class="tb-header">Image</th>
-                <th id="name" class="tb-header">Nom</th>
-                <th id="type" class="tb-header">Type</th>
-                <th id="life" class="tb-header">Vie</th>
-                <th id="attack" class="tb-header">Attaque</th>
-                <th id="defense" class="tb-header">Défense</th>
-                <th id="speed" class="tb-header">Vitesse</th>
-            </tr>
-        </thead>
-        <tbody id="data" class="tb-body">
-            {% for item in items %}
-            <tr data-href="{{ path('pokemon', {'number': item.number })}}">
-                <td class="tb-data">{{ item.number }}</td>
-                <td class="tb-data"><img class="thumbnail" src="{{ item.icon }}" alt=""></td>
-                <td class="tb-data">{{ item.name }}</td>
-                <td class="tb-data">{{ item.type }}</td>
-                <td class="tb-data">{{ item.life }}</td>
-                <td class="tb-data">{{ item.attack }}</td>
-                <td class="tb-data">{{ item.defense }}</td>
-                <td class="tb-data">{{ item.speed }}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-</div>
-<script>
-    $(document).ready(function () {
-        var data = {
-            keyword: 0,
-            col: 0,
-            order: 0
-        }
+    <div class="container">
+        {% if is_granted('ROLE_ADMIN') %}
+            <a class="addPokemon" href="{{ path('changePassword') }}">Add pokémon
+                <b>+</b>
+            </a>
+        {% endif %}
+        <input id="searchbar" class="searchbar" type="search" name="search" placeholder="Search something ...">
+
+        <table class="table">
+            <thead class="tb-head">
+                <tr>
+                    <th id="number" class="tb-header">Numéro</th>
+                    <th class="tb-header">Image</th>
+                    <th id="name" class="tb-header">Nom</th>
+                    <th id="type" class="tb-header">Type</th>
+                    <th id="life" class="tb-header">Vie</th>
+                    <th id="attack" class="tb-header">Attaque</th>
+                    <th id="defense" class="tb-header">Défense</th>
+                    <th id="speed" class="tb-header">Vitesse</th>
+                    {% if is_granted('ROLE_ADMIN') %}
+                        <th id="edit" class="tb-header">Edit</th>
+                    {% endif %}
+                </tr>
+            </thead>
+            <tbody id="data" class="tb-body">
+                {% for item in items %}
+                    <tr data-href="{{ path('info', {'number': item.number })}}">
+                        <td class="tb-data">{{ item.number }}</td>
+                        <td class="tb-data"><img class="thumbnail" src="{{ item.icon }}" alt=""></td>
+                        <td class="tb-data">{{ item.name }}</td>
+                        <td class="tb-data">{{ item.type }}</td>
+                        <td class="tb-data">{{ item.life }}</td>
+                        <td class="tb-data">{{ item.attack }}</td>
+                        <td class="tb-data">{{ item.defense }}</td>
+                        <td class="tb-data">{{ item.speed }}</td>
+                        {% if is_granted('ROLE_ADMIN') %}
+                            <td class="tb-data">
+                                <a class="edit" href="{{ path('changePassword') }}">✏️</a>
+                            </td>
+                        {% endif %}
+
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <script>
+        $(document).ready(function () {
+            var data = {
+                keyword: 0,
+                col: 0,
+                order: 0
+            }
 
         var name = true;
         var number = true;
