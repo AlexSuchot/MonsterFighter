@@ -4,7 +4,13 @@
 
 {% block body %}
     <div class="container">
+        {% if is_granted('ROLE_ADMIN') %}
+            <a class="addPokemon" href="{{ path('changePassword') }}">Add pokémon
+                <b>+</b>
+            </a>
+        {% endif %}
         <input id="searchbar" class="searchbar" type="search" name="search" placeholder="Search something ...">
+
         <table class="table">
             <thead class="tb-head">
                 <tr>
@@ -16,11 +22,14 @@
                     <th id="attack" class="tb-header">Attaque</th>
                     <th id="defense" class="tb-header">Défense</th>
                     <th id="speed" class="tb-header">Vitesse</th>
+                    {% if is_granted('ROLE_ADMIN') %}
+                        <th id="edit" class="tb-header">Edit</th>
+                    {% endif %}
                 </tr>
             </thead>
             <tbody id="data" class="tb-body">
                 {% for item in items %}
-                    <tr data-href="{{ path('pokemon', {'number': item.number })}}">
+                    <tr data-href="{{ path('info', {'number': item.number })}}">
                         <td class="tb-data">{{ item.number }}</td>
                         <td class="tb-data"><img class="thumbnail" src="{{ item.icon }}" alt=""></td>
                         <td class="tb-data">{{ item.name }}</td>
@@ -29,6 +38,12 @@
                         <td class="tb-data">{{ item.attack }}</td>
                         <td class="tb-data">{{ item.defense }}</td>
                         <td class="tb-data">{{ item.speed }}</td>
+                        {% if is_granted('ROLE_ADMIN') %}
+                            <td class="tb-data">
+                                <a class="edit" href="{{ path('changePassword') }}">✏️</a>
+                            </td>
+                        {% endif %}
+
                     </tr>
                 {% endfor %}
             </tbody>
