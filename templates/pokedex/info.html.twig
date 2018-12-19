@@ -94,12 +94,12 @@
         </div>
         <table class="item-stage">
             <tr>
-                {% for stage in stagePokemon %}
+                {% for stage in stages %}
                     <th>Stage {{ loop.index }}</th>
                 {% endfor %}
             </tr>
             <tr>
-                {% for stage in stagePokemon %}
+                {% for stage in stages %}
                     <td>
                         <a href="{{ path('info', {'number': stage.numberPokedex}) }}" class="link">
                             <img src="../{{ stage.icon }}" alt="">
