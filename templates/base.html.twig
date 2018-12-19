@@ -8,14 +8,14 @@
     <link rel="icon" type="image/png" href="../assets/images/pokeball.png" />
     <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
-    <link rel="stylesheet" href="../assets/css/styles.css" />    
+    <link rel="stylesheet" href="../assets/css/styles.css" />
     <script src="../assets/js/jquery.js"></script>
 
     {% block stylesheets %}{% endblock %}
 </head>
 
 <body>
-{% if is_granted('ROLE_USER') %}
+    {% if is_granted('ROLE_USER') %}
     <header>
         <nav id="nav">
             <a id="logo" href="{{ path('pokemon') }}">
@@ -25,7 +25,8 @@
                 <ul id="items-menu">
                     <li><a class="{{ app.request.get('_route') == 'pokemon' ? 'active' }}" href="{{ path('pokemon') }}">Fight</a></li>
                     <li><a class="{{ app.request.get('_route') == 'pokedex' ? 'active' }}" href="{{ path('pokedex') }}">Pokedex</a></li>
-                    <li><a href="{{ path('pokemon') }}"><img class="logo" alt="logo" src="../assets/images/pokeball.png" alt=""></a></li>
+                    <li><a href="{{ path('pokemon') }}"><img class="logo" alt="logo" src="../assets/images/pokeball.png"
+                                alt=""></a></li>
                     <li><a class="{{ app.request.get('_route') == 'profile' ? 'active' }}" href="{{ path('profile') }}">Profile</a></li>
                     <li><a href="{{ path('logout') }}">Logout</a></li>
                 </ul>
@@ -35,13 +36,13 @@
             </a>
         </nav>
     </header>
-{% endif %}
-{% block body %}{% endblock %}
-{% block javascripts %}
-{% if is_granted('ROLE_USER') %}
+    {% endif %}
+    {% block body %}{% endblock %}
+    {% block javascripts %}
+    {% if is_granted('ROLE_USER') %}
     <script src="../assets/js/scriptMenu.js"></script>
-{% endif %}
-{% endblock %}
+    {% endif %}
+    {% endblock %}
 </body>
 
 </html>

@@ -314,7 +314,7 @@ class PokemonFixtures extends Fixture
             ->setLife(45)
             ->setDefense(57)
             ->setSpeed(45)
-            ->setImage("../../assets/images/Bulbasaur.png")
+            ->setImage("../assets/images/Bulbasaur.png")
             ->setIcon("assets/icones/Bulbasaur_icon.png")
             ->setType("Grass")
             ->setDescription("Bulbasaur can be seen napping in bright sunlight. There is a seed on its back. By soaking up the sun's rays, the seed grows progressively larger. ")
