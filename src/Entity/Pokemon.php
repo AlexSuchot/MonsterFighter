@@ -67,6 +67,11 @@ class Pokemon
      */
     private $stage;
 
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $description;
+
 
     public function getId(): ?int
     {
@@ -192,6 +197,18 @@ class Pokemon
     public function setStage(array $stage): self
     {
         $this->stage = $stage;
+        return $this;
+    }
+
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(string $description): self
+    {
+        $this->description = $description;
+
         return $this;
     }
 }
