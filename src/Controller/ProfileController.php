@@ -5,6 +5,7 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
@@ -26,21 +27,27 @@ class ProfileController extends AbstractController
     /**
      * @Route("/changePassword", name="changePassword")
      */
-    public function changePassword(request $request, UserPasswordEncoderInterface $encoder)
+    public function changePassword(Request $request, UserPasswordEncoderInterface $encoder)
     {
         $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
         $user = $this->getUser();
 
+        $form = $this->createFormBuilder()
+            ->add('oldPassword', PasswordType::class)
+            ->add('password', PasswordType::class)
+            ->add('confirmPassword', PasswordType::class)
+            ->add('submit', SubmitType::class)
+            ->getForm();
 
-        // $form->handleRequest($request);
-        // $checkPass = $encoder->isPasswordValid($user, $user.getPassword());
+        $form->handleRequest($request);
+        $checkPass = $encoder->isPasswordValid($user, $user.getPassword());
 
-        // if($form->isSubmitted() && $form-> isValid() && $user == ) {
-        //     $hash = $encoder->encodePassword($user, $user->getPassword());
-        //     $user->setPassword($hash);
-        //     $manager->persist($user);
-        //     $manager->flush();
-        // }
+        if($form->isSubmitted() && $form-> isValid()) {
+            $hash = $encoder->encodePassword($user, $user->getPassword());
+            $user->setPassword($hash);
+            $manager->persist($user);
+            $manager->flush();
+        }
 
         return $this->render('profile/changePassword.html.twig', [
             'user' => $user

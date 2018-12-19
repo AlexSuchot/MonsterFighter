@@ -1,65 +1,65 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Info
-    {{pokemon.name}}
+{{pokemon.name}}
 {% endblock %}
 
 {% block body %}
-    <div class="container">
-        {# <a class="btn btn-back" href=" {{ path('pokedex') }}">
+<div class="container">
+    {# <a class="btn btn-back" href=" {{ path('pokedex') }}">
         <svg xmlns=" http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24"
             height="24" viewbox="0 0 24 24">
             <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
         Retour
     </a> #}
-        <div class="item-container">
-            <h2 class="title name">{{pokemon.numberPokedex}}
-                -
-                {{pokemon.name}}</h2>
-            <div class="item-info">
-                <img src="{{pokemon.image}}" alt="">
-                <table class="item-stats">
-                    <tr>
-                        <th>PV</th>
-                        <td>{{pokemon.life}}</td>
-                    </tr>
-                    <tr>
-                        <th>Attaque</th>
-                        <td>{{pokemon.attack}}</td>
-                    </tr>
-                    <tr>
-                        <th>Defence</th>
-                        <td>{{pokemon.defense}}</td>
-                    </tr>
-                    <tr>
-                        <th>Vitesse</th>
-                        <td>{{pokemon.speed}}</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-        <table class="item-stage">
-            <tr>
-                {% for stage in stagePokemon %}
-                    <th>Stade {{ loop.index }}</th>
-                {% endfor %}
-            </tr>
-            <tr>
-                {% for stage in stagePokemon %}
-                    <td>
-                        <a href="{{ path('pokedex', {'info': 'stage.numberPokedex'}) }}" class="link">
-                            <img src="../{{ stage.icon }}" alt="">
-                            {{ stage.name }}
-                        </a>
-                    </td>
-                {% endfor %}
-            </tr>
-        </table>
-        <div class="item-desc">
-            <h3 class="desc-title">Description de
-                {{pokemon.name}}</h3>
-            <p class="desc-text">{{ pokemon.description }}</p>
+    <div class="item-container">
+        <h2 class="title name">{{pokemon.numberPokedex}}
+            -
+            {{pokemon.name}}</h2>
+        <div class="item-info">
+            <img src="{{pokemon.image}}" alt="">
+            <table class="item-stats">
+                <tr>
+                    <th>PV</th>
+                    <td>{{pokemon.life}}</td>
+                </tr>
+                <tr>
+                    <th>Attaque</th>
+                    <td>{{pokemon.attack}}</td>
+                </tr>
+                <tr>
+                    <th>Defence</th>
+                    <td>{{pokemon.defense}}</td>
+                </tr>
+                <tr>
+                    <th>Vitesse</th>
+                    <td>{{pokemon.speed}}</td>
+                </tr>
+            </table>
         </div>
     </div>
+    <table class="item-stage">
+        <tr>
+            {% for stage in stages %}
+            <th>Stade {{ loop.index }}</th>
+            {% endfor %}
+        </tr>
+        <tr>
+            {% for stage in stages %}
+            <td>
+                <a href="{{ path('info', {'number': stage.numberPokedex}) }}" class="link">
+                    <img src="../{{ stage.icon }}" alt="">
+                    {{ stage.name }}
+                </a>
+            </td>
+            {% endfor %}
+        </tr>
+    </table>
+    <div class="item-desc">
+        <h3 class="desc-title">Description de
+            {{pokemon.name}}</h3>
+        <p class="desc-text">{{ pokemon.description }}</p>
+    </div>
+</div>
 </div>
 {% endblock %}
