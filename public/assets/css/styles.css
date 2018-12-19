@@ -349,7 +349,6 @@ nav #logo {
     }
 }
 
-
 .addPokemon {
     display: flex;
     flex-direction: row;
@@ -392,7 +391,6 @@ nav #logo {
 .fightContainer {
     width: 100%;
 
-
 }
 
 .displayAllTeam {
@@ -429,9 +427,7 @@ nav #logo {
     display: flex;
     justify-content: space-around;
 
-
 }
-
 
 .displayOneFighter {
     display: flex;
@@ -466,4 +462,73 @@ nav #logo {
     background-color: #FFF;
     border-radius: 15px;
     color: #aaaab6;
+}
+
+.navigation-button {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.arrow-left {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.arrow-right {
+    width: 20px;
+    margin-left: 10px;
+}
+
+/* */
+.fire-type {
+    color: #fd7d24;
+}
+
+.electric-type {
+    color: #eed535;
+}
+
+.grass-type {
+    color: #9bcc50;
+}
+
+.fighting-type {
+    color: #d56723;
+}
+
+.poison-type {
+    color: #b97fc9;
+}
+
+.psychic-type {
+    color: #f366b9;
+}
+
+.dragon-type {
+    color: #7038f8;
+}
+
+.water-type {
+    color: #4592c4;
+}
+
+.bug-type {
+    color: #729f3f;
+}
+
+.ice-type {
+    color: #30a7d7;
+}
+
+.rock-type {
+    color: #a38c21;
+}
+
+.ground-type {
+    color: #ab9842;
+}
+
+.ghost-type {
+    color: #7b62a3;
 }

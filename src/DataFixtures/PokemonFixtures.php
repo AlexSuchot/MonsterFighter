@@ -285,8 +285,8 @@ class PokemonFixtures extends Fixture
             ->setSpeed(43)
             ->setImage("../assets/images/Squirtle.png")
             ->setIcon("assets/icones/Squirtle_icon.png")
-            ->setType("Eau")
-            ->setStage(["Charmander", "Charmeleon", "Charizard"])
+            ->setType("Water")
+            ->setStage(["Squirtle", "Wartortle", "Blastoise"])
             ->setDescription("Squirtle's shell is not merely used for protection. The shell's rounded shape and the grooves on its surface help minimize resistance in water, enabling this Pokémon to swim at high speeds. ")
             ->setNumberPokedex(7);
         $manager->persist($squirtle);
@@ -350,7 +350,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Caterpie_icon.png")
             ->setType("Bug")
             ->setDescription("Caterpie has a voracious appetite. It can devour leaves bigger than its body right before your eyes. From its antenna, this Pokémon releases a terrifically strong odor. ")
-            ->setStage(["Caterpie", "Metapod", "Buterfree"])
+            ->setStage(["Caterpie", "Metapod", "Butterfree"])
             ->setNumberPokedex(10);
         $manager->persist($caterpie);
 
@@ -366,7 +366,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Metapod_icon.png")
             ->setType("Bug")
             ->setDescription("The shell covering this Pokémon's body is as hard as an iron slab. Metapod does not move very much. It stays still because it is preparing its soft innards for evolution inside the hard shell. ")
-            ->setStage(["Caterpie", "Metapod", "Buterfree"])
+            ->setStage(["Caterpie", "Metapod", "Butterfree"])
             ->setNumberPokedex(11);
         $manager->persist($metapod);
 
@@ -382,7 +382,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Butterfree_icon.png")
             ->setType("Bug")
             ->setDescription("Butterfree has a superior ability to search for delicious honey from flowers. It can even search out, extract, and carry honey from flowers that are blooming over six miles from its nest. ")
-            ->setStage(["Caterpie", "Metapod", "Buterfree"])
+            ->setStage(["Caterpie", "Metapod", "Butterfree"])
             ->setNumberPokedex(12);
         $manager->persist($butterfree);
 
