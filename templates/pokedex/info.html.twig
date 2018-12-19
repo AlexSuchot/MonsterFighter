@@ -47,8 +47,8 @@
             <tr>
                 {% for stage in stagePokemon %}
                     <td>
-                        <a href="{{path('pokedex')}}" class="link">
-                            <img src="https://www.pokemontrash.com/pokedex/images/minixy/001.png" alt="">
+                        <a href="{{ path('pokedex', {'info': 'stage.numberPokedex'}) }}" class="link">
+                            <img src="../{{ stage.icon }}" alt="">
                             {{ stage.name }}
                         </a>
                     </td>
