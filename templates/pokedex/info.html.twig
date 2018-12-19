@@ -1,77 +1,65 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Info {{pokemon.name}}{% endblock %}
+{% block title %}Info
+    {{pokemon.name}}
+{% endblock %}
 
 {% block body %}
-<div class="container">
-    <a class="btn btn-back" href=" {{ path('pokedex') }}">
+    <div class="container">
+        {# <a class="btn btn-back" href=" {{ path('pokedex') }}">
         <svg xmlns=" http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24"
             height="24" viewbox="0 0 24 24">
             <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
         Retour
-    </a>
-    <div class="item-container">
-        <h2 class="title name">{{pokemon.numberPokedex}} - {{pokemon.name}}</h2>
-        <div class="item-info">
-            <img src="{{pokemon.image}}" alt="">
-            <table class="item-stats">
-                <tr>
-                    <th>PV</th>
-                    <td>{{pokemon.life}}</td>
-                </tr>
-                <tr>
-                    <th>Attaque</th>
-                    <td>{{pokemon.attack}}</td>
-                </tr>
-                <tr>
-                    <th>Defence</th>
-                    <td>{{pokemon.defense}}</td>
-                </tr>
-                <tr>
-                    <th>Vitesse</th>
-                    <td>{{pokemon.speed}}</td>
-                </tr>
-            </table>
+    </a> #}
+        <div class="item-container">
+            <h2 class="title name">{{pokemon.numberPokedex}}
+                -
+                {{pokemon.name}}</h2>
+            <div class="item-info">
+                <img src="{{pokemon.image}}" alt="">
+                <table class="item-stats">
+                    <tr>
+                        <th>PV</th>
+                        <td>{{pokemon.life}}</td>
+                    </tr>
+                    <tr>
+                        <th>Attaque</th>
+                        <td>{{pokemon.attack}}</td>
+                    </tr>
+                    <tr>
+                        <th>Defence</th>
+                        <td>{{pokemon.defense}}</td>
+                    </tr>
+                    <tr>
+                        <th>Vitesse</th>
+                        <td>{{pokemon.speed}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <table class="item-stage">
+            <tr>
+                {% for stage in stagePokemon %}
+                    <th>Stade {{ loop.index }}</th>
+                {% endfor %}
+            </tr>
+            <tr>
+                {% for stage in stagePokemon %}
+                    <td>
+                        <a href="{{path('pokedex')}}" class="link">
+                            <img src="https://www.pokemontrash.com/pokedex/images/minixy/001.png" alt="">
+                            {{ loop.index }}
+                        </a>
+                    </td>
+                {% endfor %}
+            </tr>
+        </table>
+        <div class="item-desc">
+            <h3 class="desc-title">Description de
+                {{pokemon.name}}</h3>
+            <p class="desc-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim repellendus, odio quasi deleniti non natus temporibus asperiores, nisi laborum id molestias, inventore eius consequatur quas recusandae nobis aperiam consectetur placeat alias blanditiis sunt totam molestiae vero labore! Repellat optio alias, eveniet eligendi quia tenetur nobis placeat dicta culpa laborum nisi magnam harum doloremque. Cum similique, quibusdam quaerat molestiae autem dolorum nulla sit recusandae possimus. Quaerat velit cum officiis doloremque, corrupti possimus consectetur tenetur, corporis porro, similique et! Doloribus nesciunt odio at, harum pariatur eveniet minima reiciendis necessitatibus itaque! Ratione alias sit omnis excepturi culpa, odit accusamus dignissimos quasi hic cupiditate?</p>
         </div>
     </div>
-    <table class="item-stage">
-        <tr>
-            <th>Stade 1</th>
-            <th>Stade 2</th>
-            <th>Stade 3</th>
-        </tr>
-        <tr>
-            <td>
-                <a href="#">
-                    <img src="https://www.pokemontrash.com/pokedex/images/minixy/001.png" alt="">
-                    Bulbizarre
-                </a>
-            </td>
-            <td>
-                <a href="#">
-                    <img src="https://www.pokemontrash.com/pokedex/images/minixy/002.png" alt="">
-                    Herbizarre
-                </a>
-            </td>
-            <td>
-                <a href="#">
-                    <img src="https://www.pokemontrash.com/pokedex/images/minixy/003.png" alt="">
-                    Florizarre
-                </a>
-            </td>
-        </tr>
-    </table>
-    <div class="item-desc">
-        <h3 class="desc-title">Description de {{pokemon.name}}</h3>
-        <p class="desc-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim repellendus, odio quasi
-            deleniti non natus temporibus asperiores, nisi laborum id molestias, inventore eius consequatur quas
-            recusandae nobis aperiam consectetur placeat alias blanditiis sunt totam molestiae vero labore! Repellat
-            optio alias, eveniet eligendi quia tenetur nobis placeat dicta culpa laborum nisi magnam harum doloremque.
-            Cum similique, quibusdam quaerat molestiae autem dolorum nulla sit recusandae possimus. Quaerat velit cum
-            officiis doloremque, corrupti possimus consectetur tenetur, corporis porro, similique et! Doloribus
-            nesciunt odio at, harum pariatur eveniet minima reiciendis necessitatibus itaque! Ratione alias sit omnis
-            excepturi culpa, odit accusamus dignissimos quasi hic cupiditate?</p>
-    </div>
-</div>
 </div>
 {% endblock %}

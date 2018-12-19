@@ -120,10 +120,10 @@ nav .menu li .active {
 
 @media screen and (max-width: 580px) {
     nav .menu {
-        position: fixed;
-        top: 73px;
-        width: 100vw;
-        margin: 0;
+      position: fixed;
+      top: 70px;
+      width: 100vw;
+      margin: 0;
     }
 }
 
@@ -201,15 +201,15 @@ nav #logo {
     opacity: .6;
 }
 
-.tb-body tr td:first-child {
-    border-bottom-left-radius: 10px;
-    border-top-left-radius: 10px;
-}
+        .tb-body tr td:first-child {
+            border-bottom-left-radius: 10px;
+            border-top-left-radius: 10px;
+        }
 
-.tb-body tr td:last-child {
-    border-radius: 10px;
-    /* border-top-right-radius: 10px; */
-}
+        .tb-body tr td:last-child {
+            border-radius: 10px;
+            /* border-top-right-radius: 10px; */
+        }
 
 .tb-body tr {
     border: 1px solid #ffffff;
@@ -360,84 +360,3 @@ nav #logo {
             text-decoration: none;
             font-size: 30px;
         }
-    }
-}
-
-.fightContainer {
-    width: 100%;
-
-}
-
-.displayAllTeam {
-    display: flex;
-    justify-content: space-around;
-}
-
-.displayOneTeamContainer {
-    display: flex;
-    flex-direction: column;
-    margin: 5%;
-}
-
-.displayOneTeamContainer h2 {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.displayOneTeam {
-    display: flex;
-    background-color: #FFF;
-    border-radius: 15px;
-    height: 40px;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-.displayOnePokemon {
-}
-
-.picturePokemon {
-    width: 80px;
-}
-
-.FightSection {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-}
-
-.displayOneFighter {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#fight {
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 15px;
-    padding-left: 30px;
-    padding-right: 30px;
-    outline: none;
-    margin-top: 50px;
-}
-
-.descriptionFight {
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 15px;
-    padding-left: 30px;
-    padding-right: 30px;
-    outline: none;
-    margin-top: 50px;
-    width: 700px;
-    justify-content: center;
-    align-items: center;
-    background-color: #FFF;
-    border-radius: 15px;
-    color: #aaaab6;
-
-}

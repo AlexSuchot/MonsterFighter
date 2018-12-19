@@ -1,17 +1,12 @@
 <?php
-
 namespace App\DataFixtures;
-
 use App\Entity\Pokemon;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\Persistence\ObjectManager;
-
-
 class PokemonFixtures extends Fixture
 {
     public function load(ObjectManager $manager)
     {
-
         $charizard = new Pokemon();
         $charizard
             ->setName("Charizard")
@@ -22,9 +17,9 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Charizard.png")
             ->setIcon("assets/icones/Charizard_icon.png")
             ->setType("Fire")
+            ->setStage(["Charmander", "Charmeleon", "Charizard"])
             ->setNumberPokedex(6);
         $manager->persist($charizard);
-
         $blastoise = new Pokemon();
         $blastoise
             ->setName("Blastoise")
@@ -35,10 +30,10 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Blastoise.png")
             ->setIcon("assets/icones/Blastoise_icon.png")
             ->setType("Water")
+            ->setStage(["Charmander", "Charmeleon", "Charizard"])
+
             ->setNumberPokedex(9);
         $manager->persist($blastoise);
-
-
         $venusaur = new Pokemon();
         $venusaur
             ->setName("Venusaur")
@@ -49,10 +44,10 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Venusaur.png")
             ->setIcon("assets/icones/Venusaur_icon.png")
             ->setType("Grass")
+            ->setStage(["Charmander", "Charmeleon", "Charizard"])
+
             ->setNumberPokedex(3);
         $manager->persist($venusaur);
-
-
         $abra = new Pokemon();
         $abra
             ->setName("Abra")
@@ -63,10 +58,10 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Abra.png")
             ->setIcon("assets/icones/Abra_icon.png")
             ->setType("Psychic")
+            ->setStage(["Charmander", "Charmeleon", "Charizard"])
+
             ->setNumberPokedex(63);
         $manager->persist($abra);
-
-
         $kadabra = new Pokemon();
         $kadabra
             ->setName("Kadabra")
@@ -77,10 +72,10 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Kadabra.png")
             ->setIcon("assets/icones/Kadabra_icon.png")
             ->setType("Psychic")
+            ->setStage(["Charmander", "Charmeleon", "Charizard"])
+
             ->setNumberPokedex(64);
         $manager->persist($kadabra);
-
-
         $alakazam = new Pokemon();
         $alakazam
             ->setName("Alakazam")
@@ -91,10 +86,10 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Alakazam.png")
             ->setIcon("assets/icones/Alakazam_icon.png")
             ->setType("Psychic")
+            ->setStage(["Charmander", "Charmeleon", "Charizard"])
+
             ->setNumberPokedex(65);
         $manager->persist($alakazam);
-
-
         $aerodactyl = new Pokemon();
         $aerodactyl
             ->setName("Aerodactyl")
@@ -105,10 +100,10 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Aerodactyl.png")
             ->setIcon("assets/icones/Aerodactyl_icon.png")
             ->setType("Rock")
+            ->setStage(["Charmander", "Charmeleon", "Charizard"])
+
             ->setNumberPokedex(142);
         $manager->persist($aerodactyl);
-
-
         $ekans = new Pokemon();
         $ekans
             ->setName("Ekans")
@@ -119,10 +114,10 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Ekans.png")
             ->setIcon("assets/icones/Ekans_icon.png")
             ->setType("Poison")
+            ->setStage(["Charmander", "Charmeleon", "Charizard"])
+
             ->setNumberPokedex(23);
         $manager->persist($ekans);
-
-
         $arbok = new Pokemon();
         $arbok
             ->setName("Arbok")
@@ -133,10 +128,10 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Arbok.png")
             ->setIcon("assets/icones/Arbok_icon.png")
             ->setType("Poison")
+            ->setStage(["Charmander", "Charmeleon", "Charizard"])
+
             ->setNumberPokedex(24);
         $manager->persist($arbok);
-
-
         $growlithe = new Pokemon();
         $growlithe
             ->setName("Growlithe")
@@ -147,10 +142,10 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Growlithe.png")
             ->setIcon("assets/icones/Growlithe_icon.png")
             ->setType("Fire")
+            ->setStage(["Charmander", "Charmeleon", "Charizard"])
+
             ->setNumberPokedex(58);
         $manager->persist($growlithe);
-
-
         $arcanine = new Pokemon();
         $arcanine
             ->setName("Arcanine")
@@ -161,10 +156,10 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Arcanine.png")
             ->setIcon("assets/icones/Arcanine_icon.png")
             ->setType("Fire")
+            ->setStage(["Charmander", "Charmeleon", "Charizard"])
+
             ->setNumberPokedex(59);
         $manager->persist($arcanine);
-
-
         $moltres = new Pokemon();
         $moltres
             ->setName("Moltres")
@@ -175,10 +170,10 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Moltres.png")
             ->setIcon("assets/icones/Moltres_icon.png")
             ->setType("Fire")
+            ->setStage(["Charmander", "Charmeleon", "Charizard"])
+
             ->setNumberPokedex(146);
         $manager->persist($moltres);
-
-
         $articuno = new Pokemon();
         $articuno
             ->setName("Articuno")
@@ -189,10 +184,10 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Articuno.png")
             ->setIcon("assets/icones/Articuno_icon.png")
             ->setType("Ice")
+            ->setStage(["Charmander", "Charmeleon", "Charizard"])
+
             ->setNumberPokedex(144);
         $manager->persist($articuno);
-
-
         $weedle = new Pokemon();
         $weedle
             ->setName("Weedle")
@@ -203,10 +198,10 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Weedle.png")
             ->setIcon("assets/icones/Weedle_icon.png")
             ->setType("Bug")
+            ->setStage(["Charmander", "Charmeleon", "Charizard"])
+
             ->setNumberPokedex(13);
         $manager->persist($weedle);
-
-
         $kakuna = new Pokemon();
         $kakuna
             ->setName("Kakuna")
@@ -217,10 +212,10 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Kakuna.png")
             ->setIcon("assets/icones/Kakuna_icon.png")
             ->setType("Bug")
+            ->setStage(["Charmander", "Charmeleon", "Charizard"])
+
             ->setNumberPokedex(14);
         $manager->persist($kakuna);
-
-
         $beedrill = new Pokemon();
         $beedrill
             ->setName("Beedrill")
@@ -231,10 +226,10 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Weedle.png")
             ->setIcon("assets/icones/Weedle_icon.png")
             ->setType("Bug")
+            ->setStage(["Charmander", "Charmeleon", "Charizard"])
+
             ->setNumberPokedex(15);
         $manager->persist($beedrill);
-
-
         $bellsprout = new Pokemon();
         $bellsprout
             ->setName("Bellsprout")
@@ -245,10 +240,10 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Bellsprout.png")
             ->setIcon("assets/icones/Bellsprout_icon.png")
             ->setType("Grass")
+            ->setStage(["Charmander", "Charmeleon", "Charizard"])
+
             ->setNumberPokedex(69);
         $manager->persist($bellsprout);
-
-
         $weepinbell = new Pokemon();
         $weepinbell
             ->setName("Weepinbell")
@@ -259,10 +254,10 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Weepinbell.png")
             ->setIcon("assets/icones/Weepinbell_icon.png")
             ->setType("Grass")
+            ->setStage(["Charmander", "Charmeleon", "Charizard"])
+
             ->setNumberPokedex(70);
         $manager->persist($weepinbell);
-
-
         $victreebel = new Pokemon();
         $victreebel
             ->setName("Victreebel")
@@ -273,10 +268,10 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Victreebel.png")
             ->setIcon("assets/icones/Victreebel_icon.png")
             ->setType("Grass")
+            ->setStage(["Charmander", "Charmeleon", "Charizard"])
+
             ->setNumberPokedex(71);
         $manager->persist($victreebel);
-
-
         $squirtle = new Pokemon();
         $squirtle
             ->setName("Squirtle")
@@ -287,9 +282,10 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Squirtle.png")
             ->setIcon("assets/icones/Squirtle_icon.png")
             ->setType("Eau")
+            ->setStage(["Charmander", "Charmeleon", "Charizard"])
+
             ->setNumberPokedex(7);
         $manager->persist($squirtle);
-
         $wartortle = new Pokemon();
         $wartortle
             ->setName("Wartortle")
@@ -300,6 +296,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Wartortle.png")
             ->setIcon("assets/icones/Wartortle_icon.png")
             ->setType("Water")
+            ->setStage("Charmander", "Charmeleon", "Charizard")
             ->setNumberPokedex(8);
         $manager->persist($wartortle);
 

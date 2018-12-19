@@ -43,7 +43,7 @@ class SecurityController extends AbstractController
     {
         $user = new User();
         $form = $this->createFormBuilder($user)
-            ->add('pseudo', TextType::class)
+            ->add('nickname', TextType::class)
             ->add('email', EmailType::class)
             ->add('password', PasswordType::class)
             ->add('confirm_password', PasswordType::class)
@@ -55,6 +55,7 @@ class SecurityController extends AbstractController
             $hash = $encoder->encodePassword($user, $user->getPassword());
             $user->setPassword($hash);
             $manager->persist($user);
+            // $manager->addRole('ROLE_USER');
             $manager->flush();
             $success = 1;
             $url = $urlGenerator->generate('login', ['success' => $success]);

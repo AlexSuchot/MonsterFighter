@@ -62,6 +62,12 @@ class Pokemon
      */
     private $icon;
 
+    /**
+     * @ORM\Column(type="array", length=255)
+     */
+    private $stage;
+
+
     public function getId(): ?int
     {
         return $this->id;
@@ -172,6 +178,20 @@ class Pokemon
     {
         $this->icon = $icon;
 
+        return $this;
+    }
+
+    /**
+     * @see UserInterface
+     */
+    public function getStage(): array
+    {
+        $stage = $this->stage;
+        return array_unique($stage);
+    }
+    public function setStage(array $stage): self
+    {
+        $this->stage = $stage;
         return $this;
     }
 }
