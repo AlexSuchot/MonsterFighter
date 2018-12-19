@@ -307,7 +307,7 @@ class PokemonFixtures extends Fixture
             ->setLife(45)
             ->setDefense(57)
             ->setSpeed(45)
-            ->setImage("../../assets/images/Bulbasaur.png")
+            ->setImage("../assets/images/Bulbasaur.png")
             ->setIcon("assets/icones/Bulbasaur_icon.png")
             ->setType("Grass")
             ->setNumberPokedex(1);

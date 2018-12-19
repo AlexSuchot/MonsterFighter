@@ -24,17 +24,26 @@ body {
 
         /*        Menu         */
 
+        nav {
+            display: flex;
+            padding: 1px;
+            transition: all 1s;
+            background-color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+        }
 
+        @media screen and (max-width: 580px) {
+            nav {
+                justify-content: space-between;
+            }
+        }
 
-  nav {
-    display: flex;
-    padding: 1px;
-    transition: all 1s;
-    background-color: white;
-    position: fixed;
-    width: 100%;
-    top: 0;
-  }
+        nav .logo {
+            width: 40px;
+            height: 40px;
+        }
 
 @media screen and (max-width: 580px) {
     nav {
@@ -208,7 +217,7 @@ nav #logo {
 
         .tb-body tr td:last-child {
             border-radius: 10px;
-            /* border-top-right-radius: 10px; */
+            border-top-right-radius: 10px;
         }
 
 .tb-body tr {
@@ -347,7 +356,7 @@ nav #logo {
             text-decoration: none;
             border-radius: 10px 10px 0 0;
         }
-        
+
         .addPokemon:hover {
             background-color: red;
             border: 2px solid red;
