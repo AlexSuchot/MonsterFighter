@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="../assets/css/form.css"/>
 
     <div class="container-plus">
-        <div class="block">
+        <div class="block marg">
             <a href="{{ path('changePassword') }}"><img src="../assets/images/pokeball.png"></a>
-            <h1>{{ user.getPseudo }}</h1>
+            <h1>{{ user.getNickname }}</h1>
             <p>{{ user.getEmail }}</p>
             <p>Total game : 8</p>
             <p>Win game : 6</p>
             <p>Lose game : 2</p>
-            <a href="{{ path('changePassword') }}">Change password</a>
+            <a class="link" href="{{ path('changePassword') }}">Change password</a>
         </div>
     </div>
 {% endblock %}

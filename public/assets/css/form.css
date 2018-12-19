@@ -7,12 +7,15 @@
 }
 
 .block {
+    /* margin: 91px 0 0 0; */
     background-color: white;
+    min-width: 260px;
     padding: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    border-radius: 20px;
 }
 
 .flexCol {
@@ -55,6 +58,7 @@ button {
     color: black;
     margin: 5px 0 0 0;
     padding: 8px;
+    transition: 0.35s;
 }
 
 button:hover {
@@ -63,11 +67,12 @@ button:hover {
     color: white;
 }
 
-a {
+.link {
     color: black;
     margin: 15px 0 0 0;
+    transition: 0.35s;
 }
 
-a:hover {
+.link:hover {
     color: red;
 }

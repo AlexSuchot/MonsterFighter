@@ -37,7 +37,7 @@ class PokemonController extends AbstractController
             'controller_name' => 'PokemonController',
             'team1' => $player1->getTeam(), 'team2' => $user->getTeam(),
             'pokemon1team1' => $player1->getTeam()[0], 'pokemon1team2' => $user->getTeam()[0],
-            'player1' => $player1->getName(),'player2' => $user->getPseudo(),
+            'player1' => $player1->getName(),'player2' => $user->getNickname(),
             'hp_pokemon' => $hp_pokemon
         ]);
     }
