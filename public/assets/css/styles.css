@@ -360,11 +360,10 @@ nav #logo {
             text-decoration: none;
             font-size: 30px;
         }
-    }
-}
 
 .fightContainer {
     width: 100%;
+
 
 }
 
@@ -404,7 +403,10 @@ nav #logo {
     width: 100%;
     display: flex;
     justify-content: space-around;
+
+
 }
+
 
 .displayOneFighter {
     display: flex;
@@ -439,5 +441,4 @@ nav #logo {
     background-color: #FFF;
     border-radius: 15px;
     color: #aaaab6;
-
 }

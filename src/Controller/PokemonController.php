@@ -28,7 +28,7 @@ class PokemonController extends AbstractController
         $manager->persist($user);
         $manager->flush();
 
-        $fight = $this-> attack($player1->getTeam()[0],$user->getTeam()[0]);
+        //$fight = $this-> attack($player1->getTeam()[0],$user->getTeam()[0], );
 
         $hp_pokemon =  $user->getTeam()[0]->getLife();
 
@@ -77,13 +77,13 @@ class PokemonController extends AbstractController
         $pokemon2 = $repository->findOneByNumberPokedex($cible);
 
         if ($request->isXMLHttpRequest()) {
-            $data = $this->attack($pokemon1,$cible);
+            $data = $this->attack($pokemon1,$cible, $cible->getLife());
             return new JsonResponse($data);
         }
         return new Response("Erreur : ceci n'est pas une requête Ajax");
     }
 
-    public function attack(Pokemon $attaquant, Pokemon $cible)
+    public function attack(Pokemon $attaquant, Pokemon $cible, $life)
     {
         $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
         $user = $this->getUser();
@@ -94,15 +94,15 @@ class PokemonController extends AbstractController
             if ($damage < 10) {
                 $damage = 20;
             }
+            $life = $cible->getLife();
+            $life = $life - $damage;
 
-            $result = $cible->getLife() - $damage;
+            //$cible->setLife($result);
+            //$manager = $this->getDoctrine()->getManager();
+            //$manager->persist($cible);
+            //$manager->flush();
 
-            $cible->setLife($result);
-            $manager = $this->getDoctrine()->getManager();
-            $manager->persist($cible);
-            $manager->flush();
-
-            return array("result" => $result);
+            return array("result" => $life);
     }
     public function pokemonKo()
     {

@@ -48,7 +48,7 @@
                 <p>{{ pokemon1team2.name }}</p>
                 <img width="120px" src="{{ pokemon1team2.image }}">
                 <p id="#hpOpponent">Points de vie : {{ pokemon1team2.life }}</p>
-                <progress value="{{ pokemon1team2.life }}" max="{{ hp_pokemon }}"></progress>
+                <progress value="{{ pokemon1team2.life }}" max="{{ pokemon1team2.life }}"></progress>
             </div>
         </div>
         <button type="button" id="fight" class="btn btn-primary">Fight !</button>
