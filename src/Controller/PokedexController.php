@@ -44,16 +44,15 @@ class PokedexController extends AbstractController
     {
         $repo = $this->getDoctrine()->getRepository(Pokemon::class);
         $pokemon = $repo->findOneByNumberPokedex($number);
-        $stagePokemon = array();
-        $stage = array();
-        $stage = $pokemon->getStage();
-        for($i = 0; $i < sizeof($stage); $i++){
-            $pokemonFind = $repo->findOneByName($stage[$i]);
-            array_push($stagePokemon, $pokemonFind);
-            
+        $stagesPokemon = array();
+        $stages = $pokemon->getStage();
+
+        for($i = 0; $i < sizeof($stages); $i++){
+            $pokemonFind = $repo->findOneByName($stages[$i]);
+            array_push($stagesPokemon, $pokemonFind);
         }
         return $this->render('pokedex/info.html.twig', [
-            'pokemon' => $pokemon, 'stagePokemon' => $stagePokemon
+            'pokemon' => $pokemon, 'stages' => $stagesPokemon
         ]);
     }
 

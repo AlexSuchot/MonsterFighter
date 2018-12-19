@@ -98,16 +98,27 @@
                 async: true,
                 success: function (data) {
                     data.forEach((el) => {
-                        var url = '{{ path("pokemon", {"number": "el.number"})}}';
-                        url = url.replace("el.number", el.number);
-                        var row = '<tr data-href=' + url + '><td class="tb-data">' + el.number +
+                        var info = '{{ path("info", {"number": "el.number"})}}';
+                        info = info.replace("el.number", el.number);
+                        var edit = '{{ path("edit", {"number": "el.number"})}}';
+                        edit = edit.replace("el.number", el.number);
+                        var row = '<tr data-href="' + info + '"><td class="tb-data">' + el.number +
                             '</td><td class="tb-data"><img class="thumbnail" src="' + el.icon +
                             '" alt=""></td><td class="tb-data">' + el.name +
                             '</td><td class="tb-data">' + el.type +
                             '</td><td class="tb-data">' + el.life +
                             '</td><td class="tb-data">' + el.attack +
                             '</td><td class="tb-data">' + el.defense +
-                            '</td><td class="tb-data">' + el.speed + '</td></a></tr>';
+                            '</td><td class="tb-data">' + el.speed + '</td></a>' +
+                            '{% if is_granted("ROLE_ADMIN") %}' +
+                            '<td class="tb-data">' +
+                            '<a class="td-edit" href="' + edit + '">' +
+                            '<svg viewBox="0 0 24 24">' +
+                            '<path fill="#BBBBBB" d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" />' +
+                            '</svg>' +
+                            '</a>' +
+                            '</td>' +
+                            '{% endif %}</tr>';
                         $('#data').append(row);
                         links();
                     });
