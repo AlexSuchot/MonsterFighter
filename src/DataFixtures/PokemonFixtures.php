@@ -296,7 +296,6 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Wartortle.png")
             ->setIcon("assets/icones/Wartortle_icon.png")
             ->setType("Water")
-            ->setStage("Charmander", "Charmeleon", "Charizard")
             ->setNumberPokedex(8);
         $manager->persist($wartortle);
 
