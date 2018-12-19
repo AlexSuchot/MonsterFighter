@@ -1453,7 +1453,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Tentacruel.png")
             ->setIcon("assets/icones/Tentacruel_icon.png")
             ->setType("Water")
-            ->setStage([""])
+            ->setStage(["Tentacool", "Tentacruel"])
             ->setDescription("Description")
             ->setNumberPokedex(73);
         $manager->persist($tentacruel);
@@ -1517,7 +1517,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Vileplume.png")
             ->setIcon("assets/icones/Vileplume_icon.png")
             ->setType("Grass")
-            ->setStage([""])
+            ->setStage(["Oddish", "Bloom", "Vileplume"])
             ->setDescription("Description")
             ->setNumberPokedex(45);
         $manager->persist($vileplume);
@@ -1549,7 +1549,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Weezing.png")
             ->setIcon("assets/icones/Weezing_icon.png")
             ->setType("Poison")
-            ->setStage([""])
+            ->setStage(["Koffing", "Weezing"])
             ->setDescription("Description")
             ->setNumberPokedex(110);
         $manager->persist($weezing);
@@ -1565,7 +1565,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Zubat.png")
             ->setIcon("assets/icones/Zubat_icon.png")
             ->setType("Poison")
-            ->setStage([""])
+            ->setStage(["Zubat", "Golbat"])
             ->setDescription("Description")
             ->setNumberPokedex(41);
         $manager->persist($zubat);
@@ -1581,7 +1581,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Chansey.png")
             ->setIcon("assets/icones/Chansey_icon.png")
             ->setType("Normal")
-            ->setStage([""])
+            ->setStage(["Chansey"])
             ->setDescription("Description")
             ->setNumberPokedex(113);
         $manager->persist($chansey);
