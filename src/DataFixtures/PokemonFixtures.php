@@ -1924,8 +1924,8 @@ class PokemonFixtures extends Fixture
         $manager->persist($kangaskhan);
 
 
-        $Lickitung = new Pokemon();
-        $Lickitung
+        $lickitung = new Pokemon();
+        $lickitung
             ->setName("Lickitung")
             ->setAttack(60)
             ->setLife(90)
@@ -2065,7 +2065,7 @@ class PokemonFixtures extends Fixture
             ->setStage(["Meowth", "Persian"])
             ->setDescription("Appears to be more active at night. It loves round and shiny things. It can't stop itself from picking them up")
             ->setNumberPokedex(52);
-        $manager->persist($Meowth);
+        $manager->persist($meowth);
 
 
         $persian = new Pokemon();
@@ -2193,7 +2193,7 @@ class PokemonFixtures extends Fixture
             ->setStage(["Rattata", "Raticate"])
             ->setDescription("Will chew on anything with its fangs. If you see one, you can be certain that 40 more live in the area.")
             ->setNumberPokedex(19);
-        $manager->persist($Rattata);
+        $manager->persist($rattata);
 
 
         $rhydon = new Pokemon();
@@ -2225,7 +2225,7 @@ class PokemonFixtures extends Fixture
             ->setStage(["Rhyhorn", "Rhydon"])
             ->setDescription("A Pokémon with a one-track mind. Once it charges, it won't stop running until it falls asleep.")
             ->setNumberPokedex(111);
-        $manager->persist($rhyhorn);
+        $manager->persist($ryhorn);
 
 
         $sandshrew = new Pokemon();
@@ -2321,7 +2321,7 @@ class PokemonFixtures extends Fixture
             ->setStage(["Jigglypuff", "Wigglytuff"])
             ->setDescription("Its body is very elastic. By inhaling deeply, it can continue to inflate itself without limit.")
             ->setNumberPokedex(40);
-        $manager->persist($wygglytuff);
+        $manager->persist($wigglytuff);
 
 
         $zapdos = new Pokemon();

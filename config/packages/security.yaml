@@ -46,11 +46,11 @@ security:
 
     access_control:
         # matches /admin/users/*
-        - { path: ^/pokemon, roles: ROLE_USER }
+        - { path: ^/fight, roles: ROLE_USER }
         - { path: ^/pokedex, roles: ROLE_USER }
         - { path: ^/changePassword, roles: ROLE_USER }
         - { path: ^/profile, roles: ROLE_USER }
-        - { path: ^/indo, roles: ROLE_USER }
+        - { path: ^/info, roles: ROLE_USER }
 
         # matches /admin/* except for anything matching the above rule
         - { path: ^/settings, roles: ROLE_ADMIN }

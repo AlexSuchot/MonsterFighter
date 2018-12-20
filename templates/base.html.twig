@@ -18,15 +18,14 @@
     {% if is_granted('ROLE_USER') %}
     <header>
         <nav id="nav">
-            <a id="logo" href="{{ path('pokemon') }}">
+            <a id="logo" href="{{ path('fight') }}">
                 <img class="logo" alt="logo" src="../assets/images/pokeball.png" alt="">
             </a>
             <div class="menu">
                 <ul id="items-menu">
-                    <li><a class="{{ app.request.get('_route') == 'pokemon' ? 'active' }}" href="{{ path('pokemon') }}">Fight</a></li>
+                    <li><a class="{{ app.request.get('_route') == 'fight' ? 'active' }}" href="{{ path('fight') }}">Fight</a></li>
                     <li><a class="{{ app.request.get('_route') == 'pokedex' ? 'active' }}" href="{{ path('pokedex') }}">Pokedex</a></li>
-                    <li><a href="{{ path('pokemon') }}"><img class="logo" alt="logo" src="../assets/images/pokeball.png"
-                                alt=""></a></li>
+                    <li><a href="{{ path('fight') }}"><img class="logo" alt="logo" src="../assets/images/pokeball.png" alt=""></a></li>
                     <li><a class="{{ app.request.get('_route') == 'profile' ? 'active' }}" href="{{ path('profile') }}">Profile</a></li>
                     <li><a href="{{ path('logout') }}">Logout</a></li>
                 </ul>

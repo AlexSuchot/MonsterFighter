@@ -30,7 +30,7 @@ class SecurityController extends AbstractController
         $success = $request->get('success');
         $securityContext = $this->container->get('security.authorization_checker');
         if ($securityContext->isGranted('IS_AUTHENTICATED_REMEMBERED')) {
-            return $this->redirectToRoute('pokemon');
+            return $this->redirectToRoute('fight');
         }
         $error = $authenticationUtils->getLastAuthenticationError();
         return $this->render('security/login.html.twig', [ 'error' => $error, 'success' => $success ]);

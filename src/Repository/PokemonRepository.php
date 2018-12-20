@@ -36,19 +36,28 @@ class PokemonRepository extends ServiceEntityRepository
             ;
     }
 
+    public function findPokemonCount()
+    {
+        return $this->createQueryBuilder('p')
+        ->select('count(p.id)')
+        ->getQuery()
+        ->getResult();
+        ;
+    }
+
     public function research($keyword, $col, $order)
     {
-        return $this->createQueryBuilder('a')
-            ->andWhere('a.numberPokedex LIKE :val')
-            ->orWhere('a.name LIKE :val')
-            ->orWhere('a.type LIKE :val')
-            ->orWhere('a.life LIKE :val')
-            ->orWhere('a.attack LIKE :val')
-            ->orWhere('a.defense LIKE :val')
-            ->orWhere('a.speed LIKE :val')
+        return $this->createQueryBuilder('p')
+            ->andWhere('p.numberPokedex LIKE :val')
+            ->orWhere('p.name LIKE :val')
+            ->orWhere('p.type LIKE :val')
+            ->orWhere('p.life LIKE :val')
+            ->orWhere('p.attack LIKE :val')
+            ->orWhere('p.defense LIKE :val')
+            ->orWhere('p.speed LIKE :val')
             ->setParameter('val', $keyword.'%')
-            ->orderBy('a.'.$col, $order)
+            ->orderBy('p.'.$col, $order)
             ->getQuery()
             ->getResult();
-    } 
+    }
 }

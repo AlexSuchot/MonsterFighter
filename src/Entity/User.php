@@ -47,27 +47,6 @@ class User implements UserInterface
      */
     private $confirm_password;
 
-    /**
-     * @ORM\Column(type="array")
-     */
-    private $team = [];
-
-    /**
-     * @return mixed
-     */
-    public function getTeam()
-    {
-        return $this->team;
-    }
-
-    /**
-     * @param mixed $team
-     */
-    public function setTeam($team): void
-    {
-        $this->team = $team;
-    }
-
 
     public function getId(): ?int
     {

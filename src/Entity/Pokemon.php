@@ -192,7 +192,7 @@ class Pokemon
     public function getStage(): array
     {
         $stage = $this->stage;
-        return array_unique($stage);
+        return array($stage);
     }
     public function setStage(array $stage): self
     {
