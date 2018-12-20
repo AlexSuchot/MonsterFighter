@@ -63,7 +63,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Abra_icon.png")
             ->setType("Psychic")
             ->setStage(["Abra", "Kadabra", "Alakazam"])
-            ->setDescription("Abra sleeps for eighteen hours a day. However, it can sense the presence of foes even while it is sleeping. In such a situation, this Pokémon immediately teleports to safety. ")
+            ->setDescription("Abra sleeps for eighteen hours a day. However, it can sense the presence of foes even while it is sleeping. In such a situation, this Monster immediately teleports to safety. ")
             ->setNumberPokedex(63);
         $manager->persist($abra);
         $kadabra = new Pokemon();
@@ -77,7 +77,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Kadabra_icon.png")
             ->setType("Psychic")
             ->setStage(["Abra", "Kadabra", "Alakazam"])
-            ->setDescription("Kadabra emits a peculiar alpha wave if it develops a headache. Only those people with a particularly strong psyche can hope to become a Trainer of this Pokémon. ")
+            ->setDescription("Kadabra emits a peculiar alpha wave if it develops a headache. Only those people with a particularly strong psyche can hope to become a Trainer of this Monster. ")
             ->setNumberPokedex(64);
         $manager->persist($kadabra);
         $alakazam = new Pokemon();
@@ -105,7 +105,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Aerodactyl_icon.png")
             ->setType("Rock")
             ->setStage(["Aerodactyl"])
-            ->setDescription("Aerodactyl is a Pokémon from the age of dinosaurs. It was regenerated from genetic material extracted from amber. It is imagined to have been the king of the skies in ancient times. ")
+            ->setDescription("Aerodactyl is a Monster from the age of dinosaurs. It was regenerated from genetic material extracted from amber. It is imagined to have been the king of the skies in ancient times. ")
             ->setNumberPokedex(142);
         $manager->persist($aerodactyl);
         $ekans = new Pokemon();
@@ -133,7 +133,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Arbok_icon.png")
             ->setType("Poison")
             ->setStage(["Ekans", "Arbok"])
-            ->setDescription("This Pokémon is terrifically strong in order to constrict things with its body. It can even flatten steel oil drums. Once Arbok wraps its body around its foe, escaping its crunching embrace is impossible. ")
+            ->setDescription("This Monster is terrifically strong in order to constrict things with its body. It can even flatten steel oil drums. Once Arbok wraps its body around its foe, escaping its crunching embrace is impossible. ")
             ->setNumberPokedex(24);
         $manager->persist($arbok);
         $growlithe = new Pokemon();
@@ -175,7 +175,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Moltres_icon.png")
             ->setType("Fire")
             ->setStage(["Moltres"])
-            ->setDescription("Moltres is a legendary bird Pokémon that has the ability to control fire. If this Pokémon is injured, it is said to dip its body in the molten magma of a volcano to burn and heal itself. ")
+            ->setDescription("Moltres is a legendary bird Monster that has the ability to control fire. If this Monster is injured, it is said to dip its body in the molten magma of a volcano to burn and heal itself. ")
             ->setNumberPokedex(146);
         $manager->persist($moltres);
         $articuno = new Pokemon();
@@ -189,7 +189,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Articuno_icon.png")
             ->setType("Ice")
             ->setStage(["Articuno"])
-            ->setDescription("Articuno is a legendary bird Pokémon that can control ice. The flapping of its wings chills the air. As a result, it is said that when this Pokémon flies, snow will fall. ")
+            ->setDescription("Articuno is a legendary bird Monster that can control ice. The flapping of its wings chills the air. As a result, it is said that when this Monster flies, snow will fall. ")
             ->setNumberPokedex(144);
         $manager->persist($articuno);
         $weedle = new Pokemon();
@@ -245,7 +245,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Bellsprout_icon.png")
             ->setType("Grass")
             ->setStage(["Bellsprout", "Weepinbell", "Victreebel"])
-            ->setDescription("Bellsprout's thin and flexible body lets it bend and sway to avoid any attack, however strong it may be. From its mouth, this Pokémon spits a corrosive fluid that melts even iron. ")
+            ->setDescription("Bellsprout's thin and flexible body lets it bend and sway to avoid any attack, however strong it may be. From its mouth, this Monster spits a corrosive fluid that melts even iron. ")
             ->setNumberPokedex(69);
         $manager->persist($bellsprout);
         $weepinbell = new Pokemon();
@@ -259,7 +259,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Weepinbell_icon.png")
             ->setType("Grass")
             ->setStage(["Bellsprout", "Weepinbell", "Victreebel"])
-            ->setDescription("Weepinbell has a large hook on its rear end. At night, the Pokémon hooks on to a tree branch and goes to sleep. If it moves around in its sleep, it may wake up to find itself on the ground. ")
+            ->setDescription("Weepinbell has a large hook on its rear end. At night, the Monster hooks on to a tree branch and goes to sleep. If it moves around in its sleep, it may wake up to find itself on the ground. ")
             ->setNumberPokedex(70);
         $manager->persist($weepinbell);
         $victreebel = new Pokemon();
@@ -273,7 +273,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Victreebel_icon.png")
             ->setType("Grass")
             ->setStage(["Bellsprout", "Weepinbell", "Victreebel"])
-            ->setDescription("Victreebel has a long vine that extends from its head. This vine is waved and flicked about as if it were an animal to attract prey. When an unsuspecting prey draws near, this Pokémon swallows it whole. ")
+            ->setDescription("Victreebel has a long vine that extends from its head. This vine is waved and flicked about as if it were an animal to attract prey. When an unsuspecting prey draws near, this Monster swallows it whole. ")
             ->setNumberPokedex(71);
         $manager->persist($victreebel);
         $squirtle = new Pokemon();
@@ -285,8 +285,8 @@ class PokemonFixtures extends Fixture
             ->setSpeed(43)
             ->setImage("../assets/images/Squirtle.png")
             ->setIcon("assets/icones/Squirtle_icon.png")
-            ->setType("Water")
-            ->setStage(["Squirtle", "Wartortle", "Blastoise"])
+            ->setType("Eau")
+            ->setStage(["Charmander", "Charmeleon", "Charizard"])
             ->setDescription("Squirtle's shell is not merely used for protection. The shell's rounded shape and the grooves on its surface help minimize resistance in water, enabling this Pokémon to swim at high speeds. ")
             ->setNumberPokedex(7);
         $manager->persist($squirtle);
@@ -300,7 +300,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Wartortle.png")
             ->setIcon("assets/icones/Wartortle_icon.png")
             ->setType("Water")
-            ->setDescription("Its tail is large and covered with a rich, thick fur. The tail becomes increasingly deeper in color as Wartortle ages. The scratches on its shell are evidence of this Pokémon's toughness as a battler.")
+            ->setDescription("Its tail is large and covered with a rich, thick fur. The tail becomes increasingly deeper in color as Wartortle ages. The scratches on its shell are evidence of this Monster's toughness as a battler.")
             ->setStage(["Squirtle", "Wartortle", "Blastoise"])
             ->setNumberPokedex(8);
 
@@ -333,7 +333,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Ivysaur.png")
             ->setIcon("assets/icones/Ivysaur_icon.png")
             ->setType("Grass")
-            ->setDescription("There is a bud on this Pokémon's back. To support its weight, Ivysaur's legs and trunk grow thick and strong. If it starts spending more time lying in the sunlight, it's a sign that the bud will bloom into a large flower soon. ")
+            ->setDescription("There is a bud on this Monster's back. To support its weight, Ivysaur's legs and trunk grow thick and strong. If it starts spending more time lying in the sunlight, it's a sign that the bud will bloom into a large flower soon. ")
             ->setStage(["Bulbasaur", "Ivysaur", "Venusaur"])
             ->setNumberPokedex(2);
         $manager->persist($ivysaur);
@@ -350,7 +350,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Caterpie_icon.png")
             ->setType("Bug")
             ->setDescription("Caterpie has a voracious appetite. It can devour leaves bigger than its body right before your eyes. From its antenna, this Pokémon releases a terrifically strong odor. ")
-            ->setStage(["Caterpie", "Metapod", "Butterfree"])
+            ->setStage(["Caterpie", "Metapod", "Buterfree"])
             ->setNumberPokedex(10);
         $manager->persist($caterpie);
 
@@ -365,8 +365,8 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Metapod.png")
             ->setIcon("assets/icones/Metapod_icon.png")
             ->setType("Bug")
-            ->setDescription("The shell covering this Pokémon's body is as hard as an iron slab. Metapod does not move very much. It stays still because it is preparing its soft innards for evolution inside the hard shell. ")
-            ->setStage(["Caterpie", "Metapod", "Butterfree"])
+            ->setDescription("The shell covering this Monster's body is as hard as an iron slab. Metapod does not move very much. It stays still because it is preparing its soft innards for evolution inside the hard shell. ")
+            ->setStage(["Caterpie", "Metapod", "Buterfree"])
             ->setNumberPokedex(11);
         $manager->persist($metapod);
 
@@ -382,7 +382,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Butterfree_icon.png")
             ->setType("Bug")
             ->setDescription("Butterfree has a superior ability to search for delicious honey from flowers. It can even search out, extract, and carry honey from flowers that are blooming over six miles from its nest. ")
-            ->setStage(["Caterpie", "Metapod", "Butterfree"])
+            ->setStage(["Caterpie", "Metapod", "Buterfree"])
             ->setNumberPokedex(12);
         $manager->persist($butterfree);
 
@@ -397,7 +397,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Charmander.png")
             ->setIcon("assets/icones/Charmander_icon.png")
             ->setType("Fire")
-            ->setDescription("The flame that burns at the tip of its tail is an indication of its emotions. The flame wavers when Charmander is enjoying itself. If the Pokémon becomes enraged, the flame burns fiercely. ")
+            ->setDescription("The flame that burns at the tip of its tail is an indication of its emotions. The flame wavers when Charmander is enjoying itself. If the Monster becomes enraged, the flame burns fiercely. ")
             ->setStage(["Charmander", "Charmeleon", "Charizard"])
             ->setNumberPokedex(4);
         $manager->persist($charmander);
@@ -429,7 +429,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Mewtwo.png")
             ->setIcon("assets/icones/Mewtwo_icon.png")
             ->setType("Psychic")
-            ->setDescription("Mewtwo is a Pokémon that was created by genetic manipulation. However, even though the scientific power of humans created this Pokémon's body, they failed to endow Mewtwo with a compassionate heart. ")
+            ->setDescription("Mewtwo is a Monster that was created by genetic manipulation. However, even though the scientific power of humans created this Monster's body, they failed to endow Mewtwo with a compassionate heart. ")
             ->setStage(["Mewtwo"])
             ->setNumberPokedex(150);
         $manager->persist($mewtwo);
@@ -445,7 +445,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Cloyster.png")
             ->setIcon("assets/icones/Cloyster_icon.png")
             ->setType("Water")
-            ->setDescription("Cloyster is capable of swimming in the sea. It does so by swallowing water, then jetting it out toward the rear. This Pokémon shoots spikes from its shell using the same system. ")
+            ->setDescription("Cloyster is capable of swimming in the sea. It does so by swallowing water, then jetting it out toward the rear. This Monster shoots spikes from its shell using the same system. ")
             ->setStage(["Shellder", "Cloyster"])
             ->setNumberPokedex(91);
         $manager->persist($cloyster);
@@ -461,7 +461,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Dewgong.png")
             ->setIcon("assets/icones/Dewgong_icon.png")
             ->setType("Water")
-            ->setDescription("Dewgong loves to snooze on bitterly cold ice. The sight of this Pokémon sleeping on a glacier was mistakenly thought to be a mermaid by a mariner long ago. ")
+            ->setDescription("Dewgong loves to snooze on bitterly cold ice. The sight of this Monster sleeping on a glacier was mistakenly thought to be a mermaid by a mariner long ago. ")
             ->setStage(["Seel", "Dewgong"])
             ->setNumberPokedex(87);
         $manager->persist($dewgong);
@@ -493,7 +493,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Dragonite.png")
             ->setIcon("assets/icones/Dragonite_icon.png")
             ->setType("Dragon")
-            ->setDescription("Dragonite is capable of circling the globe in just 16 hours. It is a kindhearted Pokémon that leads lost and foundering ships in a storm to the safety of land. ")
+            ->setDescription("Dragonite is capable of circling the globe in just 16 hours. It is a kindhearted Monster that leads lost and foundering ships in a storm to the safety of land. ")
             ->setStage(["Dratini", "Dragonair", "Dragonite"])
             ->setNumberPokedex(149);
         $manager->persist($dragonite);
@@ -525,7 +525,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Drowzee.png")
             ->setIcon("assets/icones/Drowzee_icon.png")
             ->setType("Psychic")
-            ->setDescription("If your nose becomes itchy while you are sleeping, it's a sure sign that one of these Pokémon is standing above your pillow and trying to eat your dream through your nostrils. ")
+            ->setDescription("If your nose becomes itchy while you are sleeping, it's a sure sign that one of these Monster is standing above your pillow and trying to eat your dream through your nostrils. ")
             ->setStage(["Drowzee", "Hypno"])
             ->setNumberPokedex(96);
         $manager->persist($drowzee);
@@ -541,7 +541,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Exeggcute.png")
             ->setIcon("assets/icones/Exeggcute_icon.png")
             ->setType("Grass")
-            ->setDescription("This Pokémon consists of six eggs that form a closely knit cluster. The six eggs attract each other and spin around. When cracks increasingly appear on the eggs, Exeggcute is close to evolution. ")
+            ->setDescription("This Monster consists of six eggs that form a closely knit cluster. The six eggs attract each other and spin around. When cracks increasingly appear on the eggs, Exeggcute is close to evolution. ")
             ->setStage(["Exeggcute", "Exeggutor"])
             ->setNumberPokedex(102);
         $manager->persist($exeggcute);
@@ -573,7 +573,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Flareon.png")
             ->setIcon("assets/icones/Flareon_icon.png")
             ->setType("Fire")
-            ->setDescription("Flareon's fluffy fur has a functional purpose—it releases heat into the air so that its body does not get excessively hot. This Pokémon's body temperature can rise to a maximum of 1,650 degrees Fahrenheit. ")
+            ->setDescription("Flareon's fluffy fur has a functional purpose—it releases heat into the air so that its body does not get excessively hot. This Monster's body temperature can rise to a maximum of 1,650 degrees Fahrenheit. ")
             ->setStage(["Eevee", "Flareon"])
             ->setNumberPokedex(136);
         $manager->persist($flareon);
@@ -589,7 +589,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Geodude.png")
             ->setIcon("assets/icones/Geodude_icon.png")
             ->setType("Rock")
-            ->setDescription("The longer a Geodude lives, the more its edges are chipped and worn away, making it more rounded in appearance. However, this Pokémon's heart will remain hard, craggy, and rough always.")
+            ->setDescription("The longer a Geodude lives, the more its edges are chipped and worn away, making it more rounded in appearance. However, this Monster's heart will remain hard, craggy, and rough always.")
             ->setStage(["Geodude", "Graveler", "Golem"])
             ->setNumberPokedex(74);
         $manager->persist($geodude);
@@ -605,7 +605,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Gloom.png")
             ->setIcon("assets/icones/Gloom_icon.png")
             ->setType("Grass")
-            ->setDescription("Gloom releases a foul fragrance from the pistil of its flower. When faced with danger, the stench worsens. If this Pokémon is feeling calm and secure, it does not release its usual stinky aroma.")
+            ->setDescription("Gloom releases a foul fragrance from the pistil of its flower. When faced with danger, the stench worsens. If this Monster is feeling calm and secure, it does not release its usual stinky aroma.")
             ->setStage(["Oddish", "Gloom", "Vileplume"])
             ->setNumberPokedex(44);
         $manager->persist($gloom);
@@ -621,7 +621,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Golbat.png")
             ->setIcon("assets/icones/Golbat_icon.png")
             ->setType("Poison")
-            ->setDescription("Golbat loves to drink the blood of living things. It is particularly active in the pitch black of night. This Pokémon flits around in the night skies, seeking fresh blood. ")
+            ->setDescription("Golbat loves to drink the blood of living things. It is particularly active in the pitch black of night. This Monster flits around in the night skies, seeking fresh blood. ")
             ->setStage(["Zubat", "Golbat"])
             ->setNumberPokedex(74);
         $manager->persist($golbat);
@@ -637,7 +637,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Goldeen.png")
             ->setIcon("assets/icones/Goldeen_icon.png")
             ->setType("Water")
-            ->setDescription("Goldeen is a very beautiful Pokémon with fins that billow elegantly in water. However, don't let your guard down around this Pokémon—it could ram you powerfully with its horn. ")
+            ->setDescription("Goldeen is a very beautiful Monster with fins that billow elegantly in water. However, don't let your guard down around this Monster—it could ram you powerfully with its horn. ")
             ->setStage(["Goldeen", "Seaking"])
             ->setNumberPokedex(118);
         $manager->persist($goldeen);
@@ -653,7 +653,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Golduck.png")
             ->setIcon("assets/icones/Golduck_icon.png")
             ->setType("Water")
-            ->setDescription("The webbed flippers on its forelegs and hind legs and the streamlined body of Golduck give it frightening speed. This Pokémon is definitely much faster than even the most athletic swimmer. ")
+            ->setDescription("The webbed flippers on its forelegs and hind legs and the streamlined body of Golduck give it frightening speed. This Monster is definitely much faster than even the most athletic swimmer. ")
             ->setStage(["Psyduck", "Golduck"])
             ->setNumberPokedex(55);
         $manager->persist($golduck);
@@ -669,7 +669,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Golem.png")
             ->setIcon("assets/icones/Golem_icon.png")
             ->setType("Rock")
-            ->setDescription("Golem live up on mountains. If there is a large earthquake, these Pokémon will come rolling down off the mountains en masse to the foothills below. ")
+            ->setDescription("Golem live up on mountains. If there is a large earthquake, these Monster will come rolling down off the mountains en masse to the foothills below. ")
             ->setStage(["Geodude", "Graveler", "Golem"])
             ->setNumberPokedex(76);
         $manager->persist($golem);
@@ -685,7 +685,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Graveler.png")
             ->setIcon("assets/icones/Graveler_icon.png")
             ->setType("Rock")
-            ->setDescription("Graveler grows by feeding on rocks. Apparently, it prefers to eat rocks that are covered in moss. This Pokémon eats its way through a ton of rocks on a daily basis. ")
+            ->setDescription("Graveler grows by feeding on rocks. Apparently, it prefers to eat rocks that are covered in moss. This Monster eats its way through a ton of rocks on a daily basis. ")
             ->setStage(["Geodude", "Graveler", "Golem"])
             ->setNumberPokedex(75);
         $manager->persist($graveler);
@@ -701,7 +701,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Grimer.png")
             ->setIcon("assets/icones/Grimer_icon.png")
             ->setType("Poison")
-            ->setDescription("Grimer's sludgy and rubbery body can be forced through any opening, however small it may be. This Pokémon enters sewer pipes to drink filthy wastewater. ")
+            ->setDescription("Grimer's sludgy and rubbery body can be forced through any opening, however small it may be. This Monster enters sewer pipes to drink filthy wastewater. ")
             ->setStage(["Grimer", "Muk"])
             ->setNumberPokedex(88);
         $manager->persist($grimer);
@@ -717,7 +717,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Gyarados.png")
             ->setIcon("assets/icones/Gyarados_icon.png")
             ->setType("Water")
-            ->setDescription("When Magikarp evolves into Gyarados, its brain cells undergo a structural transformation. It is said that this transformation is to blame for this Pokémon's wildly violent nature. ")
+            ->setDescription("When Magikarp evolves into Gyarados, its brain cells undergo a structural transformation. It is said that this transformation is to blame for this Monster's wildly violent nature. ")
             ->setStage(["Magikarp", "Gyarados"])
             ->setNumberPokedex(130);
         $manager->persist($gyarados);
@@ -733,7 +733,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Horsea.png")
             ->setIcon("assets/icones/Horsea_icon.png")
             ->setType("Water")
-            ->setDescription("Horsea eats small insects and moss off of rocks. If the ocean current turns fast, this Pokémon anchors itself by wrapping its tail around rocks or coral to prevent being washed away. ")
+            ->setDescription("Horsea eats small insects and moss off of rocks. If the ocean current turns fast, this Monster anchors itself by wrapping its tail around rocks or coral to prevent being washed away. ")
             ->setStage(["Horsea", "Seadra"])
             ->setNumberPokedex(116);
         $manager->persist($horsea);
@@ -749,7 +749,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Hypno.png")
             ->setIcon("assets/icones/Hypno_icon.png")
             ->setType("Psychic")
-            ->setDescription("Hypno holds a pendulum in its hand. The arcing movement and glitter of the pendulum lull the foe into a deep state of hypnosis. While this Pokémon searches for prey, it polishes the pendulum. ")
+            ->setDescription("Hypno holds a pendulum in its hand. The arcing movement and glitter of the pendulum lull the foe into a deep state of hypnosis. While this Monster searches for prey, it polishes the pendulum. ")
             ->setStage(["Drowzee", "Hypno"])
             ->setNumberPokedex(97);
         $manager->persist($hypno);
@@ -781,7 +781,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Kabuto.png")
             ->setIcon("assets/icones/Kabuto_icon.png")
             ->setType("Rock")
-            ->setDescription("Kabuto is a Pokémon that has been regenerated from a fossil. However, in extremely rare cases, living examples have been discovered. The Pokémon has not changed at all for 300 million years. ")
+            ->setDescription("Kabuto is a Monster that has been regenerated from a fossil. However, in extremely rare cases, living examples have been discovered. The Monster has not changed at all for 300 million years. ")
             ->setStage(["Kabuto", "Kabutops"])
             ->setNumberPokedex(140);
         $manager->persist($kabuto);
@@ -797,7 +797,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Kabutops.png")
             ->setIcon("assets/icones/Kabutops_icon.png")
             ->setType("Rock")
-            ->setDescription("Kabutops swam underwater to hunt for its prey in ancient times. The Pokémon was apparently evolving from being a water dweller to living on land as evident from the beginnings of change in its gills and legs. ")
+            ->setDescription("Kabutops swam underwater to hunt for its prey in ancient times. The Monster was apparently evolving from being a water dweller to living on land as evident from the beginnings of change in its gills and legs. ")
             ->setStage(["Kabuto", "Kabutops"])
             ->setNumberPokedex(141);
         $manager->persist($kabutops);
@@ -813,7 +813,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Kingler.png")
             ->setIcon("assets/icones/Kingler_icon.png")
             ->setType("Water")
-            ->setDescription("Kingler has an enormous, oversized claw. It waves this huge claw in the air to communicate with others. However, because the claw is so heavy, the Pokémon quickly tires. ")
+            ->setDescription("Kingler has an enormous, oversized claw. It waves this huge claw in the air to communicate with others. However, because the claw is so heavy, the Monster quickly tires. ")
             ->setStage(["Krabby", "Kingler"])
             ->setNumberPokedex(99);
         $manager->persist($kingler);
@@ -829,7 +829,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Koffing.png")
             ->setIcon("assets/icones/Koffing_icon.png")
             ->setType("Poison")
-            ->setDescription("If Koffing becomes agitated, it raises the toxicity of its internal gases and jets them out from all over its body. This Pokémon may also overinflate its round body, then explode. ")
+            ->setDescription("If Koffing becomes agitated, it raises the toxicity of its internal gases and jets them out from all over its body. This Monster may also overinflate its round body, then explode. ")
             ->setStage(["Koffing", "Weezing"])
             ->setNumberPokedex(109);
         $manager->persist($koffing);
@@ -845,7 +845,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Krabby.png")
             ->setIcon("assets/icones/Krabby_icon.png")
             ->setType("Water")
-            ->setDescription("Krabby live on beaches, burrowed inside holes dug into the sand. On sandy beaches with little in the way of food, these Pokémon can be seen squabbling with each other over territory. ")
+            ->setDescription("Krabby live on beaches, burrowed inside holes dug into the sand. On sandy beaches with little in the way of food, these Monster can be seen squabbling with each other over territory. ")
             ->setStage(["Krabby", "Kingler"])
             ->setNumberPokedex(98);
         $manager->persist($krabby);
@@ -861,7 +861,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Lapras.png")
             ->setIcon("assets/icones/Lapras_icon.png")
             ->setType("Water")
-            ->setDescription("People have driven Lapras almost to the point of extinction. In the evenings, this Pokémon is said to sing plaintively as it seeks what few others of its kind still remain. ")
+            ->setDescription("People have driven Lapras almost to the point of extinction. In the evenings, this Monster is said to sing plaintively as it seeks what few others of its kind still remain. ")
             ->setStage(["Lapras"])
             ->setNumberPokedex(131);
         $manager->persist($lapras);
@@ -877,7 +877,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Magikarp.png")
             ->setIcon("assets/icones/Magikarp_icon.png")
             ->setType("Water")
-            ->setDescription("Magikarp is a pathetic excuse for a Pokémon that is only capable of flopping and splashing. This behavior prompted scientists to undertake research into it. ")
+            ->setDescription("Magikarp is a pathetic excuse for a Monster that is only capable of flopping and splashing. This behavior prompted scientists to undertake research into it. ")
             ->setStage(["Magikarp", "Gyarados"])
             ->setNumberPokedex(129);
         $manager->persist($magikarp);
@@ -893,7 +893,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Magmar.png")
             ->setIcon("assets/icones/Magmar_icon.png")
             ->setType("Fire")
-            ->setDescription("In battle, Magmar blows out intensely hot flames from all over its body to intimidate its opponent. This Pokémon's fiery bursts create heat waves that ignite grass and trees in its surroundings. ")
+            ->setDescription("In battle, Magmar blows out intensely hot flames from all over its body to intimidate its opponent. This Monster's fiery bursts create heat waves that ignite grass and trees in its surroundings. ")
             ->setStage(["Magmar"])
             ->setNumberPokedex(126);
         $manager->persist($magmar);
@@ -909,7 +909,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Mew.png")
             ->setIcon("assets/icones/Mew_icon.png")
             ->setType("Psychic")
-            ->setDescription("Mew is said to possess the genetic composition of all Pokémon. It is capable of making itself invisible at will, so it entirely avoids notice even if it approaches people. ")
+            ->setDescription("Mew is said to possess the genetic composition of all Monster. It is capable of making itself invisible at will, so it entirely avoids notice even if it approaches people. ")
             ->setStage(["Mew"])
             ->setNumberPokedex(151);
         $manager->persist($mew);
@@ -941,7 +941,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Muk.png")
             ->setIcon("assets/icones/Muk_icon.png")
             ->setType("Poison")
-            ->setDescription("From Muk's body seeps a foul fluid that gives off a nose-bendingly horrible stench. Just one drop of this Pokémon's body fluid can turn a pool stagnant and rancid. ")
+            ->setDescription("From Muk's body seeps a foul fluid that gives off a nose-bendingly horrible stench. Just one drop of this Monster's body fluid can turn a pool stagnant and rancid. ")
             ->setStage(["Grimer", "Muk"])
             ->setNumberPokedex(89);
         $manager->persist($muk);
@@ -957,7 +957,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Nidoking.png")
             ->setIcon("assets/icones/Nidoking_icon.png")
             ->setType("Poison")
-            ->setDescription("Nidoking's thick tail packs enormously destructive power. With one swing, it can topple a metal transmission tower. Once this Pokémon goes on a rampage, there is no stopping it. ")
+            ->setDescription("Nidoking's thick tail packs enormously destructive power. With one swing, it can topple a metal transmission tower. Once this Monster goes on a rampage, there is no stopping it. ")
             ->setStage(["Nidoranm", "Nidorino", "Nidoking"])
             ->setNumberPokedex(34);
         $manager->persist($nidoking);
@@ -973,7 +973,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Nidoqueen.png")
             ->setIcon("assets/icones/Nidoqueen_icon.png")
             ->setType("Poison")
-            ->setDescription("Nidoqueen's body is encased in extremely hard scales. It is adept at sending foes flying with harsh tackles. This Pokémon is at its strongest when it is defending its young.")
+            ->setDescription("Nidoqueen's body is encased in extremely hard scales. It is adept at sending foes flying with harsh tackles. This Monster is at its strongest when it is defending its young.")
             ->setStage(["Nidoranf", "Nidorina", "Nidoqueen"])
             ->setNumberPokedex(31);
         $manager->persist($nidoqueen);
@@ -989,7 +989,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Nidoran_m.png")
             ->setIcon("assets/icones/Nidoran_m_icon.png")
             ->setType("Poison")
-            ->setDescription("Nidoran♂ has developed muscles for moving its ears. Thanks to them, the ears can be freely moved in any direction. Even the slightest sound does not escape this Pokémon's notice. ")
+            ->setDescription("Nidoran♂ has developed muscles for moving its ears. Thanks to them, the ears can be freely moved in any direction. Even the slightest sound does not escape this Monster's notice. ")
             ->setStage(["Nidoranm", "Nidorino", "Nidoking"])
             ->setNumberPokedex(32);
         $manager->persist($nidoranm);
@@ -1005,7 +1005,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Nidoran_f.png")
             ->setIcon("assets/icones/Nidoran_f_icon.png")
             ->setType("Poison")
-            ->setDescription("Nidoran♀ has barbs that secrete a powerful poison. They are thought to have developed as protection for this small-bodied Pokémon. When enraged, it releases a horrible toxin from its horn. ")
+            ->setDescription("Nidoran♀ has barbs that secrete a powerful poison. They are thought to have developed as protection for this small-bodied Monster. When enraged, it releases a horrible toxin from its horn. ")
             ->setStage(["Nidoranf", "Nidorina", "Nidoqueen"])
             ->setNumberPokedex(29);
         $manager->persist($nidoranf);
@@ -1021,7 +1021,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Nidorina.png")
             ->setIcon("assets/icones/Nidorina_icon.png")
             ->setType("Poison")
-            ->setDescription("When Nidorina are with their friends or family, they keep their barbs tucked away to prevent hurting each other. This Pokémon appears to become nervous if separated from the others. ")
+            ->setDescription("When Nidorina are with their friends or family, they keep their barbs tucked away to prevent hurting each other. This Monster appears to become nervous if separated from the others. ")
             ->setStage(["Nidoranf", "Nidorina", "Nidoqueen"])
             ->setNumberPokedex(30);
         $manager->persist($nidorina);
@@ -1053,7 +1053,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Ninetales.png")
             ->setIcon("assets/icones/Ninetales_icon.png")
             ->setType("Fire")
-            ->setDescription("Ninetales casts a sinister light from its bright red eyes to gain total control over its foe's mind. This Pokémon is said to live for a thousand years.")
+            ->setDescription("Ninetales casts a sinister light from its bright red eyes to gain total control over its foe's mind. This Monster is said to live for a thousand years.")
             ->setStage(["Vulpix", "Ninetales"])
             ->setNumberPokedex(38);
         $manager->persist($ninetales);
@@ -1085,7 +1085,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Omanyte.png")
             ->setIcon("assets/icones/Omanyte_icon.png")
             ->setType("Rock")
-            ->setDescription("Omanyte is one of the ancient and long-since-extinct Pokémon that have been regenerated from fossils by people. If attacked by an enemy, it withdraws itself inside its hard shell. ")
+            ->setDescription("Omanyte is one of the ancient and long-since-extinct Monster that have been regenerated from fossils by people. If attacked by an enemy, it withdraws itself inside its hard shell. ")
             ->setStage(["Omanyte", "Omastar"])
             ->setNumberPokedex(138);
         $manager->persist($omanyte);
@@ -1117,7 +1117,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Onix.png")
             ->setIcon("assets/icones/Onix_icon.png")
             ->setType("Rock")
-            ->setDescription("Onix has a magnet in its brain. It acts as a compass so that this Pokémon does not lose direction while it is tunneling. As it grows older, its body becomes increasingly rounder and smoother. ")
+            ->setDescription("Onix has a magnet in its brain. It acts as a compass so that this Monster does not lose direction while it is tunneling. As it grows older, its body becomes increasingly rounder and smoother. ")
             ->setStage(["Onix"])
             ->setNumberPokedex(95);
         $manager->persist($onix);
@@ -1133,7 +1133,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Paras.png")
             ->setIcon("assets/icones/Paras_icon.png")
             ->setType("Bug")
-            ->setDescription("Paras has parasitic mushrooms growing on its back called tochukaso. They grow large by drawing nutrients from this Bug Pokémon host. They are highly valued as a medicine for extending life. ")
+            ->setDescription("Paras has parasitic mushrooms growing on its back called tochukaso. They grow large by drawing nutrients from this Bug Monster host. They are highly valued as a medicine for extending life. ")
             ->setStage(["Paras", "Parasect"])
             ->setNumberPokedex(46);
         $manager->persist($paras);
@@ -1149,7 +1149,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Parasect.png")
             ->setIcon("assets/icones/Parasect_icon.png")
             ->setType("Bug")
-            ->setDescription("Paras has parasitic mushrooms growing on its back called tochukaso. They grow large by drawing nutrients from this Bug Pokémon host. They are highly valued as a medicine for extending life. ")
+            ->setDescription("Paras has parasitic mushrooms growing on its back called tochukaso. They grow large by drawing nutrients from this Bug Monster host. They are highly valued as a medicine for extending life. ")
             ->setStage(["Paras", "Parasect"])
             ->setNumberPokedex(47);
         $manager->persist($parasect);
@@ -1165,7 +1165,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Pinsir.png")
             ->setIcon("assets/icones/Pinsir_icon.png")
             ->setType("Bug")
-            ->setDescription("Pinsir is astoundingly strong. It can grip a foe weighing twice its weight in its horns and easily lift it. This Pokémon's movements turn sluggish in cold places. ")
+            ->setDescription("Pinsir is astoundingly strong. It can grip a foe weighing twice its weight in its horns and easily lift it. This Monster's movements turn sluggish in cold places. ")
             ->setStage(["Pinsir"])
             ->setNumberPokedex(127);
         $manager->persist($pinsir);
@@ -1181,7 +1181,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Poliwag.png")
             ->setIcon("assets/icones/Poliwag_icon.png")
             ->setType("Water")
-            ->setDescription("Poliwag has a very thin skin. It is possible to see the Pokémon's spiral innards right through the skin. Despite its thinness, however, the skin is also very flexible. Even sharp fangs bounce right off it. ")
+            ->setDescription("Poliwag has a very thin skin. It is possible to see the Monster's spiral innards right through the skin. Despite its thinness, however, the skin is also very flexible. Even sharp fangs bounce right off it. ")
             ->setStage(["Poliwag", "Poliwhirl", "Poliwrath"])
             ->setNumberPokedex(60);
         $manager->persist($poliwag);
@@ -1213,7 +1213,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Poliwrath.png")
             ->setIcon("assets/icones/Poliwrath_icon.png")
             ->setType("Water")
-            ->setDescription("Poliwrath's highly developed, brawny muscles never grow fatigued, however much it exercises. It is so tirelessly strong, this Pokémon can swim back and forth across the ocean without effort. ")
+            ->setDescription("Poliwrath's highly developed, brawny muscles never grow fatigued, however much it exercises. It is so tirelessly strong, this Monster can swim back and forth across the ocean without effort. ")
             ->setStage(["Poliwag", "Poliwhirl", "Poliwrath"])
             ->setNumberPokedex(62);
         $manager->persist($poliwrath);
@@ -1229,7 +1229,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Ponyta.png")
             ->setIcon("assets/icones/Ponyta_icon.png")
             ->setType("Fire")
-            ->setDescription("Ponyta is very weak at birth. It can barely stand up. This Pokémon becomes stronger by stumbling and falling to keep up with its parent. ")
+            ->setDescription("Ponyta is very weak at birth. It can barely stand up. This Monster becomes stronger by stumbling and falling to keep up with its parent. ")
             ->setStage(["Ponyta", "Rapidash"])
             ->setNumberPokedex(77);
         $manager->persist($ponyta);
@@ -1245,7 +1245,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Psyduck.png")
             ->setIcon("assets/icones/Psyduck_icon.png")
             ->setType("Water")
-            ->setDescription("Psyduck uses a mysterious power. When it does so, this Pokémon generates brain waves that are supposedly only seen in sleepers. This discovery spurred controversy among scholars. ")
+            ->setDescription("Psyduck uses a mysterious power. When it does so, this Monster generates brain waves that are supposedly only seen in sleepers. This discovery spurred controversy among scholars. ")
             ->setStage(["Psyduck", "Golduck"])
             ->setNumberPokedex(54);
         $manager->persist($psyduck);
@@ -1261,7 +1261,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Rapidash.png")
             ->setIcon("assets/icones/Rapidash_icon.png")
             ->setType("Fire")
-            ->setDescription("Rapidash usually can be seen casually cantering in the fields and plains. However, when this Pokémon turns serious, its fiery manes flare and blaze as it gallops its way up to 150 mph. ")
+            ->setDescription("Rapidash usually can be seen casually cantering in the fields and plains. However, when this Monster turns serious, its fiery manes flare and blaze as it gallops its way up to 150 mph. ")
             ->setStage(["Ponyta", "Rapidash"])
             ->setNumberPokedex(78);
         $manager->persist($rapidash);
@@ -1277,7 +1277,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Scyther.png")
             ->setIcon("assets/icones/Scyther_icon.png")
             ->setType("Bug")
-            ->setDescription("Scyther is blindingly fast. Its blazing speed enhances the effectiveness of the twin scythes on its forearms. This Pokémon's scythes are so effective, they can slice through thick logs in one wicked stroke. ")
+            ->setDescription("Scyther is blindingly fast. Its blazing speed enhances the effectiveness of the twin scythes on its forearms. This Monster's scythes are so effective, they can slice through thick logs in one wicked stroke. ")
             ->setStage(["Scyther"])
             ->setNumberPokedex(123);
         $manager->persist($scyther);
@@ -1293,7 +1293,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Seadra.png")
             ->setIcon("assets/icones/Seadra_icon.png")
             ->setType("Water")
-            ->setDescription("Seadra sleeps after wriggling itself between the branches of coral. Those trying to harvest coral are occasionally stung by this Pokémon's poison barbs if they fail to notice it. ")
+            ->setDescription("Seadra sleeps after wriggling itself between the branches of coral. Those trying to harvest coral are occasionally stung by this Monster's poison barbs if they fail to notice it. ")
             ->setStage(["Horsea", "Seadra"])
             ->setNumberPokedex(117);
         $manager->persist($seadra);
@@ -1309,7 +1309,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Seaking.png")
             ->setIcon("assets/icones/Seaking_icon.png")
             ->setType("Water")
-            ->setDescription("In the autumn, Seaking males can be seen performing courtship dances in riverbeds to woo females. During this season, this Pokémon's body coloration is at its most beautiful. ")
+            ->setDescription("In the autumn, Seaking males can be seen performing courtship dances in riverbeds to woo females. During this season, this Monster's body coloration is at its most beautiful. ")
             ->setStage(["Goldeen", "Seaking"])
             ->setNumberPokedex(119);
         $manager->persist($seaking);
@@ -1341,7 +1341,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Shellder.png")
             ->setIcon("assets/icones/Shellder_icon.png")
             ->setType("Water")
-            ->setDescription("At night, this Pokémon uses its broad tongue to burrow a hole in the seafloor sand and then sleep in it. While it is sleeping, Shellder closes its shell, but leaves its tongue hanging out. ")
+            ->setDescription("At night, this Monster uses its broad tongue to burrow a hole in the seafloor sand and then sleep in it. While it is sleeping, Shellder closes its shell, but leaves its tongue hanging out. ")
             ->setStage(["Shellder", "Cloyster"])
             ->setNumberPokedex(90);
         $manager->persist($shellder);
@@ -1373,7 +1373,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Slowpoke.png")
             ->setIcon("assets/icones/Slowpoke_icon.png")
             ->setType("Water")
-            ->setDescription("Slowpoke uses its tail to catch prey by dipping it in water at the side of a river. However, this Pokémon often forgets what it's doing and often spends entire days just loafing at water's edge. ")
+            ->setDescription("Slowpoke uses its tail to catch prey by dipping it in water at the side of a river. However, this Monster often forgets what it's doing and often spends entire days just loafing at water's edge. ")
             ->setStage(["Slowpoke", "Slowbro"])
             ->setNumberPokedex(79);
         $manager->persist($slowpoke);
@@ -1389,7 +1389,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Starmie.png")
             ->setIcon("assets/icones/Starmie_icon.png")
             ->setType("Water")
-            ->setDescription("Starmie's center section—the core—glows brightly in seven colors. Because of its luminous nature, this Pokémon has been given the nickname “the gem of the sea.\" ")
+            ->setDescription("Starmie's center section—the core—glows brightly in seven colors. Because of its luminous nature, this Monster has been given the nickname “the gem of the sea.\" ")
             ->setStage(["Staryu", "Starmie"])
             ->setNumberPokedex(121);
         $manager->persist($starmie);
@@ -1405,7 +1405,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Staryu.png")
             ->setIcon("assets/icones/Staryu_icon.png")
             ->setType("Water")
-            ->setDescription("Staryu's center section has an organ called the core that shines bright red. If you go to a beach toward the end of summer, the glowing cores of these Pokémon look like the stars in the sky. ")
+            ->setDescription("Staryu's center section has an organ called the core that shines bright red. If you go to a beach toward the end of summer, the glowing cores of these Monster look like the stars in the sky. ")
             ->setStage(["Staryu", "Starmie"])
             ->setNumberPokedex(120);
         $manager->persist($staryu);
@@ -1437,7 +1437,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Tentacool.png")
             ->setIcon("assets/icones/Tentacool_icon.png")
             ->setType("Water")
-            ->setDescription("Tentacool's body is largely composed of water. If it is removed from the sea, it dries up like parchment. If this Pokémon happens to become dehydrated, put it back into the sea. ")
+            ->setDescription("Tentacool's body is largely composed of water. If it is removed from the sea, it dries up like parchment. If this Monster happens to become dehydrated, put it back into the sea. ")
             ->setStage(["Tentacool", "Tentacruel"])
             ->setNumberPokedex(72);
         $manager->persist($tentacool);
@@ -1454,7 +1454,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Tentacruel_icon.png")
             ->setType("Water")
             ->setStage(["Tentacool", "Tentacruel"])
-            ->setDescription("Description")
+            ->setDescription("Its 80 tentacles can stretch and contract freely. They wrap around prey and weaken it with poison.")
             ->setNumberPokedex(73);
         $manager->persist($tentacruel);
 
@@ -1470,7 +1470,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Vaporeon_icon.png")
             ->setType("Water")
             ->setStage(["Eevee", "Vaporeon"])
-            ->setDescription("Description")
+            ->setDescription("Its cell structure is similar to water molecules. It melts into the water and becomes invisible.")
             ->setNumberPokedex(134);
         $manager->persist($vaporeon);
 
@@ -1485,8 +1485,8 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Venomoth.png")
             ->setIcon("assets/icones/Venomoth_icon.png")
             ->setType("bug")
-            ->setStage(["venonat", "Venomoth"]) 
-            ->setDescription("Description")
+            ->setStage(["venonat", "Venomoth"])
+            ->setDescription("The powdery scales on its wings are hard to remove from skin. They also contain poison that leaks out on contact.")
             ->setNumberPokedex(49);
         $manager->persist($venomoth);
 
@@ -1502,7 +1502,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Venonat_icon.png")
             ->setType("Bug")
             ->setStage(["Venonat", "Venomoth"])
-            ->setDescription("Description")
+            ->setDescription("Its large eyes act as a radar. In a bright place, you can see that they are clusters of many tiny eyes.")
             ->setNumberPokedex(48);
         $manager->persist($venonat);
 
@@ -1518,7 +1518,8 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Vileplume_icon.png")
             ->setType("Grass")
             ->setStage(["Oddish", "Bloom", "Vileplume"])
-            ->setDescription("Description")
+            ->setDescription("Flaps its broad flower petals to scatter its poisonous pollen. The flapping sound is very loud.
+")
             ->setNumberPokedex(45);
         $manager->persist($vileplume);
 
@@ -1534,7 +1535,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Vulpix_icon.png")
             ->setType("Fire")
             ->setStage(["Vulpix", "Ninetails"])
-            ->setDescription("Description")
+            ->setDescription("Both its fur and its tails are beautiful. As it grows, the tails split and form more tails.")
             ->setNumberPokedex(37);
         $manager->persist($vulpix);
 
@@ -1550,7 +1551,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Weezing_icon.png")
             ->setType("Poison")
             ->setStage(["Koffing", "Weezing"])
-            ->setDescription("Description")
+            ->setDescription("This Pokémon lives and grows by absorbing poison gas, dust, and germs that exist inside garbage.")
             ->setNumberPokedex(110);
         $manager->persist($weezing);
 
@@ -1566,7 +1567,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Zubat_icon.png")
             ->setType("Poison")
             ->setStage(["Zubat", "Golbat"])
-            ->setDescription("Description")
+            ->setDescription("Emits ultrasonic cries while it flies. They act as a sonar used to check for objects in its way.")
             ->setNumberPokedex(41);
         $manager->persist($zubat);
 
@@ -1582,7 +1583,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Chansey_icon.png")
             ->setType("Normal")
             ->setStage(["Chansey"])
-            ->setDescription("Description")
+            ->setDescription("A gentle and kindhearted Monster that shares its nutritious eggs if it sees an injured Monster.")
             ->setNumberPokedex(113);
         $manager->persist($chansey);
 
@@ -1598,7 +1599,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Clefable_icon.png")
             ->setType("Fairy")
             ->setStage(["Clefairy", "Clefable"])
-            ->setDescription("Description")
+            ->setDescription("They appear to be very protective of their own world. It is a kind of fairy, rarely seen by people.")
             ->setNumberPokedex(36);
         $manager->persist($clefable);
 
@@ -1614,7 +1615,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Clefairy_icon.png")
             ->setType("Fairy")
             ->setStage(["Clefairy", "Clefable"])
-            ->setDescription("Description")
+            ->setDescription("Adored for their cute looks and playfulness. They are thought to be rare, as they do not appear often.")
             ->setNumberPokedex(37);
         $manager->persist($clefairy);
 
@@ -1630,7 +1631,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Cubone_icon.png")
             ->setType("Ground")
             ->setStage(["Cubone", "Marowark"])
-            ->setDescription("Description")
+            ->setDescription("Wears the skull of its deceased mother. Its cries echo inside the skull and come out as a sad melody.")
             ->setNumberPokedex(104);
         $manager->persist($cubone);
 
@@ -1646,7 +1647,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Diglett_icon.png")
             ->setType("Ground")
             ->setStage(["Diglett", "Dugtrio"])
-            ->setDescription("Description")
+            ->setDescription("Wears the skull of its deceased mother. Its cries echo inside the skull and come out as a sad melody.")
             ->setNumberPokedex(50);
         $manager->persist($diglett);
 
@@ -1662,7 +1663,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Ditto_icon.png")
             ->setType("Normal")
             ->setStage(["Ditto"])
-            ->setDescription("Description")
+            ->setDescription("When it spots an enemy, its body transfigures into an almost-perfect copy of its opponent.")
             ->setNumberPokedex(132);
         $manager->persist($ditto);
 
@@ -1678,7 +1679,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Dodrio_icon.png")
             ->setType("Normal")
             ->setStage(["Doduo", "Dodrio"])
-            ->setDescription("Description")
+            ->setDescription("One of Doduo's two heads splits to form a unique species. It runs close to 40 mph in prairies.")
             ->setNumberPokedex(85);
         $manager->persist($dodrio);
 
@@ -1694,7 +1695,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Doduo_icon.png")
             ->setType("Normal")
             ->setStage(["Doduo", "Dodrio"])
-            ->setDescription("Description")
+            ->setDescription("Its short wings make flying difficult. Instead, this Pokémon runs at high speed on developed legs.")
             ->setNumberPokedex(84);
         $manager->persist($doduo);
 
@@ -1710,7 +1711,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Dugtrio_icon.png")
             ->setType("Ground")
             ->setStage(["Diglett", "Dugtrio"])
-            ->setDescription("Description")
+            ->setDescription("A team of triplets that can burrow to a depth of 60 miles. It's reported that this triggers an earthquake.")
             ->setNumberPokedex(51);
         $manager->persist($dugtrio);
 
@@ -1726,7 +1727,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Eevee_icon.png")
             ->setType("Normal")
             ->setStage(["Eevee", "Vaporeon", "Jolteon", "Flareon"])
-            ->setDescription("Description")
+            ->setDescription("It can evolve into a variety of forms. Eevee's genes are the key to solving the mysteries of Monster evolution.")
             ->setNumberPokedex(133);
         $manager->persist($eevee);
 
@@ -1742,7 +1743,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Electabuzz_icon.png")
             ->setType("Electric")
             ->setStage(["Electabuzz"])
-            ->setDescription("Description")
+            ->setDescription("If a major power outage occurs, it is certain that this Pokémon has eaten electricity at a power plant.")
             ->setNumberPokedex(125);
         $manager->persist($electabuzz);
 
@@ -1758,7 +1759,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Electrode_icon.png")
             ->setType("Electric")
             ->setStage(["Voltorb", "Electrode"])
-            ->setDescription("Description")
+            ->setDescription("Stores electrical energy inside its body. Even the slightest shock could trigger a huge explosion.")
             ->setNumberPokedex(101);
         $manager->persist($electrode);
 
@@ -1774,7 +1775,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Farfetch'd_icon.png")
             ->setType("Normal")
             ->setStage(["Farfetch'd"])
-            ->setDescription("Description")
+            ->setDescription("They live where reedy plants grow. Farfetch'd are rarely seen, so it's thought their numbers are decreasing.")
             ->setNumberPokedex(83);
         $manager->persist($farfetchd);
 
@@ -1790,7 +1791,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Fearow_icon.png")
             ->setType("Normal")
             ->setStage(["Spearow", "Fearow"])
-            ->setDescription("Description")
+            ->setDescription("A Pokémon that dates back many years. If it senses danger, it flies high and away, instantly.")
             ->setNumberPokedex(22);
         $manager->persist($fearow);
 
@@ -1806,7 +1807,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Gastly_icon.png")
             ->setType("Ghost")
             ->setStage(["Gastly", "Haunter", "Gengar"])
-            ->setDescription("Description")
+            ->setDescription("Said to appear in decrepit, deserted buildings. It has no real shape, as it appears to be made of a gas.")
             ->setNumberPokedex(92);
         $manager->persist($gastly);
 
@@ -1822,7 +1823,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Gengar_icon.png")
             ->setType("Ghost")
             ->setStage(["Gastly", "Haunter", "Gengar"])
-            ->setDescription("Description")
+            ->setDescription("It can pass through other dimensions and can appear anywhere. It caused a stir one time when it stuck just one leg out of a wall.")
             ->setNumberPokedex(94);
         $manager->persist($gengar);
 
@@ -1838,7 +1839,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Haunter_icon.png")
             ->setType("Ghost")
             ->setStage(["Gastly", "Haunter", "Gengar"])
-            ->setDescription("Description")
+            ->setDescription("By licking, it saps the victim's life. It causes shaking that won't stop until the victim's demise.")
             ->setNumberPokedex(93);
         $manager->persist($haunter);
 
@@ -1854,7 +1855,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Hitmonlee_icon.png")
             ->setType("Fighting")
             ->setStage(["Hitmonlee"])
-            ->setDescription("Description")
+            ->setDescription("When kicking, the sole of its foot turns as hard as a diamond on impact and destroys its enemy.")
             ->setNumberPokedex(106);
         $manager->persist($hitmonlee);
 
@@ -1870,7 +1871,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Hitmonchan_icon.png")
             ->setType("Fighting")
             ->setStage(["Hitmonchan"])
-            ->setDescription("Description")
+            ->setDescription("Punches in corkscrew fashion. It can punch its way through a concrete wall like a drill.")
             ->setNumberPokedex(107);
         $manager->persist($hitmonchan);
 
@@ -1886,7 +1887,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Jigglypuff_icon.png")
             ->setType("Normal")
             ->setStage(["Jigglypuff", "Wigglytuff"])
-            ->setDescription("Description")
+            ->setDescription("Uses its cute round eyes to enrapture its foe. It then sings a pleasing melody that lulls the foe to sleep.")
             ->setNumberPokedex(39);
         $manager->persist($jigglypuff);
 
@@ -1902,7 +1903,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Jolteon_icon.png")
             ->setType("Electric")
             ->setStage(["Eevee", "Jolteon"])
-            ->setDescription("Description")
+            ->setDescription("A sensitive Pokémon that easily becomes sad or angry. Every time its mood changes, it charges power.")
             ->setNumberPokedex(135);
         $manager->persist($jolteon);
 
@@ -1918,7 +1919,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Kangaskhan_icon.png")
             ->setType("Normal")
             ->setStage(["Kangaskhan"])
-            ->setDescription("Description")
+            ->setDescription("Raises its young in its belly pouch. Won't run from any fight to keep its young protected.")
             ->setNumberPokedex(115);
         $manager->persist($kangaskhan);
 
@@ -1934,7 +1935,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Lickitung_icon.png")
             ->setType("Normal")
             ->setStage(["Lickitung"])
-            ->setDescription("Description")
+            ->setDescription("Its tongue spans almost seven feet and moves more freely than its forelegs. Its licks can cause paralysis.")
             ->setNumberPokedex(108);
         $manager->persist($lickitung);
 
@@ -1950,7 +1951,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Machamp_icon.png")
             ->setType("Fighting")
             ->setStage(["Machop", "Machoke", "Machamp"])
-            ->setDescription("Description")
+            ->setDescription("One arm alone can move mountains. Using all four arms, this Pokémon fires off awesome punches.")
             ->setNumberPokedex(68);
         $manager->persist($machamp);
 
@@ -1966,7 +1967,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Machoke_icon.png")
             ->setType("Fighting")
             ->setStage(["Machop", "Machoke", "Machamp"])
-            ->setDescription("Description")
+            ->setDescription("The belt around its waist holds back its energy. Without it, this Pokémon would be unstoppable.")
             ->setNumberPokedex(67);
         $manager->persist($machoke);
 
@@ -1982,7 +1983,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Machop_icon.png")
             ->setType("Fighting")
             ->setStage(["Machop", "Machoke", "Machamp"])
-            ->setDescription("Description")
+            ->setDescription("Very powerful in spite of its small size. Its mastery of many types of martial arts makes it very tough.")
             ->setNumberPokedex(66);
         $manager->persist($machop);
 
@@ -1998,7 +1999,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Magnemite_icon.png")
             ->setType("Electric")
             ->setStage(["Magnemite", "Magneton"])
-            ->setDescription("Description")
+            ->setDescription("	It is hatched with the ability to defy gravity. It floats while emitting powerful electromagnetic waves.")
             ->setNumberPokedex(81);
         $manager->persist($magnemite);
 
@@ -2014,7 +2015,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Magneton_icon.png")
             ->setType("Electric")
             ->setStage(["Magnemite", "Magneton"])
-            ->setDescription("Description")
+            ->setDescription("Generates strange radio signals. It raises the temperature by 3.6 degrees Fahrenheit within 3,300 feet.")
             ->setNumberPokedex(82);
         $manager->persist($magneton);
 
@@ -2030,7 +2031,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Mankey_icon.png")
             ->setType("Fighting")
             ->setStage(["Mankey", "Primeape"])
-            ->setDescription("Description")
+            ->setDescription("An agile Pokémon that lives in trees. It angers easily and will not hesitate to attack anything.")
             ->setNumberPokedex(56);
         $manager->persist($mankey);
 
@@ -2046,7 +2047,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Marowak_icon.png")
             ->setType("Ground")
             ->setStage(["Cubone", "Marowak"])
-            ->setDescription("Description")
+            ->setDescription("Small and weak, this Pokémon is adept with its bone club. It has grown more vicious over the ages.")
             ->setNumberPokedex(105);
         $manager->persist($marowak);
 
@@ -2062,7 +2063,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Meowth_icon.png")
             ->setType("Normal")
             ->setStage(["Meowth", "Persian"])
-            ->setDescription("Description")
+            ->setDescription("Appears to be more active at night. It loves round and shiny things. It can't stop itself from picking them up")
             ->setNumberPokedex(52);
         $manager->persist($Meowth);
 
@@ -2078,7 +2079,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Persian_icon.png")
             ->setType("Normal")
             ->setStage(["Meowth", "Persian"])
-            ->setDescription("Description")
+            ->setDescription("The gem in its forehead glows on its own! It walks with all the grace and elegance of a proud queen.")
             ->setNumberPokedex(53);
         $manager->persist($persian);
 
@@ -2094,7 +2095,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Pidgeot_icon.png")
             ->setType("Normal")
             ->setStage(["Pidgey", "Pidgeotto", "Pidgeot"])
-            ->setDescription("Description")
+            ->setDescription("This Pokémon flies at Mach 2 speed, seeking prey. Its large talons are feared as wicked weapons.")
             ->setNumberPokedex(18);
         $manager->persist($pidgeot);
 
@@ -2110,7 +2111,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Pidgeotto_icon.png")
             ->setType("Normal")
             ->setStage(["Pidgey", "Pidgeotto", "Pidgeot"])
-            ->setDescription("Description")
+            ->setDescription("This Monster is full of vitality. It constantly flies around its large territory in search of prey.")
             ->setNumberPokedex(17);
         $manager->persist($pidgeotto);
 
@@ -2126,7 +2127,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Pidgey_icon.png")
             ->setType("Normal")
             ->setStage(["Pidgey", "Pidgeotto", "Pidgeot"])
-            ->setDescription("Description")
+            ->setDescription("Very docile. If attacked, it will often kick up sand to protect itself rather than fight back.")
             ->setNumberPokedex(16);
         $manager->persist($pidgey);
 
@@ -2142,7 +2143,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Pikachu_icon.png")
             ->setType("Electric")
             ->setStage(["Pikachu", "Raichu"])
-            ->setDescription("Description")
+            ->setDescription("This forest-dwelling Monster stores electricity in its cheeks, so you'll feel a tingly shock if you touch it.")
             ->setNumberPokedex(25);
         $manager->persist($pikachu);
 
@@ -2158,7 +2159,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Porygon_icon.png")
             ->setType("Normal")
             ->setStage(["Porygon"])
-            ->setDescription("Description")
+            ->setDescription("The only Pokémon that people anticipate can fly into space. None has managed the feat yet, however.")
             ->setNumberPokedex(137);
         $manager->persist($porygon);
 
@@ -2174,7 +2175,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Raticate_icon.png")
             ->setType("Normal")
             ->setStage(["Rattata", "Raticate"])
-            ->setDescription("Description")
+            ->setDescription("Its hind feet are webbed. They act as flippers, so it can swim in rivers and hunt for prey.")
             ->setNumberPokedex(20);
         $manager->persist($raticate);
 
@@ -2190,7 +2191,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Rattata_icon.png")
             ->setType("Normal")
             ->setStage(["Rattata", "Raticate"])
-            ->setDescription("Description")
+            ->setDescription("Will chew on anything with its fangs. If you see one, you can be certain that 40 more live in the area.")
             ->setNumberPokedex(19);
         $manager->persist($Rattata);
 
@@ -2206,7 +2207,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Rhydon_icon.png")
             ->setType("Ground")
             ->setStage(["Rhyhorn", "Rhydon"])
-            ->setDescription("Description")
+            ->setDescription("Its brain developed when it began walking on its hind legs. Its armor-like hide even repels molten lava.")
             ->setNumberPokedex(112);
         $manager->persist($rhydon);
 
@@ -2222,7 +2223,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Rhyhorn_icon.png")
             ->setType("Ground")
             ->setStage(["Rhyhorn", "Rhydon"])
-            ->setDescription("Description")
+            ->setDescription("A Pokémon with a one-track mind. Once it charges, it won't stop running until it falls asleep.")
             ->setNumberPokedex(111);
         $manager->persist($rhyhorn);
 
@@ -2238,7 +2239,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Sandshrew_icon.png")
             ->setType("Ground")
             ->setStage(["Sandshrew", "Sandslash"])
-            ->setDescription("Description")
+            ->setDescription("A Pokémon with a one-track mind. Once it charges, it won't stop running until it falls asleep.")
             ->setNumberPokedex(27);
         $manager->persist($sandshrew);
 
@@ -2254,7 +2255,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Sandslash_icon.png")
             ->setType("Ground")
             ->setStage(["Sandshrew", "Sandslash"])
-            ->setDescription("Description")
+            ->setDescription("It is skilled at slashing enemies with its claws. If broken, they start to grow back in a day.")
             ->setNumberPokedex(28);
         $manager->persist($sandslash);
 
@@ -2270,7 +2271,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Snorlax_icon.png")
             ->setType("Normal")
             ->setStage(["Snorlax"])
-            ->setDescription("Description")
+            ->setDescription("Will eat anything, even if the food happens to be a little moldy. It never gets an upset stomach.")
             ->setNumberPokedex(143);
         $manager->persist($snorlax);
 
@@ -2286,7 +2287,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Spearow_icon.png")
             ->setType("Normal")
             ->setStage(["Spearow", "Fearow"])
-            ->setDescription("Description")
+            ->setDescription("Inept at flying high. However, it can fly around very fast to protect its territory.")
             ->setNumberPokedex(21);
         $manager->persist($spearow);
 
@@ -2302,7 +2303,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Tauros_icon.png")
             ->setType("Normal")
             ->setStage(["Tauros"])
-            ->setDescription("Description")
+            ->setDescription("A rowdy Pokémon with a lot of stamina. Once running, it won't stop until it hits something.")
             ->setNumberPokedex(128);
         $manager->persist($tauros);
 
@@ -2318,7 +2319,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Wygglytuff_icon.png")
             ->setType("Normal")
             ->setStage(["Jigglypuff", "Wigglytuff"])
-            ->setDescription("Description")
+            ->setDescription("Its body is very elastic. By inhaling deeply, it can continue to inflate itself without limit.")
             ->setNumberPokedex(40);
         $manager->persist($wygglytuff);
 
@@ -2334,7 +2335,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Zapdos_icon.png")
             ->setType("Electric")
             ->setStage(["Zapdos"])
-            ->setDescription("Description")
+            ->setDescription("This legendary bird Monster is said to appear when the sky turns dark and lightning showers down.")
             ->setNumberPokedex(145);
         $manager->persist($zapdos);
 
@@ -2350,7 +2351,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Voltorb_icon.png")
             ->setType("Electric")
             ->setStage(["Voltorb", "Electrode"])
-            ->setDescription("Description")
+            ->setDescription("It is said to camouflage itself as a Poké Ball. It will self-destruct with very little stimulus.")
             ->setNumberPokedex(100);
         $manager->persist($voltorb);
 
@@ -2366,7 +2367,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Primeape_icon.png")
             ->setType("Fighting")
             ->setStage(["Mankey", "Primeape"])
-            ->setDescription("Description")
+            ->setDescription("It stops being angry only when nobody else is around. To view this moment is very difficult.")
             ->setNumberPokedex(57);
         $manager->persist($primeape);
 
@@ -2382,7 +2383,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Raichu_icon.png")
             ->setType("Electric")
             ->setStage(["Pikachu", "Raichu"])
-            ->setDescription("Description")
+            ->setDescription("When electricity builds up inside its body, it becomes feisty. It also glows in the dark.")
             ->setNumberPokedex(26);
         $manager->persist($raichu);
 
