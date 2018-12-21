@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Profile
+{% endblock %}
+
+{% block body %}
+    <link rel="stylesheet" href="../assets/css/form.css"/>
+
+    <div class="container-plus">
+        <div class="block marg">
+            <a href="{{ path('changePassword') }}"><img src="../assets/images/pokeball.png"></a>
+            <h1>{{ user.getNickname }}</h1>
+            <p>{{ user.getEmail }}</p>
+            <p>Total game : {{ user.win + user.lose }}</p>
+            <p>Win game : {{ user.win }}</p>
+            <p>Lose game : {{ user.lose }}</p>
+            <a class="link" href="{{ path('changePassword') }}">Change password</a>
+        </div>
+    </div>
+{% endblock %}

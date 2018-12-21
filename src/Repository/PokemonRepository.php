@@ -19,32 +19,46 @@ class PokemonRepository extends ServiceEntityRepository
         parent::__construct($registry, Pokemon::class);
     }
 
-    // /**
-    //  * @return Pokemon[] Returns an array of Pokemon objects
-    //  */
-    /*
-    public function findByExampleField($value)
+    /**
+     * @param $keyword
+     * @param $col
+     * @param $order
+     * @return mixed
+     */
+    public function findTeamByNumberPokedex($numberPokedex)
     {
         return $this->createQueryBuilder('p')
-            ->andWhere('p.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('p.id', 'ASC')
-            ->setMaxResults(10)
+            ->andWhere('p.numberPokedex = :val')
+            ->setParameter('val', $numberPokedex)
+            ->setMaxResults(1)
             ->getQuery()
             ->getResult()
-        ;
+            ;
     }
-    */
 
-    /*
-    public function findOneBySomeField($value): ?Pokemon
+    public function findPokemonCount()
     {
         return $this->createQueryBuilder('p')
-            ->andWhere('p.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
+        ->select('count(p.id)')
+        ->setMaxResults(1)
+        ->getQuery()
+        ->getResult();
         ;
     }
-    */
+
+    public function research($keyword, $col, $order)
+    {
+        return $this->createQueryBuilder('p')
+            ->andWhere('p.numberPokedex LIKE :val')
+            ->orWhere('p.name LIKE :val')
+            ->orWhere('p.type LIKE :val')
+            ->orWhere('p.life LIKE :val')
+            ->orWhere('p.attack LIKE :val')
+            ->orWhere('p.defense LIKE :val')
+            ->orWhere('p.speed LIKE :val')
+            ->setParameter('val', $keyword.'%')
+            ->orderBy('p.'.$col, $order)
+            ->getQuery()
+            ->getResult();
+    }
 }

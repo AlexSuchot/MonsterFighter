@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Log in{% endblock %}
+
+{% block body %}
+    <link rel="stylesheet" href="../assets/css/form.css"/>
+    <div class="container-plus">
+        <div class="block">
+            <a href="{{path('login')}}"><img src="../assets/images/pokeball.png"></a>
+            <h1>Log in</h1>
+            <form action="{{ path('login') }}" method="post">
+                <div class="flexCol">
+                    <label>Email</label>
+                    <input placeholder="Email" type="email" name="_username" required="required">
+                </div>
+                <div class="flexCol">
+                    <label>Password</label>
+                    <input placeholder="Enter your password" type="password" name="_password" required="required">
+                </div>
+                {% if error %}
+                    <p class="alert">{{ error.messageKey|trans(error.messageData, 'security') }}</p>
+                {% endif %}
+                {% if success %}
+                    <p class="alert">Your account is created successfully</p>
+                {% endif %}
+
+                <button type="submit">Go</button>
+            </form>
+            {# <a href="">Mot de passe oublié ?</a> #}
+            <a class="link" href="{{path('register')}}">Registration</a>
+            <div>
+                <div>
+                {% endblock %}

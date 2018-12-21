@@ -1,13 +1,47 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}Welcome!{% endblock %}</title>
-    <link rel="stylesheet" href="../assets/style.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" href="../assets/images/pokeball.png" />
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <script src="../assets/js/jquery.js"></script>
+
     {% block stylesheets %}{% endblock %}
 </head>
+
 <body>
-{% block body %}{% endblock %}
-{% block javascripts %}{% endblock %}
+    {% if is_granted('ROLE_USER') %}
+    <header>
+        <nav id="nav">
+            <a id="logo" href="{{ path('fight') }}">
+                <img class="logo" alt="logo" src="../assets/images/pokeball.png" alt="">
+            </a>
+            <div class="menu">
+                <ul id="items-menu">
+                    <li><a class="{{ app.request.get('_route') == 'fight' ? 'active' }}" href="{{ path('fight') }}">Fight</a></li>
+                    <li><a class="{{ app.request.get('_route') == 'pokedex' ? 'active' }}" href="{{ path('pokedex') }}">Pokedex</a></li>
+                    <li><a href="{{ path('fight') }}"><img class="logo" alt="logo" src="../assets/images/pokeball.png" alt=""></a></li>
+                    <li><a class="{{ app.request.get('_route') == 'profile' ? 'active' }}" href="{{ path('profile') }}">Profile</a></li>
+                    <li><a href="{{ path('logout') }}">Logout</a></li>
+                </ul>
+            </div>
+            <a href="javascript:void(0);" id="icon" onclick="clickMenu()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+    </header>
+    {% endif %}
+    {% block body %}{% endblock %}
+    {% block javascripts %}
+    {% if is_granted('ROLE_USER') %}
+    <script src="../assets/js/scriptMenu.js"></script>
+    {% endif %}
+    {% endblock %}
 </body>
+
 </html>

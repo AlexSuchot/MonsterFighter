@@ -7,6 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * @ORM\Entity(repositoryClass="App\Repository\PokemonRepository")
  */
+
 class Pokemon
 {
     /**
@@ -55,6 +56,22 @@ class Pokemon
      * @ORM\Column(type="string", length=255)
      */
     private $image;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $icon;
+
+    /**
+     * @ORM\Column(type="array", length=255)
+     */
+    private $stage;
+
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $description;
+
 
     public function getId(): ?int
     {
@@ -153,6 +170,44 @@ class Pokemon
     public function setImage(string $image): self
     {
         $this->image = $image;
+
+        return $this;
+    }
+
+    public function getIcon() : ?string
+    {
+        return $this->icon;
+    }
+
+    public function setIcon(string $icon) : self
+    {
+        $this->icon = $icon;
+
+        return $this;
+    }
+
+    /**
+     * @see UserInterface
+     */
+    public function getStage(): array
+    {
+        $stage = $this->stage;
+        return array_unique($stage);
+    }
+    public function setStage(array $stage): self
+    {
+        $this->stage = $stage;
+        return $this;
+    }
+
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(string $description): self
+    {
+        $this->description = $description;
 
         return $this;
     }

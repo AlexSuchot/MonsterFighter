@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit{% endblock %}
+
+{% block body %}
+<link rel="stylesheet" href="../assets/css/form.css" />
+
+<div class="container-plus">
+    <div class="block">
+        {{ form_start(form, {'multipart': true}) }}
+        {{ form_row(form.numberPokedex, {'attr':{'class':'flexCol'}}) }}
+        {{ form_row(form.name, {'attr':{'class':'flexCol'}}) }}
+        {{ form_row(form.type, {'attr':{'class':'flexCol'}}) }}
+        {{ form_row(form.life, {'attr':{'class':'flexCol'}}) }}
+        {{ form_row(form.attack, {'attr':{'class':'flexCol'}}) }}
+        {{ form_row(form.defense, {'attr':{'class':'flexCol'}}) }}
+        {{ form_row(form.speed, {'attr':{'class':'flexCol'}}) }}
+        {{ form_row(form.image, {'attr':{'class':'flexCol'}}) }}
+        {{ form_row(form.icon, {'attr':{'class':'flexCol'}}) }}
+        {{ form_row(form.save, {'attr':{'class':'flexCol'}}) }}
+        {{ form_end(form) }}
+    </div>
+</div>
+
+{% endblock %}

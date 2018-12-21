@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+{% block title %}Registration{% endblock %}
+
+{% block body %}
+<link rel="stylesheet" href="../assets/css/form.css"/>
+
+<div class="container-plus">
+    <div class="block">
+        <a href="{{path('login')}}"><img src="../assets/images/pokeball.png"></a>
+        <h1>Registration</h1>
+            {{ form_start(form) }}
+            {{ form_row(form.nickname, {'attr':{'placeholder':'Nickname', 'class':'flexCol'}}) }}
+            {{ form_row(form.email, {'attr':{'placeholder':'Email', 'class':'flexCol'}}) }}
+            {{ form_row(form.password, {'label': 'Password', 'attr':{'placeholder':'Enter password', 'class':'flexCol'}}) }}
+            {{ form_row(form.confirm_password, {'label': 'Confirme password', 'attr':{'placeholder':'Repeat your password', 'class':'flexCol'}}) }}       
+            <button type="submit">Save</button>
+            {{ form_end(form) }}
+        {# <a href="">Mot de passe oublié ?</a> #}
+        <a class="link" href="{{path('login')}}">Log in</a>
+    <div>
+<div>
+
+{% endblock %}
