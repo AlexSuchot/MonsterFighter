@@ -93,17 +93,17 @@
         <table class="item-stage">
             <tr>
                 {% for stage in stages %}
-                    <th>Stage {{ loop.index }}</th>
+                <th>Stage {{ loop.index }}</th>
                 {% endfor %}
             </tr>
             <tr>
                 {% for stage in stages %}
-                    <td>
-                        <a href="{{ path('info', {'number': stage.numberPokedex}) }}" class="link">
-                            <img src="../{{ stage.icon }}" alt="">
-                            {{ stage.name }}
-                        </a>
-                    </td>
+                <td>
+                    <a href="{{ path('info', {'number': stage.numberPokedex}) }}" class="link">
+                        <img src="../{{ stage.icon }}" alt="">
+                        {{ stage.name }}
+                    </a>
+                </td>
                 {% endfor %}
             </tr>
         </table>
@@ -113,28 +113,5 @@
             <p class="desc-text">{{ pokemon.description }}</p>
         </div>
     </div>
-    <table class="item-stage">
-        <tr>
-            {% for stage in stages %}
-            <th>Stage {{ loop.index }}</th>
-            {% endfor %}
-        </tr>
-        <tr>
-            {% for stage in stages %}
-            <td>
-                <a href="{{ path('info', {'number': stage.numberPokedex}) }}" class="link">
-                    <img src="../{{ stage.icon }}" alt="">
-                    {{ stage.name }}
-                </a>
-            </td>
-            {% endfor %}
-        </tr>
-    </table>
-    <div class="item-desc">
-        <h3 class="desc-title">Description of
-            {{ pokemon.name }}</h3>
-        <p class="desc-text">{{ pokemon.description }}</p>
-    </div>
-</div>
 </div>
 {% endblock %}
