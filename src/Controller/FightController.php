@@ -8,6 +8,8 @@ use Symfony\Component\Routing\Annotation\Route;
 use App\Repository\PokemonRepository;
 use App\Repository;
 use Doctrine\ORM\EntityRepository;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -59,20 +61,42 @@ class FightController extends AbstractController
     }
 
     /**
-     * @Route("/datalist", name="fightfinish")
+     * @Route("/fightfinish", name="fightfinish")
      */
-    public function fightFinish(Request $request, SerializerInterface $serializer){
+    public function fightFinish(Request $request, SerializerInterface $serializer, UrlGeneratorInterface $urlGenerator){
 
-        $game = $request->request->get('game');
+        $repo = $this->getDoctrine()->getRepository(User::class);
+        $manager = $this->getDoctrine()->getManager();
 
-        if($game  == "nowinner") {
-            
-        } else if ($game  == "player1") {
+        $winner = $request->request->get('winner');
+        $name1 = $request->request->get('player1');
+        $name2 = $request->request->get('player2');
+        $player1 = $repo->findOneByNickname($name1);
+        $player2 = $repo->findOneByNickname($name2);
 
-        } else if ($game  == "player2") {
+        if($winner  == "nowinner") {
+        } else if ($winner  == "player1") {
+            $win = $player1->getWin() + 1;
+            $player1->setWin($win);
+            $lose = $player2->getLose() + 1;
+            $player2->setLose($lose);
+            $manager->persist($player1);
+            $manager->flush();
+            $manager->persist($player2);
+            $manager->flush();
 
+        } else if ($winner  == "player2") {
+            $win = $player2->getWin() + 1;
+            $player2->setWin($win);
+            $lose = $player1->getLose() + 1;
+            $player1->setLose($lose);
+            $manager->persist($player1);
+            $manager->flush();
+            $manager->persist($player2);
+            $manager->flush();
         }
-
+        $url = $urlGenerator->generate('fight');
+        return new RedirectResponse($url);
     }
 
     public function generateTeam(SerializerInterface $serializer)

@@ -1,112 +1,109 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Info
-    {{ pokemon.name }}
+{% block title %}
+{{ pokemon.name }}
 {% endblock %}
 
 {% block body %}
-    <div class="container">
-        {# <a class="btn btn-back" href=" {{ path('pokedex') }}">
-            <svg xmlns=" http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24"
-                height="24" viewbox="0 0 24 24">
-                <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
-            Retour
-        </a> #}
-        <div class="navigation-button">
-            {% if pokemon.numberPokedex >1 %}
-                <a class="btn btn-back" href="{{ pokemon.numberPokedex -1 }}"><img class="arrow-left"
-                                                                                   src="../assets/icons/back-arrow.svg">previous</a>
-            {% endif %}
+<div class="container">
+    {# <a class="btn btn-back" href=" {{ path('pokedex') }}">
+        <svg xmlns=" http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24"
+            height="24" viewbox="0 0 24 24">
+            <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        Retour
+    </a> #}
+    <div class="navigation-button">
+        {% if pokemon.numberPokedex >1 %}
+        <a class="btn btn-back" href="{{ pokemon.numberPokedex -1 }}"><img class="arrow-left" src="../assets/icons/back-arrow.svg">previous</a>
+        {% endif %}
 
-            {% if pokemon.numberPokedex < 151 %}
-                <a class="btn btn-back" href="{{ pokemon.numberPokedex +1 }}">next<img class="arrow-right"
-                                                                                       src="../assets/icons/forward-arrow.svg"></a>
+        {% if pokemon.numberPokedex < 151 %} <a class="btn btn-back" href="{{ pokemon.numberPokedex +1 }}">next<img
+                class="arrow-right" src="../assets/icons/forward-arrow.svg"></a>
             {% endif %}
-        </div>
-        <div class="item-container">
-            <h2 class="title name">{{ pokemon.numberPokedex }}
-                -
-                {{ pokemon.name }}</h2>
-            <div class="item-info">
-                <img src="{{ pokemon.image }}" alt="">
-                <table class="item-stats">
-                    <tr>
-                        <th>Life</th>
-                        <td>{{ pokemon.life }}</td>
-                    </tr>
-                    <tr>
-                        <th>Attack</th>
-                        <td>{{ pokemon.attack }}</td>
-                    </tr>
-                    <tr>
-                        <th>Defense</th>
-                        <td>{{ pokemon.defense }}</td>
-                    </tr>
-                    <tr>
-                        <th>Speed</th>
-                        <td>{{ pokemon.speed }}</td>
-                    </tr>
-                    <tr>
-                        <th>Type</th>
-                        {% if pokemon.type == 'Fire' %}
-                            <td class="fire-type">{{ pokemon.type }}</td>
-                        {% endif %}
-                        {% if pokemon.type == 'Grass' %}
-                            <td class="grass-type">{{ pokemon.type }}</td>
-                        {% endif %}
-                        {% if pokemon.type == 'Fighting' %}
-                            <td class="fighting-type">{{ pokemon.type }}</td>
-                        {% endif %}
-                        {% if pokemon.type == 'Dragon' %}
-                            <td class="dragon-type">{{ pokemon.type }}</td>
-                        {% endif %}
-                        {% if pokemon.type == 'Water' %}
-                            <td class="water-type">{{ pokemon.type }}</td>
-                        {% endif %}
-                        {% if pokemon.type == 'Electric' %}
-                            <td class="electric-type">{{ pokemon.type }}</td>
-                        {% endif %}
-                        {% if pokemon.type == 'Ice' %}
-                            <td class="ice-type">{{ pokemon.type }}</td>
-                        {% endif %}
-                        {% if pokemon.type == 'Bug' %}
-                            <td class="bug-type">{{ pokemon.type }}</td>
-                        {% endif %}
-                        {% if pokemon.type == 'Poison' %}
-                            <td class="poison-type">{{ pokemon.type }}</td>
-                        {% endif %}
-                        {% if pokemon.type == 'Psychic' %}
-                            <td class="psychic-type">{{ pokemon.type }}</td>
-                        {% endif %}
-                        {% if pokemon.type == 'Rock' %}
-                            <td class="rock-type">{{ pokemon.type }}</td>
-                        {% endif %}
-                        {% if pokemon.type == 'Ground' %}
-                            <td class="ground-type">{{ pokemon.type }}</td>
-                        {% endif %}
-                        {% if pokemon.type == 'Ghost' %}
-                            <td class="ghost-type">{{ pokemon.type }}</td>
-                        {% endif %}
+    </div>
+    <div class="item-container">
+        <h2 class="title name">{{ pokemon.numberPokedex }}
+            -
+            {{ pokemon.name }}</h2>
+        <div class="item-info">
+            <img src="{{ pokemon.image }}" alt="">
+            <table class="item-stats">
+                <tr>
+                    <th>Life</th>
+                    <td>{{ pokemon.life }}</td>
+                </tr>
+                <tr>
+                    <th>Attack</th>
+                    <td>{{ pokemon.attack }}</td>
+                </tr>
+                <tr>
+                    <th>Defense</th>
+                    <td>{{ pokemon.defense }}</td>
+                </tr>
+                <tr>
+                    <th>Speed</th>
+                    <td>{{ pokemon.speed }}</td>
+                </tr>
+                <tr>
+                    <th>Type</th>
+                    {% if pokemon.type == 'Fire' %}
+                    <td class="fire-type">{{ pokemon.type }}</td>
+                    {% endif %}
+                    {% if pokemon.type == 'Grass' %}
+                    <td class="grass-type">{{ pokemon.type }}</td>
+                    {% endif %}
+                    {% if pokemon.type == 'Fighting' %}
+                    <td class="fighting-type">{{ pokemon.type }}</td>
+                    {% endif %}
+                    {% if pokemon.type == 'Dragon' %}
+                    <td class="dragon-type">{{ pokemon.type }}</td>
+                    {% endif %}
+                    {% if pokemon.type == 'Water' %}
+                    <td class="water-type">{{ pokemon.type }}</td>
+                    {% endif %}
+                    {% if pokemon.type == 'Electric' %}
+                    <td class="electric-type">{{ pokemon.type }}</td>
+                    {% endif %}
+                    {% if pokemon.type == 'Ice' %}
+                    <td class="ice-type">{{ pokemon.type }}</td>
+                    {% endif %}
+                    {% if pokemon.type == 'Bug' %}
+                    <td class="bug-type">{{ pokemon.type }}</td>
+                    {% endif %}
+                    {% if pokemon.type == 'Poison' %}
+                    <td class="poison-type">{{ pokemon.type }}</td>
+                    {% endif %}
+                    {% if pokemon.type == 'Psychic' %}
+                    <td class="psychic-type">{{ pokemon.type }}</td>
+                    {% endif %}
+                    {% if pokemon.type == 'Rock' %}
+                    <td class="rock-type">{{ pokemon.type }}</td>
+                    {% endif %}
+                    {% if pokemon.type == 'Ground' %}
+                    <td class="ground-type">{{ pokemon.type }}</td>
+                    {% endif %}
+                    {% if pokemon.type == 'Ghost' %}
+                    <td class="ghost-type">{{ pokemon.type }}</td>
+                    {% endif %}
 
-                    </tr>
-                </table>
-            </div>
+                </tr>
+            </table>
         </div>
 
         <table class="item-stage">
             <tr>
                 {% for stage in stages %}
-                    <th>Stage {{ loop.index }}</th>
+                <th>Stage {{ loop.index }}</th>
                 {% endfor %}
             </tr>
             <tr>
                 {% for stage in stages %}
-                    <td>
-                        <a href="{{ path('info', {'number': stage.numberPokedex}) }}" class="link">
-                            <img src="../{{ stage.icon }}" alt="">
-                            {{ stage.name }}
-                        </a>
-                    </td>
+                <td>
+                    <a href="{{ path('info', {'number': stage.numberPokedex}) }}" class="link">
+                        <img src="../{{ stage.icon }}" alt="">
+                        {{ stage.name }}
+                    </a>
+                </td>
                 {% endfor %}
             </tr>
         </table>
@@ -116,5 +113,5 @@
             <p class="desc-text">{{ pokemon.description }}</p>
         </div>
     </div>
-    </div>
+</div>
 {% endblock %}
