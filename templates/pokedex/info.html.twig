@@ -5,13 +5,13 @@
 {% endblock %}
 
 {% block body %}
-<div class="container">
-    {# <a class="btn btn-back" href=" {{ path('pokedex') }}">
-        <svg xmlns=" http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24"
-            height="24" viewbox="0 0 24 24">
-            <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
-        Retour
-    </a> #}
+    <div class="container">
+        {# <a class="btn btn-back" href=" {{ path('pokedex') }}">
+            <svg xmlns=" http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24"
+                height="24" viewbox="0 0 24 24">
+                <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+            Retour
+        </a> #}
         <div class="navigation-button">
             {% if pokemon.numberPokedex >1 %}
                 <a class="btn btn-back" href="{{ pokemon.numberPokedex -1 }}"><img class="arrow-left"
@@ -92,6 +92,7 @@
                 </table>
             </div>
         </div>
+
         <table class="item-stage">
             <tr>
                 {% for stage in stages %}

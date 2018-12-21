@@ -17,7 +17,7 @@
             <!-- TEAM 2 AFFICHAGE !-->
 
             <div class="displayOneTeamContainer">
-                <h2>{{ player2.nickname }}</h2>
+                <h2>Player 2</h2>
                 <div id="displayOneTeam2" class="displayOneTeam"></div>
             </div>
         </div>
@@ -107,7 +107,7 @@
                     document.getElementById('pokemon2Name').innerHTML = pokemon2.name;
                     //                document.getElementById("player1Progress").max = pokemon1PvMax;
                     //                document.getElementById("player2Progress").max = pokemon2PvMax;
-                    console.log((pokemon1.life * 100 / pokemon1PvMax)+"%");
+                    console.log((pokemon1.life * 100 / pokemon1PvMax) + "%");
                     document.getElementById("player1Progress").style.width = (pokemon1.life * 100 / pokemon1PvMax) + "%";
                     document.getElementById("player2Progress").style.width = (pokemon2.life * 100 / pokemon2PvMax) + "%";
                     document.getElementById('player1Pv').innerHTML = "Points de vie : " + pokemon1.life;
@@ -121,22 +121,17 @@
             $('#fight').click(function () {
 
                 // Damage player1
-                var damage1 = pokemon2.defense - pokemon1.attack;
-                if (damage1 < 0) {
-                    damage1 = 10;
-                }
-                if (damage1 < 10) {
-                    damage1 = 20;
+
+                var damage1 = pokemon1.attack - pokemon2.defense;
+                if (damage1 <= 0) {
+                    damage1 = 1;
                 }
                 pokemon2.life = pokemon2.life - damage1;
 
                 // Damage player2
-                var damage2 = pokemon1.defense - pokemon2.attack;
-                if (damage2 < 0) {
-                    damage2 = 10;
-                }
-                if (damage2 < 10) {
-                    damage2 = 20;
+                var damage2 = pokemon2.attack - pokemon1.defense;
+                if (damage2 <= 0) {
+                    damage2 = 1;
                 }
                 pokemon1.life = pokemon1.life - damage2;
 
@@ -176,7 +171,7 @@
                         document.getElementById("message2").innerHTML = "";
                         numberPokemon1++;
                         document.getElementById("team1").innerHTML = "Pokemon " + (
-                        numberPokemon1 + 1) + " de l'équipe 1 :";
+                            numberPokemon1 + 1) + " de l'équipe 1 :";
                         pokemon1 = pokemonTeam1[numberPokemon1];
                         pokemon1PvMax = pokemon1.life;
                         document.getElementById('pokemon1Name').innerHTML = pokemon1.name;
@@ -191,7 +186,7 @@
                         document.getElementById("message2").innerHTML = "";
                         numberPokemon2++;
                         document.getElementById("team2").innerHTML = "Pokemon " + (
-                        numberPokemon2 + 1) + " de l'équipe 2 :";
+                            numberPokemon2 + 1) + " de l'équipe 2 :";
                         pokemon2 = pokemonTeam2[numberPokemon2];
                         pokemon2PvMax = pokemon2.life;
                         document.getElementById('pokemon2Name').innerHTML = pokemon2.name;
@@ -210,7 +205,7 @@
                     document.getElementById('player2Pv').innerHTML = "Points de vie : " + pokemon2.life;
                 }
 
-                if( game != "" ) {
+                if (game != "") {
                     $.ajax({
                         method: "POST",
                         url: "{{ path('fightfinish') }}",
