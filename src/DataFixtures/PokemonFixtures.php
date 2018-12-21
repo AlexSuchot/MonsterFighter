@@ -24,6 +24,8 @@ class PokemonFixtures extends Fixture
             ->setNumberPokedex(6)
             ->setDescription("Charizard flies around the sky in search of powerful opponents. It breathes fire of such great heat that it melts anything. However, it never turns its fiery breath on any opponent weaker than itself. ");
         $manager->persist($charizard);
+
+
         $blastoise = new Pokemon();
         $blastoise
             ->setName("Blastoise")
@@ -38,6 +40,8 @@ class PokemonFixtures extends Fixture
             ->setDescription("Blastoise has water spouts that protrude from its shell. The water spouts are very accurate. They can shoot bullets of water with enough accuracy to strike empty cans from a distance of over 160 feet.")
             ->setNumberPokedex(9);
         $manager->persist($blastoise);
+
+
         $venusaur = new Pokemon();
         $venusaur
             ->setName("Venusaur")
@@ -52,6 +56,8 @@ class PokemonFixtures extends Fixture
             ->setDescription("There is a large flower on Venusaur's back. The flower is said to take on vivid colors if it gets plenty of nutrition and sunlight. The flower's aroma soothes the emotions of people. ")
             ->setNumberPokedex(3);
         $manager->persist($venusaur);
+
+
         $abra = new Pokemon();
         $abra
             ->setName("Abra")
@@ -66,6 +72,8 @@ class PokemonFixtures extends Fixture
             ->setDescription("Abra sleeps for eighteen hours a day. However, it can sense the presence of foes even while it is sleeping. In such a situation, this Monster immediately teleports to safety. ")
             ->setNumberPokedex(63);
         $manager->persist($abra);
+
+
         $kadabra = new Pokemon();
         $kadabra
             ->setName("Kadabra")
@@ -80,6 +88,8 @@ class PokemonFixtures extends Fixture
             ->setDescription("Kadabra emits a peculiar alpha wave if it develops a headache. Only those people with a particularly strong psyche can hope to become a Trainer of this Monster. ")
             ->setNumberPokedex(64);
         $manager->persist($kadabra);
+
+
         $alakazam = new Pokemon();
         $alakazam
             ->setName("Alakazam")
@@ -94,6 +104,8 @@ class PokemonFixtures extends Fixture
             ->setDescription("Alakazam's brain continually grows, making its head far too heavy to support with its neck. This Pokémon holds its head up using its psychokinetic power instead. ")
             ->setNumberPokedex(65);
         $manager->persist($alakazam);
+
+
         $aerodactyl = new Pokemon();
         $aerodactyl
             ->setName("Aerodactyl")
@@ -108,6 +120,8 @@ class PokemonFixtures extends Fixture
             ->setDescription("Aerodactyl is a Monster from the age of dinosaurs. It was regenerated from genetic material extracted from amber. It is imagined to have been the king of the skies in ancient times. ")
             ->setNumberPokedex(142);
         $manager->persist($aerodactyl);
+
+
         $ekans = new Pokemon();
         $ekans
             ->setName("Ekans")
@@ -122,6 +136,8 @@ class PokemonFixtures extends Fixture
             ->setDescription("Ekans curls itself up in a spiral while it rests. Assuming this position allows it to quickly respond to a threat from any direction with a glare from its upraised head. ")
             ->setNumberPokedex(23);
         $manager->persist($ekans);
+
+
         $arbok = new Pokemon();
         $arbok
             ->setName("Arbok")
@@ -136,6 +152,8 @@ class PokemonFixtures extends Fixture
             ->setDescription("This Monster is terrifically strong in order to constrict things with its body. It can even flatten steel oil drums. Once Arbok wraps its body around its foe, escaping its crunching embrace is impossible. ")
             ->setNumberPokedex(24);
         $manager->persist($arbok);
+
+
         $growlithe = new Pokemon();
         $growlithe
             ->setName("Growlithe")
@@ -150,6 +168,8 @@ class PokemonFixtures extends Fixture
             ->setDescription("Growlithe has a superb sense of smell. Once it smells anything, this Pokémon won't forget the scent, no matter what. It uses its advanced olfactory sense to determine the emotions of other living things. ")
             ->setNumberPokedex(58);
         $manager->persist($growlithe);
+
+
         $arcanine = new Pokemon();
         $arcanine
             ->setName("Arcanine")
@@ -164,6 +184,8 @@ class PokemonFixtures extends Fixture
             ->setDescription("Arcanine is known for its high speed. It is said to be capable of running over 6,200 miles in a single day and night. The fire that blazes wildly within this Pokémon's body is its source of power. ")
             ->setNumberPokedex(59);
         $manager->persist($arcanine);
+
+
         $moltres = new Pokemon();
         $moltres
             ->setName("Moltres")
@@ -178,6 +200,8 @@ class PokemonFixtures extends Fixture
             ->setDescription("Moltres is a legendary bird Monster that has the ability to control fire. If this Monster is injured, it is said to dip its body in the molten magma of a volcano to burn and heal itself. ")
             ->setNumberPokedex(146);
         $manager->persist($moltres);
+
+
         $articuno = new Pokemon();
         $articuno
             ->setName("Articuno")
@@ -192,6 +216,8 @@ class PokemonFixtures extends Fixture
             ->setDescription("Articuno is a legendary bird Monster that can control ice. The flapping of its wings chills the air. As a result, it is said that when this Monster flies, snow will fall. ")
             ->setNumberPokedex(144);
         $manager->persist($articuno);
+
+
         $weedle = new Pokemon();
         $weedle
             ->setName("Weedle")
@@ -206,6 +232,8 @@ class PokemonFixtures extends Fixture
             ->setDescription("Weedle has an extremely acute sense of smell. It is capable of distinguishing its favorite kinds of leaves from those it dislikes just by sniffing with its big red proboscis (nose). ")
             ->setNumberPokedex(13);
         $manager->persist($weedle);
+
+
         $kakuna = new Pokemon();
         $kakuna
             ->setName("Kakuna")
@@ -220,6 +248,8 @@ class PokemonFixtures extends Fixture
             ->setDescription("Kakuna remains virtually immobile as it clings to a tree. However, on the inside, it is extremely busy as it prepares for its coming evolution. This is evident from how hot the shell becomes to the touch. ")
             ->setNumberPokedex(14);
         $manager->persist($kakuna);
+
+
         $beedrill = new Pokemon();
         $beedrill
             ->setName("Beedrill")
@@ -227,13 +257,15 @@ class PokemonFixtures extends Fixture
             ->setLife(65)
             ->setDefense(60)
             ->setSpeed(75)
-            ->setImage("../assets/images/Weedle.png")
-            ->setIcon("assets/icones/Weedle_icon.png")
+            ->setImage("../assets/images/Beedrill.png")
+            ->setIcon("assets/icones/Beedrill_icon.png")
             ->setType("Bug")
             ->setStage(["Weedle", "Kakuna", "Beedrill"])
             ->setDescription("Beedrill is extremely territorial. No one should ever approach its nest—this is for their own safety. If angered, they will attack in a furious swarm. ")
             ->setNumberPokedex(15);
         $manager->persist($beedrill);
+
+
         $bellsprout = new Pokemon();
         $bellsprout
             ->setName("Bellsprout")
@@ -248,6 +280,8 @@ class PokemonFixtures extends Fixture
             ->setDescription("Bellsprout's thin and flexible body lets it bend and sway to avoid any attack, however strong it may be. From its mouth, this Monster spits a corrosive fluid that melts even iron. ")
             ->setNumberPokedex(69);
         $manager->persist($bellsprout);
+
+
         $weepinbell = new Pokemon();
         $weepinbell
             ->setName("Weepinbell")
@@ -262,6 +296,8 @@ class PokemonFixtures extends Fixture
             ->setDescription("Weepinbell has a large hook on its rear end. At night, the Monster hooks on to a tree branch and goes to sleep. If it moves around in its sleep, it may wake up to find itself on the ground. ")
             ->setNumberPokedex(70);
         $manager->persist($weepinbell);
+
+
         $victreebel = new Pokemon();
         $victreebel
             ->setName("Victreebel")
@@ -276,6 +312,8 @@ class PokemonFixtures extends Fixture
             ->setDescription("Victreebel has a long vine that extends from its head. This vine is waved and flicked about as if it were an animal to attract prey. When an unsuspecting prey draws near, this Monster swallows it whole. ")
             ->setNumberPokedex(71);
         $manager->persist($victreebel);
+
+
         $squirtle = new Pokemon();
         $squirtle
             ->setName("Squirtle")
@@ -290,6 +328,8 @@ class PokemonFixtures extends Fixture
             ->setDescription("Squirtle's shell is not merely used for protection. The shell's rounded shape and the grooves on its surface help minimize resistance in water, enabling this Pokémon to swim at high speeds. ")
             ->setNumberPokedex(7);
         $manager->persist($squirtle);
+
+
         $wartortle = new Pokemon();
         $wartortle
             ->setName("Wartortle")
@@ -303,7 +343,6 @@ class PokemonFixtures extends Fixture
             ->setDescription("Its tail is large and covered with a rich, thick fur. The tail becomes increasingly deeper in color as Wartortle ages. The scratches on its shell are evidence of this Monster's toughness as a battler.")
             ->setStage(["Squirtle", "Wartortle", "Blastoise"])
             ->setNumberPokedex(8);
-
         $manager->persist($wartortle);
 
 
