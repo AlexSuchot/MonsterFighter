@@ -324,7 +324,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Squirtle.png")
             ->setIcon("assets/icones/Squirtle_icon.png")
             ->setType("Water")
-            ->setStage(["Squirtle", "Wartotle", "Blastoise"])
+            ->setStage(["Squirtle", "Wartortle", "Blastoise"])
             ->setDescription("Squirtle's shell is not merely used for protection. The shell's rounded shape and the grooves on its surface help minimize resistance in water, enabling this Pokémon to swim at high speeds. ")
             ->setNumberPokedex(7);
         $manager->persist($squirtle);
@@ -389,7 +389,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Caterpie_icon.png")
             ->setType("Bug")
             ->setDescription("Caterpie has a voracious appetite. It can devour leaves bigger than its body right before your eyes. From its antenna, this Pokémon releases a terrifically strong odor. ")
-            ->setStage(["Caterpie", "Metapod", "Buterfree"])
+            ->setStage(["Caterpie", "Metapod", "Butterfree"])
             ->setNumberPokedex(10);
         $manager->persist($caterpie);
 
@@ -405,7 +405,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Metapod_icon.png")
             ->setType("Bug")
             ->setDescription("The shell covering this Monster's body is as hard as an iron slab. Metapod does not move very much. It stays still because it is preparing its soft innards for evolution inside the hard shell. ")
-            ->setStage(["Caterpie", "Metapod", "Buterfree"])
+            ->setStage(["Caterpie", "Metapod", "Butterfree"])
             ->setNumberPokedex(11);
         $manager->persist($metapod);
 
@@ -421,7 +421,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Butterfree_icon.png")
             ->setType("Bug")
             ->setDescription("Butterfree has a superior ability to search for delicious honey from flowers. It can even search out, extract, and carry honey from flowers that are blooming over six miles from its nest. ")
-            ->setStage(["Caterpie", "Metapod", "Buterfree"])
+            ->setStage(["Caterpie", "Metapod", "Butterfree"])
             ->setNumberPokedex(12);
         $manager->persist($butterfree);
 
@@ -1461,7 +1461,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Tangela_icon.png")
             ->setType("Grass")
             ->setDescription("Tangela's vines snap off easily if they are grabbed. This happens without pain, allowing it to make a quick getaway. The lost vines are replaced by newly grown vines the very next day. ")
-            ->setStage(["Tangela", "Tangrowth"])
+            ->setStage(["Tangela"])
             ->setNumberPokedex(114);
         $manager->persist($tangela);
 
@@ -1556,7 +1556,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Vileplume.png")
             ->setIcon("assets/icones/Vileplume_icon.png")
             ->setType("Grass")
-            ->setStage(["Oddish", "Bloom", "Vileplume"])
+            ->setStage(["Oddish", "Gloom", "Vileplume"])
             ->setDescription("Flaps its broad flower petals to scatter its poisonous pollen. The flapping sound is very loud.
 ")
             ->setNumberPokedex(45);
@@ -1573,7 +1573,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Vulpix.png")
             ->setIcon("assets/icones/Vulpix_icon.png")
             ->setType("Fire")
-            ->setStage(["Vulpix", "Ninetails"])
+            ->setStage(["Vulpix", "Ninetales"])
             ->setDescription("Both its fur and its tails are beautiful. As it grows, the tails split and form more tails.")
             ->setNumberPokedex(37);
         $manager->persist($vulpix);
@@ -1669,7 +1669,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Cubone.png")
             ->setIcon("assets/icones/Cubone_icon.png")
             ->setType("Ground")
-            ->setStage(["Cubone", "Marowark"])
+            ->setStage(["Cubone", "Marowak"])
             ->setDescription("Wears the skull of its deceased mother. Its cries echo inside the skull and come out as a sad melody.")
             ->setNumberPokedex(104);
         $manager->persist($cubone);
@@ -1853,7 +1853,7 @@ class PokemonFixtures extends Fixture
 
         $gengar = new Pokemon();
         $gengar
-            ->setName("gengar")
+            ->setName("Gengar")
             ->setAttack(130)
             ->setLife(60)
             ->setDefense(67)
@@ -2245,7 +2245,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Rhydon.png")
             ->setIcon("assets/icones/Rhydon_icon.png")
             ->setType("Ground")
-            ->setStage(["Rhyhorn", "Rhydon"])
+            ->setStage(["Ryhorn", "Rhydon"])
             ->setDescription("Its brain developed when it began walking on its hind legs. Its armor-like hide even repels molten lava.")
             ->setNumberPokedex(112);
         $manager->persist($rhydon);
@@ -2261,7 +2261,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Rhyhorn.png")
             ->setIcon("assets/icones/Rhyhorn_icon.png")
             ->setType("Ground")
-            ->setStage(["Rhyhorn", "Rhydon"])
+            ->setStage(["Ryhorn", "Rhydon"])
             ->setDescription("A Pokémon with a one-track mind. Once it charges, it won't stop running until it falls asleep.")
             ->setNumberPokedex(111);
         $manager->persist($ryhorn);
