@@ -40,6 +40,7 @@ class PokemonRepository extends ServiceEntityRepository
     {
         return $this->createQueryBuilder('p')
         ->select('count(p.id)')
+        ->setMaxResults(1)
         ->getQuery()
         ->getResult();
         ;

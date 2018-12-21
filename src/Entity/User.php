@@ -46,7 +46,14 @@ class User implements UserInterface
      * @Assert\EqualTo(propertyPath="password", message="You did not type the same password.")
      */
     private $confirm_password;
-
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $win = 0;
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $lose = 0;
 
     public function getId(): ?int
     {
@@ -117,6 +124,24 @@ class User implements UserInterface
     public function setConfirmPassword(string $confirm_password): self
     {
         $this->confirm_password = $confirm_password;
+        return $this;
+    }
+    public function getWin(): ?int
+    {
+        return $this->win;
+    }
+    public function setWin(int $win): ?int
+    {
+        $this->win = $win;
+        return $this;
+    }
+    public function getLose(): ?int
+    {
+        return $this->lose;
+    }
+    public function setLose(int $lose): ?int
+    {
+        $this->lose = $lose;
         return $this;
     }
     /**

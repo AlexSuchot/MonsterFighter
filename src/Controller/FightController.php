@@ -30,8 +30,8 @@ class FightController extends AbstractController
         $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
         $player1 = $this->getUser();
 
-        $max = $repositoryUser->findUserCount();
-        $player2 = $repositoryUser->findOneById(2);
+        $maxPlayer = $repositoryUser->findUserCount();
+        $player2 = $repositoryUser->findOneById(rand(1,(int)$maxPlayer[0][1]));
 
         return $this->render('fight/fight.html.twig', [
             'player1' => $player1,
@@ -54,15 +54,31 @@ class FightController extends AbstractController
         return new Response("Erreur : ceci n'est pas une requête Ajax");
     }
 
+    /**
+     * @Route("/datalist", name="fightfinish")
+     */
+    public function fightFinish(Request $request, SerializerInterface $serializer){
+
+        $game = $request->request->get('game');
+
+        if($game  == "nowinner") {
+            
+        } else if ($game  == "player1") {
+            
+        } else if ($game  == "player2") {
+
+        }
+
+    }
+
     public function generateTeam(SerializerInterface $serializer)
     {
         $repositoryPokemon = $this->getDoctrine()->getRepository(Pokemon::class);
         $arrayPokemon = array();
 
         for ($i = 0; $i < 6; $i++) {
-            $max = $repositoryPokemon->findPokemonCount();
-            // var_dump($max);
-            $pokemon = $repositoryPokemon->findOneByNumberPokedex(rand(1,12));
+            $maxPokemon = $repositoryPokemon->findPokemonCount();
+            $pokemon = $repositoryPokemon->findOneByNumberPokedex(rand(1,(int)$maxPokemon[0][1]));
             $jsonPokemon = $serializer->serialize($pokemon, 'json');
             array_push($arrayPokemon, $jsonPokemon);
         }

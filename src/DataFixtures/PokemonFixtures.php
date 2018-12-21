@@ -2316,7 +2316,7 @@ class PokemonFixtures extends Fixture
             ->setDefense(47)
             ->setSpeed(45)
             ->setImage("../assets/images/Wigglytuff.png")
-            ->setIcon("assets/icones/Wygglytuff_icon.png")
+            ->setIcon("assets/icones/Wigglytuff_icon.png")
             ->setType("Normal")
             ->setStage(["Jigglypuff", "Wigglytuff"])
             ->setDescription("Its body is very elastic. By inhaling deeply, it can continue to inflate itself without limit.")

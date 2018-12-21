@@ -40,6 +40,7 @@ class UserRepository extends ServiceEntityRepository
     {
         return $this->createQueryBuilder('u')
             ->select('count(u.id)')
+            ->setMaxResults(1)
             ->getQuery()
             ->getResult();
             ;

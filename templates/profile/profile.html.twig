@@ -12,9 +12,9 @@
             <a href="{{ path('changePassword') }}"><img src="../assets/images/pokeball.png"></a>
             <h1>{{ user.getNickname }}</h1>
             <p>{{ user.getEmail }}</p>
-            <p>Total game : 8</p>
-            <p>Win game : 6</p>
-            <p>Lose game : 2</p>
+            <p>Total game : {{ user.win + user.lose }}</p>
+            <p>Win game : {{ user.win }}</p>
+            <p>Lose game : {{ user.lose }}</p>
             <a class="link" href="{{ path('changePassword') }}">Change password</a>
         </div>
     </div>
