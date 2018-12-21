@@ -120,20 +120,38 @@
 
             $('#fight').click(function () {
 
-                // Damage player1
+            var damage1;
+            var damage2;
 
-                var damage1 = pokemon1.attack - pokemon2.defense;
-                if (damage1 <= 0) {
-                    damage1 = 1;
+                if(pokemon1.speed > pokemon2) {
+                    fight1();
+                    if(pokemon2.life >= 0){
+                        fight2()
+                    }
+                } else {
+                    fight2();
+                    if(pokemon1.life >= 0){
+                        fight1()
+                    }
                 }
-                pokemon2.life = pokemon2.life - damage1;
 
-                // Damage player2
-                var damage2 = pokemon2.attack - pokemon1.defense;
-                if (damage2 <= 0) {
-                    damage2 = 1;
+                function fight1() {
+                    // Damage player1
+                    damage1 = pokemon1.attack - pokemon2.defense;
+                    if (damage1 <= 0) {
+                        damage1 = 1;
+                    }
+                    pokemon2.life = pokemon2.life - damage1;
                 }
-                pokemon1.life = pokemon1.life - damage2;
+
+                function fight2() {
+                    // Damage player2
+                    damage2 = pokemon2.attack - pokemon1.defense;
+                    if (damage2 <= 0) {
+                        damage2 = 1;
+                    }
+                    pokemon1.life = pokemon1.life - damage2;
+                }
 
                 if (pokemonTeam1[5].life <= 0 && pokemonTeam2[5].life <= 0) {
                     pokemon1.life = 0;
@@ -171,7 +189,7 @@
                         document.getElementById("message2").innerHTML = "";
                         numberPokemon1++;
                         document.getElementById("team1").innerHTML = "Pokemon " + (
-                            numberPokemon1 + 1) + " de l'équipe 1 :";
+                        numberPokemon1 + 1) + " de l'équipe 1 :";
                         pokemon1 = pokemonTeam1[numberPokemon1];
                         pokemon1PvMax = pokemon1.life;
                         document.getElementById('pokemon1Name').innerHTML = pokemon1.name;
@@ -186,7 +204,7 @@
                         document.getElementById("message2").innerHTML = "";
                         numberPokemon2++;
                         document.getElementById("team2").innerHTML = "Pokemon " + (
-                            numberPokemon2 + 1) + " de l'équipe 2 :";
+                        numberPokemon2 + 1) + " de l'équipe 2 :";
                         pokemon2 = pokemonTeam2[numberPokemon2];
                         pokemon2PvMax = pokemon2.life;
                         document.getElementById('pokemon2Name').innerHTML = pokemon2.name;
@@ -212,8 +230,7 @@
                         dataType: "json",
                         data: game,
                         async: true,
-                        success: function (data) {
-                        }
+                        success: function (data) {}
                     })
                 }
             });
