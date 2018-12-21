@@ -662,7 +662,7 @@ class PokemonFixtures extends Fixture
             ->setType("Poison")
             ->setDescription("Golbat loves to drink the blood of living things. It is particularly active in the pitch black of night. This Monster flits around in the night skies, seeking fresh blood. ")
             ->setStage(["Zubat", "Golbat"])
-            ->setNumberPokedex(74);
+            ->setNumberPokedex(42);
         $manager->persist($golbat);
 
 
@@ -1655,7 +1655,7 @@ class PokemonFixtures extends Fixture
             ->setType("Fairy")
             ->setStage(["Clefairy", "Clefable"])
             ->setDescription("Adored for their cute looks and playfulness. They are thought to be rare, as they do not appear often.")
-            ->setNumberPokedex(37);
+            ->setNumberPokedex(35);
         $manager->persist($clefairy);
 
 
