@@ -85,6 +85,12 @@
                     {% if pokemon.type == 'Ghost' %}
                     <td class="ghost-type">{{ pokemon.type }}</td>
                     {% endif %}
+                    {% if pokemon.type == 'Normal' %}
+                        <td>{{ pokemon.type }}</td>
+                    {% endif %}
+                    {% if pokemon.type == 'Fairy' %}
+                        <td class="fairy-type">{{ pokemon.type }}</td>
+                    {% endif %}
 
                 </tr>
             </table>
