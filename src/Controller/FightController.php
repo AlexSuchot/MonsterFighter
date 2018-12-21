@@ -31,9 +31,13 @@ class FightController extends AbstractController
 
         $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
         $player1 = $this->getUser();
-
+        $player1Id = $player1->getId();
         $maxPlayer = $repositoryUser->findUserCount();
-        $player2 = $repositoryUser->findOneById(rand(1,(int)$maxPlayer[0][1]));
+        $random = $player1Id;
+        while($random == $player1Id){
+            $random = rand(1,(int)$maxPlayer[0][1]);
+        }
+        $player2 = $repositoryUser->findOneById($random);
 
         return $this->render('fight/fight.html.twig', [
             'player1' => $player1,
