@@ -323,7 +323,7 @@ class PokemonFixtures extends Fixture
             ->setSpeed(43)
             ->setImage("../assets/images/Squirtle.png")
             ->setIcon("assets/icones/Squirtle_icon.png")
-            ->setType("Eau")
+            ->setType("Water")
             ->setStage(["Squirtle", "Wartotle", "Blastoise"])
             ->setDescription("Squirtle's shell is not merely used for protection. The shell's rounded shape and the grooves on its surface help minimize resistance in water, enabling this Pokémon to swim at high speeds. ")
             ->setNumberPokedex(7);
