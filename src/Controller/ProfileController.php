@@ -8,6 +8,8 @@ use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
+use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 
 class ProfileController extends AbstractController
 {
@@ -27,30 +29,41 @@ class ProfileController extends AbstractController
     /**
      * @Route("/changePassword", name="changePassword")
      */
-    public function changePassword(Request $request, UserPasswordEncoderInterface $encoder)
+    public function changePassword(Request $request, UserPasswordEncoderInterface $encoder, UrlGeneratorInterface $urlGenerator)
     {
         $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
         $user = $this->getUser();
 
-        $form = $this->createFormBuilder()
-            ->add('oldPassword', PasswordType::class)
+        $form = $this->createFormBuilder($user) 
+            ->add('oldPassword', PasswordType::class, array(
+                'mapped' => false
+            ))
             ->add('password', PasswordType::class)
             ->add('confirmPassword', PasswordType::class)
             ->add('submit', SubmitType::class)
             ->getForm();
 
         $form->handleRequest($request);
-        $checkPass = $encoder->isPasswordValid($user, $user.getPassword());
-
+        
         if($form->isSubmitted() && $form-> isValid()) {
-            $hash = $encoder->encodePassword($user, $user->getPassword());
-            $user->setPassword($hash);
-            $manager->persist($user);
-            $manager->flush();
+
+            $oldPassword = $form['oldPassword']->getData();
+            // $check = $encoder->isPasswordValid($user, $oldPassword);
+
+            // if ($check) {
+                $newPassword = $encoder->encodePassword($user, $user->getPassword());
+                $user->setPassword($newPassword);
+                $manager = $this->getDoctrine()->getManager();
+                $manager->persist($user);
+                $manager->flush();
+                $url = $urlGenerator->generate('pokedex');
+                return new RedirectResponse($url);
+            // }
         }
 
         return $this->render('profile/changePassword.html.twig', [
-            'user' => $user
+            'user' => $user,
+            'form' => $form->createView()
         ]);
     }
 }
