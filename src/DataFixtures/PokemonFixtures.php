@@ -286,7 +286,7 @@ class PokemonFixtures extends Fixture
             ->setImage("../assets/images/Squirtle.png")
             ->setIcon("assets/icones/Squirtle_icon.png")
             ->setType("Eau")
-            ->setStage(["Charmander", "Charmeleon", "Charizard"])
+            ->setStage(["Squirtle", "Wartotle", "Blastoise"])
             ->setDescription("Squirtle's shell is not merely used for protection. The shell's rounded shape and the grooves on its surface help minimize resistance in water, enabling this Pokémon to swim at high speeds. ")
             ->setNumberPokedex(7);
         $manager->persist($squirtle);
@@ -926,7 +926,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Mr._Mime_icon.png")
             ->setType("Psychic")
             ->setDescription("Mr. Mime is a master of pantomime. Its gestures and motions convince watchers that something unseeable actually exists. Once the watchers are convinced, the unseeable thing exists as if it were real. ")
-            ->setStage(["Mr.Mime"])
+            ->setStage(["Mr. Mime"])
             ->setNumberPokedex(122);
         $manager->persist($mrmime);
 
@@ -958,7 +958,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Nidoking_icon.png")
             ->setType("Poison")
             ->setDescription("Nidoking's thick tail packs enormously destructive power. With one swing, it can topple a metal transmission tower. Once this Monster goes on a rampage, there is no stopping it. ")
-            ->setStage(["Nidoranm", "Nidorino", "Nidoking"])
+            ->setStage(["Nidoran-M", "Nidorino", "Nidoking"])
             ->setNumberPokedex(34);
         $manager->persist($nidoking);
 
@@ -974,7 +974,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Nidoqueen_icon.png")
             ->setType("Poison")
             ->setDescription("Nidoqueen's body is encased in extremely hard scales. It is adept at sending foes flying with harsh tackles. This Monster is at its strongest when it is defending its young.")
-            ->setStage(["Nidoranf", "Nidorina", "Nidoqueen"])
+            ->setStage(["Nidoran-F", "Nidorina", "Nidoqueen"])
             ->setNumberPokedex(31);
         $manager->persist($nidoqueen);
 
@@ -990,7 +990,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Nidoran_m_icon.png")
             ->setType("Poison")
             ->setDescription("Nidoran♂ has developed muscles for moving its ears. Thanks to them, the ears can be freely moved in any direction. Even the slightest sound does not escape this Monster's notice. ")
-            ->setStage(["Nidoranm", "Nidorino", "Nidoking"])
+            ->setStage(["Nidoran-M", "Nidorino", "Nidoking"])
             ->setNumberPokedex(32);
         $manager->persist($nidoranm);
 
@@ -1006,7 +1006,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Nidoran_f_icon.png")
             ->setType("Poison")
             ->setDescription("Nidoran♀ has barbs that secrete a powerful poison. They are thought to have developed as protection for this small-bodied Monster. When enraged, it releases a horrible toxin from its horn. ")
-            ->setStage(["Nidoranf", "Nidorina", "Nidoqueen"])
+            ->setStage(["Nidoran-F", "Nidorina", "Nidoqueen"])
             ->setNumberPokedex(29);
         $manager->persist($nidoranf);
 
@@ -1022,7 +1022,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Nidorina_icon.png")
             ->setType("Poison")
             ->setDescription("When Nidorina are with their friends or family, they keep their barbs tucked away to prevent hurting each other. This Monster appears to become nervous if separated from the others. ")
-            ->setStage(["Nidoranf", "Nidorina", "Nidoqueen"])
+            ->setStage(["Nidoran-F", "Nidorina", "Nidoqueen"])
             ->setNumberPokedex(30);
         $manager->persist($nidorina);
 
@@ -1038,7 +1038,7 @@ class PokemonFixtures extends Fixture
             ->setIcon("assets/icones/Nidorino_icon.png")
             ->setType("Poison")
             ->setDescription("Nidorino has a horn that is harder than a diamond. If it senses a hostile presence, all the barbs on its back bristle up at once, and it challenges the foe with all its might. ")
-            ->setStage(["Nidoranm", "Nidorino", "Nidoking"])
+            ->setStage(["Nidoran-M", "Nidorino", "Nidoking"])
             ->setNumberPokedex(33);
         $manager->persist($nidorino);
 
