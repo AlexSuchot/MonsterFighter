@@ -123,7 +123,11 @@
             var damage1;
             var damage2;
 
-                if(pokemon1.speed > pokemon2) {
+                if( pokemon1.speed == pokemon2.speed ) {
+                    fight1();
+                    fight2();
+                }
+                else if(pokemon1.speed > pokemon2.speed) {
                     fight1();
                     if(pokemon2.life >= 0){
                         fight2()
@@ -156,7 +160,7 @@
                 if (pokemonTeam1[5].life <= 0 && pokemonTeam2[5].life <= 0) {
                     pokemon1.life = 0;
                     pokemon2.life = 0;
-                    document.getElementById("message1").innerHTML = " No winner ";
+                    document.getElementById("message1").innerHTML = " Draw ";
                     document.getElementById("message2").innerHTML = "";
                     document.getElementById("player1Progress").value = pokemon1.life;
                     document.getElementById("player2Progress").value = pokemon2.life;
@@ -213,8 +217,8 @@
                         document.getElementById("player2Image").src = pokemon2.image;
                     }
 
-                    document.getElementById("message1").innerHTML = pokemon1.name + " attack is inflict " + damage1 + " damage";
-                    document.getElementById("message2").innerHTML = pokemon2.name + " attack is inflict " + damage2 + " damage";
+                    document.getElementById("message1").innerHTML = pokemon1.name + " 's attack inflicted " + damage1 + " damage";
+                    document.getElementById("message2").innerHTML = pokemon2.name + " 's attack inflicted " + damage2 + " damage";
                     document.getElementById("player1Progress").style.width = (pokemon1.life * 100 / pokemon1PvMax) + "%";
                     document.getElementById("player2Progress").style.width = (pokemon2.life * 100 / pokemon2PvMax) + "%";
                     document.getElementById('player1Pv').innerHTML = "Points de vie : " + pokemon1.life;
