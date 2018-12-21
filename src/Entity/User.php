@@ -130,16 +130,17 @@ class User implements UserInterface
     {
         return $this->win;
     }
-    public function setWin(int $win): ?int
+    public function setWin(int $win): self
     {
         $this->win = $win;
+
         return $this;
     }
     public function getLose(): ?int
     {
         return $this->lose;
     }
-    public function setLose(int $lose): ?int
+    public function setLose(int $lose): self
     {
         $this->lose = $lose;
         return $this;

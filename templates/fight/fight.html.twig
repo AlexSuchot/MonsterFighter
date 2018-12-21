@@ -3,98 +3,102 @@
 {% block title %}Fight{% endblock %}
 
 {% block body %}
-    <section class="fightContainer">
+<section class="fightContainer">
 
-        <div class="displayAllTeam">
+    <div class="displayAllTeam">
 
-            <!-- TEAM 1 AFFICHAGE !-->
+        <!-- TEAM 1 AFFICHAGE !-->
 
-            <div class="displayOneTeamContainer">
-                <h2>{{ player1.nickname }}</h2>
-                <div id="displayOneTeam1" class="displayOneTeam"></div>
-            </div>
-
-            <!-- TEAM 2 AFFICHAGE !-->
-
-            <div class="displayOneTeamContainer">
-                <h2>{{ player2.nickname }}</h2>
-                <div id="displayOneTeam2" class="displayOneTeam"></div>
-            </div>
+        <div class="displayOneTeamContainer">
+            <h2>{{ player1.nickname }}</h2>
+            <div id="displayOneTeam1" class="displayOneTeam"></div>
         </div>
 
-        <div class="FightSection">
-            <div class="displayOneFighter">
-                <h3 id="team1">Pokemon 1 de l'équipe 1 :</h3>
-                <p id="pokemon1Name">Name Pokemon</p>
-                <img id="player1Image" width="120px">
-                <p id="player1Pv">
-                    Points de vie :</p>
-                <div class="progress">
-                    <div id="player1Progress" class="progress-in"></div>
-                </div>
-                {# <progress class="progress" value="0" max=""></progress> #}
-            </div>
+        <!-- TEAM 2 AFFICHAGE !-->
 
-            <div class="displayOneFighter">
-                <h3 id="team2">Pokemon 1 de l'équipe 2 :</h3>
-                <p id="pokemon2Name">Name Pokemon</p>
-                <img id="player2Image" width="120px">
-                <p id="player2Pv">Points de vie :</p>
-                <div class="progress">
-                    <div id="player2Progress" class="progress-in"></div>
-                </div>
+        <div class="displayOneTeamContainer">
+            <h2>{{ player2.nickname }}</h2>
+            <div id="displayOneTeam2" class="displayOneTeam"></div>
+        </div>
+    </div>
+
+    <div class="FightSection">
+        <div class="displayOneFighter">
+            <h3 id="team1">Pokemon 1 de l'équipe 1 :</h3>
+            <p id="pokemon1Name">Name Pokemon</p>
+            <img id="player1Image" width="120px">
+            <p id="player1Pv">
+                Points de vie :</p>
+            <div class="progress">
+                <div id="player1Progress" class="progress-in"></div>
             </div>
+            {# <progress class="progress" value="0" max=""></progress> #}
         </div>
 
-        <button type="button" id="fight" class="btn btn-primary">Fight !</button>
-        <div class="descriptionFight">
-            <p id="message1">It's time to fight</p>
-            <p id="message2"></p>
+        <div class="displayOneFighter">
+            <h3 id="team2">Pokemon 1 de l'équipe 2 :</h3>
+            <p id="pokemon2Name">Name Pokemon</p>
+            <img id="player2Image" width="120px">
+            <p id="player2Pv">Points de vie :</p>
+            <div class="progress">
+                <div id="player2Progress" class="progress-in"></div>
+            </div>
         </div>
-    </section>
-    <script>
+    </div>
+
+    <button type="button" id="fight" class="btn btn-primary">Fight !</button>
+    <div class="descriptionFight">
+        <p id="message1">It's time to fight</p>
+        <p id="message2"></p>
+    </div>
+</section>
+<script>
+    $(document).ready(function () {
         var player1 = "{{ player1.nickname }}";
         var player2 = "{{ player2.nickname }}";
+        var send = false;
 
-        $(document).ready(function () {
-            var data = {
-                teamPlayer1: "win",
-                teamPlayer2: "lose"
-            };
+        var data = {
+            winner: 0,
+            player1: player1,
+            player2: player2
+        }
 
-            game = "";
+        var listTeam;
 
-            var listTeam;
+        var pokemonTeam1 = [];
+        var pokemonTeam2 = [];
 
-            var pokemonTeam1 = [];
-            var pokemonTeam2 = [];
+        var pokemon1;
+        var pokemon2;
 
-            var pokemon1;
-            var pokemon2;
+        var numberPokemon1 = 0;
+        var numberPokemon2 = 0;
 
-            var numberPokemon1 = 0;
-            var numberPokemon2 = 0;
+        var pokemon1PvMax = 0;
+        var pokemon2PvMax = 0;
 
-            var pokemon1PvMax = 0;
-            var pokemon2PvMax = 0;
-
+        function init() {
             $.ajax({
                 method: "POST",
                 url: "{{ path('datalist') }}",
                 dataType: "json",
-                data: data,
                 async: true,
                 success: function (data) {
                     console.log(data);
                     listTeam = data;
                     for (var o = 0; o < listTeam[0].length; o++) {
                         pokemonTeam1[o] = JSON.parse(listTeam[0][o]);
-                        $("#displayOneTeam1").append(`<div  class="displayOnePokemon"><img src="${pokemonTeam1[o].icon}"></div>`)
+                        $("#displayOneTeam1").append(
+                            `<div  class="displayOnePokemon"><img src="${pokemonTeam1[o].icon}"></div>`
+                        )
                     }
 
                     for (var w = 0; w < listTeam[1].length; w++) {
                         pokemonTeam2[w] = JSON.parse(listTeam[1][w]);
-                        $("#displayOneTeam2").append(`<div  class="displayOnePokemon"><img src="${pokemonTeam2[w].icon}"></div>`)
+                        $("#displayOneTeam2").append(
+                            `<div  class="displayOnePokemon"><img src="${pokemonTeam2[w].icon}"></div>`
+                        )
                     }
 
                     pokemon1 = pokemonTeam1[numberPokemon1];
@@ -107,9 +111,11 @@
                     document.getElementById('pokemon2Name').innerHTML = pokemon2.name;
                     //                document.getElementById("player1Progress").max = pokemon1PvMax;
                     //                document.getElementById("player2Progress").max = pokemon2PvMax;
-                    console.log((pokemon1.life * 100 / pokemon1PvMax)+"%");
-                    document.getElementById("player1Progress").style.width = (pokemon1.life * 100 / pokemon1PvMax) + "%";
-                    document.getElementById("player2Progress").style.width = (pokemon2.life * 100 / pokemon2PvMax) + "%";
+                    console.log((pokemon1.life * 100 / pokemon1PvMax) + "%");
+                    document.getElementById("player1Progress").style.width = (pokemon1.life * 100 /
+                        pokemon1PvMax) + "%";
+                    document.getElementById("player2Progress").style.width = (pokemon2.life * 100 /
+                        pokemon2PvMax) + "%";
                     document.getElementById('player1Pv').innerHTML = "Points de vie : " + pokemon1.life;
                     document.getElementById('player2Pv').innerHTML = "Points de vie : " + pokemon2.life;
                     document.getElementById("player1Image").src = pokemon1.image;
@@ -117,111 +123,128 @@
 
                 }
             });
+        }
 
-            $('#fight').click(function () {
+        init();
 
-                // Damage player1
-                var damage1 = pokemon2.defense - pokemon1.attack;
-                if (damage1 < 0) {
-                    damage1 = 10;
-                }
-                if (damage1 < 10) {
-                    damage1 = 20;
-                }
-                pokemon2.life = pokemon2.life - damage1;
+        $('#fight').click(function () {
+            // Damage player1
+            var damage1 = pokemon2.defense - pokemon1.attack;
+            if (damage1 < 0) {
+                damage1 = 10;
+            }
+            if (damage1 < 10) {
+                damage1 = 20;
+            }
+            pokemon2.life = pokemon2.life - damage1;
 
-                // Damage player2
-                var damage2 = pokemon1.defense - pokemon2.attack;
-                if (damage2 < 0) {
-                    damage2 = 10;
-                }
-                if (damage2 < 10) {
-                    damage2 = 20;
-                }
-                pokemon1.life = pokemon1.life - damage2;
+            // Damage player2
+            var damage2 = pokemon1.defense - pokemon2.attack;
+            if (damage2 < 0) {
+                damage2 = 10;
+            }
+            if (damage2 < 10) {
+                damage2 = 20;
+            }
+            pokemon1.life = pokemon1.life - damage2;
 
-                if (pokemonTeam1[5].life <= 0 && pokemonTeam2[5].life <= 0) {
+            if (pokemonTeam1[5].life <= 0 && pokemonTeam2[5].life <= 0) {
+                pokemon1.life = 0;
+                pokemon2.life = 0;
+                document.getElementById("message1").innerHTML = " No winner ";
+                document.getElementById("message2").innerHTML = "";
+                document.getElementById("player1Progress").value = pokemon1.life;
+                document.getElementById("player2Progress").value = pokemon2.life;
+                document.getElementById('player1Pv').innerHTML = "Points de vie : " + pokemon1.life;
+                document.getElementById('player2Pv').innerHTML = "Points de vie : " + pokemon2.life;
+                document.getElementById('player1Pv').innerHTML = "Points de vie : " + pokemon1.life;
+                document.getElementById('player2Pv').innerHTML = "Points de vie : " + pokemon2.life;
+                data.winner = "nowinner";
+            } else if (pokemonTeam1[5].life <= 0) {
+                pokemon1.life = 0;
+                document.getElementById("message1").innerHTML = " You Lose ... ";
+                document.getElementById("message2").innerHTML = "";
+                document.getElementById("player1Progress").style.width = (pokemon1.life * 100 /
+                    pokemon1PvMax) + "%";
+                document.getElementById('player1Pv').innerHTML = "Points de vie : " + pokemon1.life;
+                document.getElementById('player1Pv').innerHTML = "Points de vie : " + pokemon1.life;
+                data.winner = "player2";
+            } else if (pokemonTeam2[5].life <= 0) {
+                pokemon2.life = 0;
+                document.getElementById("message1").innerHTML = " You Win ! ";
+                document.getElementById("message2").innerHTML = "";
+                document.getElementById("player2Progress").style.width = (pokemon2.life * 100 /
+                    pokemon2PvMax) + "%";
+                document.getElementById('player2Pv').innerHTML = "Points de vie : " + pokemon2.life;
+                document.getElementById('player2Pv').innerHTML = "Points de vie : " + pokemon2.life;
+                data.winner = "player1";
+            } else {
+
+                if (pokemon1.life <= 0) {
                     pokemon1.life = 0;
-                    pokemon2.life = 0;
-                    document.getElementById("message1").innerHTML = " No winner ";
+                    document.getElementById("message1").innerHTML = pokemon1.name + " fainted";
                     document.getElementById("message2").innerHTML = "";
-                    document.getElementById("player1Progress").value = pokemon1.life;
-                    document.getElementById("player2Progress").value = pokemon2.life;
-                    document.getElementById('player1Pv').innerHTML = "Points de vie : " + pokemon1.life;
-                    document.getElementById('player2Pv').innerHTML = "Points de vie : " + pokemon2.life;
-                    document.getElementById('player1Pv').innerHTML = "Points de vie : " + pokemon1.life;
-                    document.getElementById('player2Pv').innerHTML = "Points de vie : " + pokemon2.life;
-                    game = "nowinner";
-                } else if (pokemonTeam1[5].life <= 0) {
-                    pokemon1.life = 0;
-                    document.getElementById("message1").innerHTML = " You Lose ... ";
-                    document.getElementById("message2").innerHTML = "";
-                    document.getElementById("player1Progress").style.width = (pokemon1.life * 100 / pokemon1PvMax) + "%";
-                    document.getElementById('player1Pv').innerHTML = "Points de vie : " + pokemon1.life;
-                    document.getElementById('player1Pv').innerHTML = "Points de vie : " + pokemon1.life;
-                    game = "player2";
-                } else if (pokemonTeam2[5].life <= 0) {
-                    pokemon2.life = 0;
-                    document.getElementById("message1").innerHTML = " You Win ! ";
-                    document.getElementById("message2").innerHTML = "";
-                    document.getElementById("player2Progress").style.width = (pokemon2.life * 100 / pokemon2PvMax) + "%";
-                    document.getElementById('player2Pv').innerHTML = "Points de vie : " + pokemon2.life;
-                    document.getElementById('player2Pv').innerHTML = "Points de vie : " + pokemon2.life;
-                    game = "player1";
-                } else {
-
-                    if (pokemon1.life <= 0) {
-                        pokemon1.life = 0;
-                        document.getElementById("message1").innerHTML = pokemon1.name + " fainted";
-                        document.getElementById("message2").innerHTML = "";
-                        numberPokemon1++;
-                        document.getElementById("team1").innerHTML = "Pokemon " + (
+                    numberPokemon1++;
+                    document.getElementById("team1").innerHTML = "Pokemon " + (
                         numberPokemon1 + 1) + " de l'équipe 1 :";
-                        pokemon1 = pokemonTeam1[numberPokemon1];
-                        pokemon1PvMax = pokemon1.life;
-                        document.getElementById('pokemon1Name').innerHTML = pokemon1.name;
-                        document.getElementById("player1Progress").style.width = (pokemon1.life * 100 / pokemon1PvMax) + "%";
-                        document.getElementById('player1Pv').innerHTML = "Points de vie : " + pokemon1.life;
-                        document.getElementById("player1Image").src = pokemon1.image;
-                    }
+                    pokemon1 = pokemonTeam1[numberPokemon1];
+                    pokemon1PvMax = pokemon1.life;
+                    document.getElementById('pokemon1Name').innerHTML = pokemon1.name;
+                    document.getElementById("player1Progress").style.width = (pokemon1.life * 100 /
+                        pokemon1PvMax) + "%";
+                    document.getElementById('player1Pv').innerHTML = "Points de vie : " + pokemon1.life;
+                    document.getElementById("player1Image").src = pokemon1.image;
+                }
 
-                    if (pokemon2.life <= 0) {
-                        pokemon2.life = 0;
-                        document.getElementById("message1").innerHTML = pokemon2.name + " fainted";
-                        document.getElementById("message2").innerHTML = "";
-                        numberPokemon2++;
-                        document.getElementById("team2").innerHTML = "Pokemon " + (
+                if (pokemon2.life <= 0) {
+                    pokemon2.life = 0;
+                    document.getElementById("message1").innerHTML = pokemon2.name + " fainted";
+                    document.getElementById("message2").innerHTML = "";
+                    numberPokemon2++;
+                    document.getElementById("team2").innerHTML = "Pokemon " + (
                         numberPokemon2 + 1) + " de l'équipe 2 :";
-                        pokemon2 = pokemonTeam2[numberPokemon2];
-                        pokemon2PvMax = pokemon2.life;
-                        document.getElementById('pokemon2Name').innerHTML = pokemon2.name;
-                        document.getElementById("player2Progress").style.width = (pokemon2.life * 100 / pokemon2PvMax) + "%";
-                        document.getElementById('player2Pv').innerHTML = "Points de vie : " + pokemon2.life;
-                        document.getElementById("player2Image").src = pokemon2.image;
+                    pokemon2 = pokemonTeam2[numberPokemon2];
+                    pokemon2PvMax = pokemon2.life;
+                    document.getElementById('pokemon2Name').innerHTML = pokemon2.name;
+                    document.getElementById("player2Progress").style.width = (pokemon2.life * 100 /
+                        pokemon2PvMax) + "%";
+                    document.getElementById('player2Pv').innerHTML = "Points de vie : " + pokemon2.life;
+                    document.getElementById("player2Image").src = pokemon2.image;
+                }
+
+                document.getElementById("message1").innerHTML = pokemon1.name + " attack is inflict " +
+                    damage1 + " damage";
+                document.getElementById("message2").innerHTML = pokemon2.name + " attack is inflict " +
+                    damage2 + " damage";
+                document.getElementById("player1Progress").style.width = (pokemon1.life * 100 /
+                    pokemon1PvMax) + "%";
+                document.getElementById("player2Progress").style.width = (pokemon2.life * 100 /
+                    pokemon2PvMax) + "%";
+                document.getElementById('player1Pv').innerHTML = "Points de vie : " + pokemon1.life;
+                document.getElementById('player2Pv').innerHTML = "Points de vie : " + pokemon2.life;
+                document.getElementById('player1Pv').innerHTML = "Points de vie : " + pokemon1.life;
+                document.getElementById('player2Pv').innerHTML = "Points de vie : " + pokemon2.life;
+            }
+
+            function end(data) {
+                $.ajax({
+                    method: "POST",
+                    url: "{{ path('fightfinish') }}",
+                    dataType: "json",
+                    data: data,
+                    async: true,
+                    success: function (data) {
+                        console.log(data);
                     }
+                })
+            }
 
-                    document.getElementById("message1").innerHTML = pokemon1.name + " attack is inflict " + damage1 + " damage";
-                    document.getElementById("message2").innerHTML = pokemon2.name + " attack is inflict " + damage2 + " damage";
-                    document.getElementById("player1Progress").style.width = (pokemon1.life * 100 / pokemon1PvMax) + "%";
-                    document.getElementById("player2Progress").style.width = (pokemon2.life * 100 / pokemon2PvMax) + "%";
-                    document.getElementById('player1Pv').innerHTML = "Points de vie : " + pokemon1.life;
-                    document.getElementById('player2Pv').innerHTML = "Points de vie : " + pokemon2.life;
-                    document.getElementById('player1Pv').innerHTML = "Points de vie : " + pokemon1.life;
-                    document.getElementById('player2Pv').innerHTML = "Points de vie : " + pokemon2.life;
-                }
-
-                if( game != "" ) {
-                    $.ajax({
-                        method: "POST",
-                        url: "{{ path('fightfinish') }}",
-                        dataType: "json",
-                        data: game,
-                        async: true,
-                        success: function (data) {
-                        }
-                    })
-                }
-            });
+            if (data.winner != 0 && send == false) {
+                end(data);
+                send = true;
+                location.reload();
+            }
         });
-    </script>
+    });
+</script>
 {% endblock %}
